@@ -202,7 +202,7 @@ html {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  max-width: 170px;
+  width: 170px;
 }
 
 .price {
