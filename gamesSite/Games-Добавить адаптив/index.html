@@ -4,30 +4,38 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="fonts/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <title>Games</title>
     <script src="https://use.fontawesome.com/a2f9fd80e3.js"></script>
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"> </head>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="alternate" href="style/normalize.css">
+    <link href="fonts/style.css" rel="stylesheet">
+</head>
 
 <body>
     <header>
         <div class="header">
             <div class="header__section center">
-                <div> <a href="#" class="header__a">HISTORICAL</a>
-                    <br> <a href="#" class="header__a header__a1">GAMES</a> </div>
+                <div>
+                    <a href="#" class="header__a">HISTORICAL</a>
+                    <br> <a href="#" class="header__a header__a1">GAMES</a>
+                </div>
                 <div class="common">
                     <div class="header__midlle right"><i class="fa fa-phone" aria-hidden="true"></i>
-                        <p class="header__midlle_p">+123 456 7890</p>
+                        <a href="tel:12345678901" class="header__midlle_p">+123 456 7890</a>
                     </div>
                     <div class="header__midlle"><i class="fa fa-envelope" aria-hidden="true"></i>
-                        <p class="header__midlle_p">info@example.com</p>
+                        <a href="#" class="header__midlle_p">info@example.com</a>
                     </div>
                 </div>
                 <div class="header__div">
-                    <input type="search" placeholder="Search" class="header__search"><a href='#' class="header__bottom"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                    <input type="search" placeholder="Search" class="header__search"><a href='#' class="header__bottom"><i class="fa fa-search" aria-hidden="true"></i></a>
+                </div>
+                <div class="burger">
+                    <span class="burger__span"></span>
+                </div>
             </div>
             <nav class="center nav">
                 <ul class="nav_ul">
@@ -46,52 +54,60 @@
             <div class="center text">
                 <h1 class="text__h1">Morbi in nisl auctor</h1>
             </div>
-            <div class="center favicon"> <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="display: flex;align-items: center;justify-content: center;"></i></a> <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="display: flex;align-items: center;justify-content: center;"></i></a>                <a href="#"><i class="fa fa-wifi" aria-hidden="true" style="display: flex;align-items: center;justify-content: center;"></i></a> <a href="#"><i class="fa fa-vk" aria-hidden="true" style="display: flex;align-items: center;justify-content: center;"></i></a>                </div>
+            <div class="center favicon">
+                <a href="#"><i class="fa fa-twitter icon" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook icon" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-wifi icon" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-vk icon" aria-hidden="true"></i></a>
+            </div>
         </div>
     </header>
     <div class="about center">
-        <div style="margin-right: 20px;">
+        <div class="about__wrapper">
             <h1 class="about_h1">About Us!</h1>
-            <p class="about_p">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
-                <br>quia consequntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                <br>porro quisquam est, qui dolore, ipsum quia dolor sit amet, consectetur, adipisci
-                <br>velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                <br>suscipit laboriosam, nisi ut aliquid ex ea commodi consequntur? </p>
+            <p class="about_p">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolore, ipsum quia dolor sit amet, consectetur, adipisci
+                velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequntur?
+            </p>
             <p class="about_p about_p1">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
                 <br>molestia consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-                <br>pariatur? </p>
-        </div> <img src="img/about.png" alt="lara"> </div>
+                <br>pariatur?
+            </p>
+        </div> <img src="img/about.png" alt="lara" class="about__lara">
+    </div>
 
 
-    <div class="center services"> </div>
+    <!-- <div class="center services"> </div> -->
     <div class="center service">
         <h1 class="services">Services</h1>
         <div class="serveces__div_common">
             <div>
                 <div class="serveces__div">
-                    <div style="text-align: right;">
+                    <div class="services__wrapper">
                         <h2 class="services__h2">Repreh Qui In Ea Voluptate</h2>
                         <p class="services__p">Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                             <br> reiciendis voluptatibus maiores alias consequatur aut
-                            <br> perferendis doloribus asperiores repellat. </p>
+                            <br> perferendis doloribus asperiores repellat.
+                        </p>
                     </div>
                     <div> <img src="img/three.png" alt="three" class="services__img"> </div>
                 </div>
                 <div class="serveces__div">
-                    <div style="text-align: right;">
+                    <div class="services__wrapper">
                         <h2 class="services__h2">Repreh Qui In Ea Voluptate</h2>
                         <p class="services__p">Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                             <br> reiciendis voluptatibus maiores alias consequatur aut
-                            <br> perferendis doloribus asperiores repellat. </p>
+                            <br> perferendis doloribus asperiores repellat.
+                        </p>
                     </div>
                     <div> <img src="img/dolor.png" alt="three" class="services__img"> </div>
                 </div>
                 <div class="serveces__div">
-                    <div style="text-align: right;">
+                    <div class="services__wrapper">
                         <h2 class="services__h2">Repreh Qui In Ea Voluptate</h2>
                         <p class="services__p">Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                             <br> reiciendis voluptatibus maiores alias consequatur aut
-                            <br> perferendis doloribus asperiores repellat. </p>
+                            <br> perferendis doloribus asperiores repellat.
+                        </p>
                     </div>
                     <div> <img src="img/statistic.png" alt="three" class="services__img"> </div>
                 </div>
@@ -105,7 +121,8 @@
                         <h2 class="services__h2">Repreh Qui In Ea Voluptate</h2>
                         <p class="services__p">Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                             <br> reiciendis voluptatibus maiores alias consequatur aut
-                            <br> perferendis doloribus asperiores repellat. </p>
+                            <br> perferendis doloribus asperiores repellat.
+                        </p>
                     </div>
 
                 </div>
@@ -115,7 +132,8 @@
                         <h2 class="services__h2">Repreh Qui In Ea Voluptate</h2>
                         <p class="services__p">Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                             <br> reiciendis voluptatibus maiores alias consequatur aut
-                            <br> perferendis doloribus asperiores repellat. </p>
+                            <br> perferendis doloribus asperiores repellat.
+                        </p>
                     </div>
 
                 </div>
@@ -125,7 +143,8 @@
                         <h2 class="services__h2">Repreh Qui In Ea Voluptate</h2>
                         <p class="services__p">Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                             <br> reiciendis voluptatibus maiores alias consequatur aut
-                            <br> perferendis doloribus asperiores repellat. </p>
+                            <br> perferendis doloribus asperiores repellat.
+                        </p>
                     </div>
 
                 </div>
@@ -153,10 +172,10 @@
 
         <div class="gallery__img">
             <div class="gallery__img1">
-                <a href="#"><img src="./img/1.png" alt="game">
+                <a href="product.html"><img src="./img/1.png" alt="game">
                     <p class="gallery__p">ASSASSIN'S CREED: Rogue<br><br></p>
                 </a>
-                <div style="padding-bottom: 20px;">
+                <div class="btn_pad">
                     <a href="#" class="gallery__a">BUY</a>
                 </div>
             </div>
@@ -168,7 +187,7 @@
                 <a href="#"><img src="./img/2.png" height="378px" alt="game">
                     <p class="gallery__p">TOMB RAIDER<br><br></p>
                 </a>
-                <div style="padding-bottom: 20px;">
+                <div class="btn_pad">
                     <a href="#" class="gallery__a">BUY</a>
                 </div>
             </div>
@@ -180,7 +199,7 @@
                 <a href="#"><img src="./img/3.png" alt="game">
                     <p class="gallery__p">RYSE: Son Of Rome<br><br></p>
                 </a>
-                <div style="padding-bottom: 20px;">
+                <div class="btn_pad">
                     <a href="#" class="gallery__a">BUY</a>
                 </div>
             </div>
@@ -190,9 +209,10 @@
             <div class="gallery__img1">
                 <a href="#"><img src="./img/4.png" alt="game">
                     <p class="gallery__p">WORLD OF WARCRAFT:
-                        <BR>Wroth Of the Linch King</p>
+                        <br>Wroth Of the Linch King
+                    </p>
                 </a>
-                <div style="padding-bottom: 20px;">
+                <div class="btn_pad">
                     <a href="#" class="gallery__a">BUY</a>
                 </div>
             </div>
@@ -207,12 +227,11 @@
     <div class="comment">
 
         <div class="center">
-            <h1 class="comment__h1">Testimonial</h1>
+            <h2 class="comment__h1">Testimonial</h2>
             <h2 class="comment__h2">"</h2>
-            <p class="comment__p">Donec feugiat tellus sem, laoreet iaculis orci lobortis vel. Sed sed luctus orci lacinia risus. Ut porttiot ante ac tincidunt elementum. Curabitur ex dolor, condimentum vitae
-                <br>nunc vel, pulvinar semper justo. Vestibulum et aliquet magna, maximus dapibus enim. Vestibulum ex lectus, posuere eu viverra at, mattis et enim. Nam efficitur sem et lectus
-                <br>fringilla, at pharetra nulla luctus. Nunc, cursus, augue ac ultricies volutpat, neque erat congue jutso, ac pretium tellus eros a neque. Integer ipsum sem,
-                <br>consectetur a mollis ac, cursus eu ipsum.
+            <p class="comment__p">Donec feugiat tellus sem, laoreet iaculis orci lobortis vel. Sed sed luctus orci lacinia risus. Ut porttiot ante ac tincidunt elementum. Curabitur ex dolor, condimentum vitae nunc vel, pulvinar semper justo. Vestibulum et aliquet magna, maximus
+                dapibus enim. Vestibulum ex lectus, posuere eu viverra at, mattis et enim. Nam efficitur sem et lectus fringilla, at pharetra nulla luctus. Nunc, cursus, augue ac ultricies volutpat, neque erat congue jutso, ac pretium tellus eros a neque.
+                Integer ipsum sem, consectetur a mollis ac, cursus eu ipsum.
             </p>
 
             <p class="comment__p1">JOHN SMITH<span class="comment__span"> - FOUDER</span></p>
@@ -231,13 +250,13 @@
                 <div class="gallery__img1">
                     <img src="./img/11.png" alt="game">
                     <h1 class="comment_h1">Mary Jane</h1>
-                    <p class="comment__p">Vestibulum</p>
+                    <p class="comment__p comment__head1">Vestibulum</p>
 
-                    <div class="center favicon" style="justify-content:left; margin-top: 20px; padding-bottom: 20px;">
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-wifi" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-vk" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
+                    <div class="center favicon icon">
+                        <a href="#"><i class="fa fa-twitter link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-wifi link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-vk link_favicon" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -247,13 +266,13 @@
                 <div class="gallery__img1">
                     <img src="./img/22.png" alt="game">
                     <h1 class="comment_h1">Peter Parker</h1>
-                    <p class="comment__p">Vestibulum</p>
+                    <p class="comment__p comment__head1">Vestibulum</p>
 
-                    <div class="center favicon" style="justify-content:left; margin-top: 20px; padding-bottom: 20px;">
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-wifi" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-vk" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
+                    <div class="center favicon icon">
+                        <a href="#"><i class="fa fa-twitter link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-wifi link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-vk link_favicon" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -263,13 +282,13 @@
                 <div class="gallery__img1">
                     <img src="./img/33.png" alt="game">
                     <h1 class="comment_h1">Jahn Watson</h1>
-                    <p class="comment__p">Vestibulum</p>
+                    <p class="comment__p comment__head1">Vestibulum</p>
 
-                    <div class="center favicon" style="justify-content:left; margin-top: 20px; padding-bottom: 20px;">
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-wifi" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                        <a href="#"><i class="fa fa-vk" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
+                    <div class="center favicon icon">
+                        <a href="#"><i class="fa fa-twitter link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-wifi link_favicon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-vk link_favicon" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -277,16 +296,16 @@
             <div class="gallery__img">
                 <div class="gallery__img1">
                     <img src="./img/44.png" alt="game">
-                    <h1 class="comment_h1">Steven Wilson
-                        <h1p>
-                            <p class="comment__p">Vestibulum</p>
+                    <p class="comment_h1">Steven Wilson</p>
 
-                            <div class="center favicon" style="justify-content:left; margin-top: 20px; padding-bottom: 20px;">
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                                <a href="#"><i class="fa fa-wifi" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                                <a href="#"><i class="fa fa-vk" aria-hidden="true" style="margin-left: 0px; color: black; display: flex;align-items: center;justify-content: center; padding: 10px; border: 2px solid black; border-radius: 0px;"></i></a>
-                            </div>
+                    <p class="comment__p comment__head1">Vestibulum</p>
+
+                    <div class="center favicon icon">
+                        <a href="#"><i class="fa fa-twitter link_favicon link_icon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook link_favicon link_icon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-wifi link_favicon link_icon" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-vk link_favicon link_icon" aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -296,10 +315,11 @@
     <div class="subscribe">
         <section class="center subscribe__section">
             <h1 class="subscribe__h1">Subscribe with Us</h1>
-            <form name="form" class="subscribe__form">
+            <form name="form" class="subscribe__form" method="POST" action="main.php">
                 <input type="email" name="email" class="subscribe__email" placeholder="Email">
-                <a href="#" class="subscribe__a">Subscribe</a>
+                <a href="#" class="subscribe__a" name='btn_subs' type="submit">Subscribe</a>
             </form>
+            <p class="form__active">Благодарим вас за подписку!</p>
         </section>
     </div>
 
@@ -311,14 +331,16 @@
     <div class="connection center">
         <h1 class="connection__h1">Contact Us</h1>
         <div class="connection__common">
-            <div>
+            <div class="connection__wrapper">
                 <h6 class="connection__h6">Get in touch with us</h6>
                 <p class="connection__p">Lorem ipsum dolor sit. consectrtur adipisicing elit, sheets
                     <br>containing Lorem ipsum passages sed do, At eos et accusamus et
-                    <br> iusto odio digs qui blanditiis</p>
+                    <br> iusto odio digs qui blanditiis
+                </p>
 
                 <p class="connection__p">Leningradsky AVE 39, BLDG 79
-                    <br>MOSCOW 125167, Russia</p>
+                    <br>MOSCOW 125167, Russia
+                </p>
 
                 <p class="connection__p">Telephone: +00 111 222 3333</p>
 
@@ -332,7 +354,7 @@
             <form class="connection__form" name="connection__form">
                 <input type="text" placeholder="Name" class="connection__input" name="connection__form">
                 <input type="email" placeholder="Email" class="connection__input" name="connection__form">
-                <input type="text" placeholder="Massege" class="connection__input1" name="connection__form">
+                <textarea name="connection__input1" placeholder="Message" class="connection__input1" cols="30" rows="10"></textarea>
                 <a href="#" class="connection__a">SUBMIT</a>
             </form>
 
@@ -341,7 +363,7 @@
         </div>
 
         <h1 class="connection__h1 connection__h1_x2">Roite Map</h1>
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aec67e8acf6c692e476a3f2d9b7d1df0062bb7fd78f0ee8d1e0b1e6a31159fca1&amp;source=constructor" width="1170" height="300" frameborder="0"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f04ddac3c2e12f1b2f70c7b750cab123e5406ad1ba3b9ad003918f81fd600b3&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
     </div>
 
 
