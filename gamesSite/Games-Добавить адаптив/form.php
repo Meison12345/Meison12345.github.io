@@ -4,6 +4,6 @@ $inp = $_POST['email'];
 
 switch ($inp) {
     default:
-        echo 'Благодарим за подписку!';
+        echo 'Благодарим вас за подписку!';
 }
 ?>
