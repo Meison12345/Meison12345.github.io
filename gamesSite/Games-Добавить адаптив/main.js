@@ -47,4 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
             xhr.send("email" + userInput);
         }
     });
+    let form__submit = document.querySelector(".connection__a");
+    form__submit.addEventListener('click', (e) => {
+        e.preventDefault();
+        // if()
+    })
 });
