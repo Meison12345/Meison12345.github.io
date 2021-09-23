@@ -519,6 +519,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0px 10px 0px 10px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -873,34 +874,50 @@ a {
   width: 20px;
   height: 20px;
   z-index: 3;
+  position: relative;
 }
 
-.burger__span {
+.burger__span1 {
   width: 20px;
-  height: 3px;
-  background: white;
-  display: block;
-  content: "";
-}
-
-.burger__span::after {
-  width: 20px;
-  height: 3px;
+  height: 2px;
   background: white;
   display: block;
   content: "";
   position: absolute;
-  top: 67px;
 }
 
-.burger__span::before {
+.burger__span1-active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger__span2 {
   width: 20px;
-  height: 3px;
+  height: 2px;
   background: white;
   display: block;
   content: "";
   position: absolute;
-  top: 60px;
+  top: 8px;
+}
+
+.burger__span2-active {
+  display: none;
+}
+
+.burger__span3 {
+  width: 20px;
+  height: 2px;
+  background: white;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 16px;
+}
+
+.burger__span3-active {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .inp_anim {
@@ -979,6 +996,13 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subscribe__a:hover {
+    background-color: white;
+    color: black;
   }
 }
 
@@ -1168,6 +1192,8 @@ a {
   .subscribe__a {
     width: 300px;
     margin-left: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   .subscribe__h1 {
     font-size: 30px;
