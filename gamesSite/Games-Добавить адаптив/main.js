@@ -1,13 +1,30 @@
 "use strict";
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     let burger = document.querySelector(".burger");
     let nav_ul = document.querySelector(".nav_ul");
     burger.addEventListener("click", function() {
         this.classList.toggle("burger-active");
+        this.classList.toggle("burger__span-active");
+
+
         nav_ul.classList.toggle("nav_ul-active");
         document.body.classList.toggle("body-active");
     });
 
+    let form__submit = document.querySelector(".connection__a");
+    let inp__name = document.querySelector(".connection__input-name");
+    let inp__email = document.querySelector(".connection__input-email");
+    form__submit.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (
+            inp__name.value.trim().length > 3 &&
+            inp__email.value.trim().length > 5 &&
+            inp__email.value.trim().includes("@") &&
+            inp__email.value.trim().includes(".")
+        ) {
+            console.log('Спасибо, мы свяжемся с вами!')
+        }
+    });
 
     let btn_subs = document.querySelector(".subscribe__a");
     let inp_email = document.querySelector(".subscribe__email");
@@ -45,11 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             xhr.send("email" + userInput);
+        } else {
+            console.log('Введите корректный email')
         }
     });
-    let form__submit = document.querySelector(".connection__a");
-    form__submit.addEventListener('click', (e) => {
-        e.preventDefault();
-        // if()
-    })
 });
