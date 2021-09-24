@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let burger = document.querySelector(".burger");
     let nav_ul = document.querySelector(".nav_ul");
     burger.addEventListener("click", function() {
-        this.classList.toggle("burger-active");
-        this.classList.toggle("burger__span-active");
+        this.classList.toggle("open");
+        // this.classList.toggle("burger__span-active");
 
 
         nav_ul.classList.toggle("nav_ul-active");
