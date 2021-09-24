@@ -2,10 +2,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     let burger = document.querySelector(".burger");
     let nav_ul = document.querySelector(".nav_ul");
+    const windowInnerWidth = window.innerWidth;
+
     burger.addEventListener("click", function() {
         this.classList.toggle("open");
         nav_ul.classList.toggle("nav_ul-active");
         document.body.classList.toggle("body-active");
+
     });
 
     let form__submit = document.querySelector(".connection__a");
