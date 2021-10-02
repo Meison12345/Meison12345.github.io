@@ -52,4 +52,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+
+
+    const burger = document.querySelector(".burger");
+    const nav_ul = document.querySelector(".nav_ul");
+    const menu_burger = document.querySelector('.secondNav__burger');
+    burger.addEventListener("click", function(element) {
+        this.classList.toggle('open');
+        document.body.classList.toggle('body_active');
+        menu_burger.classList.toggle('secondNav__burger');
+    })
+
 });

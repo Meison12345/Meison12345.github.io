@@ -375,7 +375,9 @@ body {
 }
 
 .burger {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .brand-logo {
@@ -395,7 +397,6 @@ body {
   width: 20px;
   background-color: white;
   border-radius: 20px;
-  position: absolute;
   -webkit-transition-duration: .25s;
   transition-duration: .25s;
   -webkit-transition-delay: .25s;
@@ -461,7 +462,15 @@ body {
           transform: rotateZ(45deg);
 }
 
+.body_active {
+  overflow: hidden;
+}
+
 .secondNav__burger {
+  display: none;
+}
+
+.burger__span {
   display: none;
 }
 
@@ -558,7 +567,18 @@ body {
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: inherit;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100vw;
+    padding: 20px;
+  }
+  .secondNav__logo_ {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .collection__right {
     display: none;
@@ -592,6 +612,47 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .burger__span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .secondNav__burger_active {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+  }
+  .secondNav__burger {
+    display: none;
+  }
+  .secondNav__burger_active li a {
+    padding: 20px;
+    display: block;
+  }
+}
+
+@media (min-width: 601px) {
+  .secondNav__burger_active {
+    display: none;
+  }
+  .body_active {
+    overflow: scroll;
   }
 }
 
