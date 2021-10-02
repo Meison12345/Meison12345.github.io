@@ -245,6 +245,7 @@ body {
   outline: 1px solid white;
   padding: 20px;
   display: block;
+  font-size: 20px;
   margin: 0 auto;
 }
 
@@ -266,7 +267,7 @@ body {
   width: fit-content;
   text-align: center;
   padding: 20px;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .product__content {
@@ -369,6 +370,101 @@ body {
   color: white;
 }
 
+.nav_ul_reg {
+  display: block;
+}
+
+.burger {
+  display: none;
+}
+
+.brand-logo {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.nav-icon {
+  position: relative;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.nav-icon span {
+  height: 3px;
+  width: 20px;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -webkit-transition-delay: .25s;
+  transition-delay: .25s;
+}
+
+.nav-icon span:before {
+  left: 0;
+  position: absolute;
+  top: -6px;
+  height: 3px;
+  width: 20px;
+  background-color: white;
+  content: "";
+  border-radius: 20px;
+  -webkit-transition-duration: .25s;
+  transition-duration: .25s;
+  -webkit-transition: top .25s .25s, -webkit-transform .25s;
+  transition: top .25s .25s, -webkit-transform .25s;
+  transition: transform .25s, top .25s .25s;
+  transition: transform .25s, top .25s .25s, -webkit-transform .25s;
+}
+
+.nav-icon span:after {
+  left: 0;
+  position: absolute;
+  top: 6px;
+  height: 3px;
+  width: 20px;
+  background-color: white;
+  content: "";
+  border-radius: 20px;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  transition: top .25s .25s, -webkit-transform .25s;
+}
+
+.nav-icon.open span {
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-delay: .25s;
+          transition-delay: .25s;
+  background: transparent;
+}
+
+.nav-icon.open span:before {
+  -webkit-transition: top .25s, -webkit-transform .25s .25s;
+  transition: top .25s, -webkit-transform .25s .25s;
+  transition: top .25s, transform .25s .25s;
+  transition: top .25s, transform .25s .25s, -webkit-transform .25s .25s;
+  top: 0px;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
+.nav-icon.open span:after {
+  -webkit-transition: top 0.4s, -webkit-transform .25s .25s;
+  transition: top 0.4s, -webkit-transform .25s .25s;
+  transition: top 0.4s, transform .25s .25s;
+  transition: top 0.4s, transform .25s .25s, -webkit-transform .25s .25s;
+  top: 0px;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.secondNav__burger {
+  display: none;
+}
+
 @media (max-width: 1140px) {
   .prefooter {
     padding: 20px 0;
@@ -397,6 +493,171 @@ body {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .secondNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 26px;
+  }
+  .nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .middle__img {
+    display: none;
+  }
+  .middle__right-text {
+    max-width: 500px;
+  }
+  .main-img {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1099px) {
+  .product__content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-text__down {
+    margin: 100px 15px 0px 15px;
+    font-size: 16px;
+  }
+  .header {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .collection__left {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .secondNav__right-ul {
+    display: none;
+  }
+  .secondNav__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: inherit;
+  }
+  .collection__right {
+    display: none;
+  }
+  .secondNav {
+    position: fixed;
+    width: 100vw;
+    z-index: 11;
+  }
+  .prefooter__main-text {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 15px;
+  }
+  .prefooter__info {
+    display: none;
+  }
+  .main-text__down {
+    margin: 85px 15px 0px 15px;
+    font-size: 14px;
+  }
+  .prefooter__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav_ul_left li,
+  .nav_ul_right li {
+    font-size: 20px;
+  }
+  .main-text {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .secondNav__right-ul,
+  .collection__right-catalog,
+  .middle__right-link,
+  .collection__clock,
+  .product__clock_,
+  .prefooter__link li a,
+  .prefooter__form-link,
+  .brand-logo {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .secondNav__right-ul li:hover {
+    background: #1F1F1F;
+    cursor: pointer;
+  }
+  .collection__right-catalog:hover {
+    background: white;
+    color: black;
+  }
+  .middle__right-link:hover {
+    background: white;
+    color: black;
+  }
+  .collection__clock:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .product__clock_:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .prefooter__link li a:hover,
+  .prefooter__form-link:hover {
+    background: #1F1F1F;
+  }
+  .nav_ul_login:hover,
+  .nav_ul_reg:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .brand-logo:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .brand-logo {
+    -webkit-filter: brightness(1);
+            filter: brightness(1);
   }
 }
 /*# sourceMappingURL=style.css.map */

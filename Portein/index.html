@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>PORTEN</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://use.fontawesome.com/a2f9fd80e3.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -36,14 +38,26 @@
         </nav>
     </header>
 
+    <ul class="secondNav__burger">
+        <li><a href="#">Понравилось</a></li>
+        <li><a href="#">Личный кабинет</a></li>
+        <li><a href="#">Настройки</a></li>
+        <li><a href="#">Войти / Зарегистрироваться</a></li>
+        <li><a href="#">Каталог</a></li>
+    </ul>
 
     <nav class="secondNav center">
-        <div class="secondNav__logo"><a href="#">PORTEN</a></div>
+        <div class="secondNav__logo">
+            <a href="index.html" class="secondNav__logo">PORTEN</a>
+            <div class="burger nav-icon">
+                <span></span>
+            </div>
+        </div>
         <div class="secondNav__right">
             <ul class="secondNav__right-ul">
                 <li><a href="#">Понравилось</a></li>
-                <li><a href="#">личный кабинет</a></li>
-                <li><a href="#">настройки</a></li>
+                <li><a href="#">Личный кабинет</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
                 <li>
                     <a href="#"><img src="img/cart.png" alt="cart"></a>
                 </li>
@@ -99,7 +113,7 @@
                 <img src="img/man.png" alt="man" class="collection-man">
                 <div class="collection__right-text">
                     <h2>НОВАЯ КОЛЛЕКЦИЯ</h2>
-                    <a href="#" class="collection__right-catalog">Каталог</a>
+                    <a href="catalog.html" class="collection__right-catalog">Каталог</a>
                 </div>
             </div>
         </div>
@@ -133,17 +147,17 @@
     <section class="center brand">
         <h2 class="brand__header">НАШИ БРЕНДЫ</h2>
         <div class="brand__main">
-            <img src="img/coco.png" alt="brand">
-            <img src="img/coco.png" alt="brand">
-            <img src="img/coco.png" alt="brand">
-            <img src="img/coco.png" alt="brand">
+            <a href="#" class="brand-logo"><img src="img/coco.png" alt="brand"></a>
+            <a href="#" class="brand-logo"><img src="img/coco.png" alt="brand"></a>
+            <a href="#" class="brand-logo"><img src="img/coco.png" alt="brand"></a>
+            <a href="#" class="brand-logo"><img src="img/coco.png" alt="brand"></a>
         </div>
     </section>
 
 
 
     <section class="center prefooter">
-        <div>
+        <div class="prefooter__info">
             <h3 class="prefooter__header">О МАГАЗИНЕ</h3>
             <p class="prefooter__main-text prefooter__main-text_">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium
                 quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.</p>
