@@ -1,6 +1,6 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function() {
-    /**@description Конструктор для сущности 'продукт' 
+    /**@description Конструктор для сущности 'продукт'
      * @param {string} name - Название товара
      * @param {number} price - Цена товара
      * @returns {string} возвращает HTML разметку
@@ -32,35 +32,40 @@ document.addEventListener("DOMContentLoaded", function() {
     const mas = [clock1, clock2, clock3, clock4, clock5, clock6, clock7, clock8];
 
     let prodContent = document.querySelector(".product__content");
-    mas.forEach((el) => {
-        prodContent.insertAdjacentHTML("afterbegin", el.renderProduct());
-    });
-
-    function createEl() {
-        let block = document.querySelector('.prefooter__form')
-        let el = document.createElement('p');
-        block.insertAdjacentHTML('beforeend', el.innerHTML = 'Благодарим вас!');
+    if (prodContent != null) {
+        mas.forEach((el) => {
+            prodContent.insertAdjacentHTML("afterbegin", el.renderProduct());
+        });
     }
 
-    const formEmail = document.querySelector('.prefooter__form-email');
-    const formBtn = document.querySelector('.prefooter__form-link');
+    // function createEl() {
+    //     let block = document.querySelector(".prefooter__form");
+    //     let el = document.createElement("p");
+    //     block.insertAdjacentHTML("beforeend", (el.innerHTML = "Благодарим вас!"));
+    // }
+
+    const formEmail = document.querySelector(".prefooter__form-email");
+    const formBtn = document.querySelector(".prefooter__form-link");
     formBtn.addEventListener("click", function(el) {
-        el.preventDefault()
-        if (formEmail.value.trim() !== '' && /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(formEmail.value.trim())) {
-            console.log('Благодарим вас!');
+        el.preventDefault();
+        if (
+            formEmail.value.trim() !== "" &&
+            /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
+                formEmail.value.trim()
+            )
+        ) {
+            console.log("Благодарим вас!");
             //some function or AJAX
         }
-    })
+    });
 
-
-
+    //Burger
     const burger = document.querySelector(".burger");
     const nav_ul = document.querySelector(".nav_ul");
-    const menu_burger = document.querySelector('.secondNav__burger');
+    const menu_burger = document.querySelector(".secondNav__burger");
     burger.addEventListener("click", function(element) {
-        this.classList.toggle('open');
-        document.body.classList.toggle('body_active');
-        menu_burger.classList.toggle('secondNav__burger');
-    })
-
+        this.classList.toggle("open");
+        document.body.classList.toggle("body_active");
+        menu_burger.classList.toggle("secondNav__burger");
+    });
 });
