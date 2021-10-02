@@ -14,8 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
             list.innerHTML += `<div class="product__clock_">
                      <a href="#" class="product__link">
                          <img src="img/clock.png" alt="product" class="product__clock">
-                         <p class="content__name">${content[key].name}</p>
-                         <p class="content__price">${content[key].price}<p>руб.</p></p>
+                            <p class="content__name">${content[key].name}</p>
+                            <div class="product__clock-wrapper">
+                            <p class="content__price">${content[key].price}<p>руб.</p>
+                         </div>
                      </a>
                      </div>`;
         }
