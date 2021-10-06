@@ -59,6 +59,21 @@ body {
     margin-right: 10px;
 }
 
+body,
+html {
+    height: 100%;
+}
+
+.all__wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle_main-block {
+    flex: 1 1 auto;
+}
+
 .nav_ul_login {
     -webkit-box-align: center;
     -ms-flex-align: center;
