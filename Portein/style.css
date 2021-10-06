@@ -508,8 +508,11 @@ body {
 }
 
 .secondNav__right-ul li a {
-    display: block;
     padding: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product__clock-wrapper {
