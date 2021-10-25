@@ -244,6 +244,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;  
+    background: #2f2a2d;
+    height: 40px;
 }
 
 html,
