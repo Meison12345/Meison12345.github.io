@@ -240,8 +240,10 @@ img {
 }
 
 .footer {
-  background-color: #2f2a2d;
-  height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 html,
