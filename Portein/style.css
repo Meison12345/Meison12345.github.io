@@ -520,6 +520,10 @@ html {
     padding: 5px;
     text-align: center;
     font-size: 20px;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    background: transparent;
 }
 
 .secondNav__right-ul li a {
