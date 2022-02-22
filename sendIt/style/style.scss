@@ -239,7 +239,23 @@ a {
                 font-style: normal;
                 font-weight: 400;
                 letter-spacing: 0em;
+                margin-left: 8px;
             }
         }
+    }
+}
+
+.reviews {
+    margin: 70px 0px;
+}
+
+.wrapper-reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 55px;
+    &-left,
+    &-right {
+        width: 460px;
     }
 }
