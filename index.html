@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Мы – агрегатор служб доставки. С нами удобно вам, вашим клиентам и курьерским службам.
+    Для вас наши услуги бесплатны, так как мы получаем бонусы от служб доставок за предоставленный объем заказов, а вы получаете надежный сервис в подарок!">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="center header">
+            <nav class="header-nav">
+                <a href="index.html"><img src="img/header__name.png" width="160" height="46" alt="SendIt"></a>
+                <ul class="header-title">
+                    <li>
+                        <a href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a href="#">Описание</a>
+                    </li>
+                    <li>
+                        <a href="#">Преимущества</a>
+                    </li>
+                    <li>
+                        <a href="#">Отзывы</a>
+                    </li>
+                    <li>
+                        <a href="#">Партнёры</a>
+                    </li>
+                    <li>
+                        <a href="#">Гарантии</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <h1>ПРИДУМАЙТЕ ЧТО ОТПРАВИТЬ </h1>
+                <h2>А посылка доедет сама</h2>
+                <button class="main-btn">ОТПРАВИТЬ ПОСЫЛКУ</button>
+            </div>
+        </header>
+
+
+        <section class="center agregator">
+            <img src="img/Group2.png" alt="group2__bg" width="660" height="336">
+            <div class="agregator-desc">
+                <h3>Мы – агрегатор служб доставки</h3>
+                <p>С нами удобно вам, вашим клиентам и курьерским службам. Для вас наши услуги бесплатны, так как мы получаем бонусы от служб доставок за предоставленный объем заказов, а вы получаете надежный сервис в подарок!
+                </p>
+                <button class="agregator-btn">ОТПРАВИТЬ ПОСЫЛКУ</button>
+            </div>
+        </section>
+
+
+
+        <section class="center mans">
+            <div class="mans-elem">
+                <img src="img/Asset1.png" alt="asset1.png" width="462" height="312">
+                <h3>Шаг 1</h3>
+                <p>Придумайте что и кому отправить</p>
+            </div>
+
+            <div class="mans-elem">
+                <img src="img/Asset2.png" alt="asset1.png" width="459" height="299">
+                <h3>Шаг 2</h3>
+                <p>Создайте заявку на сайте SendIt - Ваш персональный менеджер позвонит и подтвердит запрос, уточнит все необходимые данные</p>
+            </div>
+
+            <div class="mans-elem">
+                <img src="img/Asset3.png" alt="asset1.png" width="460" height="311">
+                <h3>Шаг 3</h3>
+                <p>К Вам приезжает курьер, забирает посылку, Вы подписываете один документ</p>
+            </div>
+
+            <div class="mans-elem">
+                <img src="img/Asset4.png" alt="asset1.png" width="461" height="299">
+                <h3>Шаг 4</h3>
+                <p>Вы ждёте подтверждения доставки, слова радости и благодарности от адресата :)</p>
+            </div>
+        </section>
+
+        <section class="info center">
+            <h3 class="info-header">Мы берём все заботы по доставке на себя!</h3>
+            <button class="info-btn">ОТПРАВИТЬ ПОСЫЛКУ</button>
+        </section>
+
+        <section class="feedback center">
+            <div class="feedback-left">
+                <h3 class="feedback-left-title">ХОТИТЕ МЫ ВАМ ПЕРЕЗВОНИМ?</h3>
+                <h4 class="feedback-left-text">ЗАКАЖИТЕ ЗВОНОК И МЕНЕДЖЕР ВАМ ВСЕ РАССКАЖЕТ И ОБЪЯСНИТ</h4>
+            </div>
+            <div class="feedback-right">
+                <input type="text" placeholder="Ваш телефон" class="feedback-right-num">
+                <button class="feedback-right-btn" @click="showModelWin">ЗАКАЗАТЬ ЗВОНОК</button>
+                <label class="feedback-right-label">
+                    <input type="checkbox" class="feedback-right-label-check">
+                    <p class="feedback-right-label-text">Я согласен на обработку персональных данных</p>
+                </label>
+            </div>
+        </section>
+
+
+        <section class="modal-win">
+            <div class="feedback-modal-win">
+                <div class="feedback-modal-win-close"></div>
+                <h4>Оставьте заявку, и мы Вам перезвоним!</h4>
+                <input type="text" placeholder="Ваше имя" class="feedback-modal-win-name">
+                <input type="text" placeholder="Ваш телефон" class="feedback-modal-win-num">
+                <button class="info-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+        </section>
+
+
+        <section class="center reviews">
+            <h2 class="big-text">ОТЗЫВЫ</h2>
+            <div class="wrapper-reviews">
+                <div class="wrapper-reviews-left">
+                    <img src="img/face1.png" alt="face1.png" class="wrapper-reviews-face" width="160" height="159">
+                    <div class="reviews-data">
+                        <h3 class="reviews-name">Дарья</h3>
+                        <h4 class="reviews-link">La Intuicion</h4>
+                        <h4 class="reviews-item">Посылка: товары</h4>
+                        <h4 class="reviews-from">Откуда: Москва</h4>
+                        <h4 class="reviews-to">Куда: Нижневартовск</h4>
+                    </div>
+                    <p class="reviews-text">Отличный и качественный сервис. Долго искали курьерскую службу для доставки наших товаров. Решили попробовать и были приятно удивлены, что помимо удобного сайта, компания предоставляет доступ в личный кабинет, где реализованы многие
+                        наши потребности (ведение адресной базы, выбор и вызов курьера в пару кликов).</p>
+                </div>
+                <div class="wrapper-reviews-right">
+                    <img src="img/face2.png" alt="face2.png" class="wrapper-reviews-face" width="160" height="160">
+                    <div class="reviews-data">
+                        <h3 class="reviews-name">Елена</h3>
+                        <h4 class="reviews-link">Global Logic</h4>
+                        <h4 class="reviews-item">Посылка: товары</h4>
+                        <h4 class="reviews-from">Откуда: Москва</h4>
+                        <h4 class="reviews-to">Куда: Калининград</h4>
+                    </div>
+                    <p class="reviews-text">Мне нравится работать с SendIt, потому что это удобно: моментальный расчет стоимости доставки, удобный сайт, выборка среди основных надёжных логистических компаний и самый значимый фактор – всё это можно оперативно организовать и не
+                        волноваться. И ещё хочу сказать отдельное спасибо менеджеру за отзывчивость.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="center advantages">
+            <h3 class="big-text">НАШИ ПРЕИМУЩЕСТВА</h3>
+            <ul class="advantages-nav">
+                <li class="advantages-nav-elem">
+                    <div class="advantages-dot">
+                        <img src="img/1.png" alt="1.png" width="84" height="49">
+                    </div>
+                    <p class="advantages-nav-text">Бесплатный сервис</p>
+                </li>
+                <li class="advantages-nav-elem">
+                    <div class="advantages-dot">
+                        <img src="img/2.png" alt="2.png" width="62" height="76">
+                    </div>
+                    <p class="advantages-nav-text">Огромный выбор вариантов доставки</p>
+                </li>
+                <li class="advantages-nav-elem">
+                    <div class="advantages-dot">
+                        <img src="img/3.png" alt="3.png" width="66" height="66">
+                    </div>
+                    <p class="advantages-nav-text">4 параметра лучшего предложения</p>
+                </li>
+                <li class="advantages-nav-elem">
+                    <div class="advantages-dot">
+                        <img src="img/4.png" alt="4.png" width="68" height="61">
+                    </div>
+                    <p class="advantages-nav-text">Удобство заказа</p>
+                </li>
+                <li class="advantages-nav-elem">
+                    <div class="advantages-dot">
+                        <img src="img/5.png" alt="5.png" width="68" height="66">
+                    </div>
+                    <p class="advantages-nav-text">Online-поддержка</p>
+                </li>
+                <li class="advantages-nav-elem">
+                    <div class="advantages-dot">
+                        <img src="img/6.png" alt="6.png" width="74" height="58">
+                    </div>
+                    <p class="advantages-nav-text">Единый номер отслеживания</p>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <section class="center guarantees">
+            <h3 class="big-text guarantees-title">НАШИ ГАРАНТИИ</h3>
+            <div class="guarantees-nav">
+                <div class="guarantees-wrapper">
+                    <div class="guarantees-dot">
+                        <img src="img/Forma1.png" alt="Forma1.png" width="75" height="70">
+                    </div>
+                    <h4 class="guarantees-name">Страховка отправлений</h4>
+                    <p class="guarantees-text">Контроль работы курьеров в онлайн режиме. Страхование по запросу клиента Каждый куръер находится под пристальным вниманием менеджеров SendIt</p>
+                    <button class="guarantees-btn info-btn">ПОДРОБНЕЕ</button>
+                </div>
+                <div class="guarantees-wrapper">
+                    <div class="guarantees-dot">
+                        <img src="img/Forma2.png" alt="Forma2.png" width="75" height="82">
+                    </div>
+                    <h4 class="guarantees-name">Прозрачность расчетов</h4>
+                    <p class="guarantees-text">Чтобы узнать точную стоимость отправления вам не нужно связываться с каждой курьерской службой в отдельности и сравнивать полученные предложения, просто воспользуйтесь нашим сервисом </p>
+                    <button class="guarantees-btn info-btn">ПОДРОБНЕЕ</button>
+                </div>
+                <div class="guarantees-wrapper">
+                    <div class="guarantees-dot">
+                        <img src="img/Forma3.png" alt="Forma3.png" width="67" height="69">
+                    </div>
+                    <h4 class="guarantees-name">Лучшие поставщики</h4>
+                    <p class="guarantees-text">Мы работаем с самыми надежными и известными операторами доставки. Проверка надежности курьерской компании, экспертная оценка качества предоставляемых услуг</p>
+                    <button class="guarantees-btn info-btn">ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="center more-info">
+            <h3 class="big-text">ОСТАЛИСЬ СОМНЕНИЯ?</h3>
+            <div class="more-info-wrapper">
+                <div class="more-info-helper">
+                    <details class="more-info-drop-menu">
+                        <summary class="more-info-summory">На бумажную волокиту уйдёт много времени, а мне нужно доставить срочно!
+                        </summary>
+                        <p class="more-info-text">Это не так. Вам нужно заполнить и подписать всего один документ, который распространяется на все службы доставки, которые будут доставлять вашу посылку
+                        </p>
+                    </details>
+                    <details class="more-info-drop-menu">
+                        <summary class="more-info-summory">Мне необходимо совершить доставку по нескольким адресам, нужно много чего заполнять
+                        </summary>
+                        <p class="more-info-text">Это не так. Вам нужно заполнить и подписать всего один документ, который распространяется на все службы доставки, которые будут доставлять вашу посылку
+                        </p>
+                    </details>
+                    <details class="more-info-drop-menu">
+                        <summary class="more-info-summory">Вы не сможете доставить посылку за границу</summary>
+                        <p class="more-info-text">Это не так. Вам нужно заполнить и подписать всего один документ, который распространяется на все службы доставки, которые будут доставлять вашу посылку
+                        </p>
+                    </details>
+                </div>
+                <div class="more-info-helper">
+                    <details class="more-info-drop-menu">
+                        <summary class="more-info-summory">Вы не занимаетесь такими простыми грузами, как мебель
+                        </summary>
+                        <p class="more-info-text">Это не так. Вам нужно заполнить и подписать всего один документ, который распространяется на все службы доставки, которые будут доставлять вашу посылку
+                        </p>
+                    </details>
+
+                    <details class="more-info-drop-menu">
+                        <summary class="more-info-summory">Я отправляю вместе с коллегами, мы можем легко запутаться где чьё
+                        </summary>
+                        <p class="more-info-text">Это не так. Вам нужно заполнить и подписать всего один документ, который распространяется на все службы доставки, которые будут доставлять вашу посылку
+                        </p>
+                    </details>
+
+                    <details class="more-info-drop-menu">
+                        <summary class="more-info-summory">Нужно заполнять кучу документов</summary>
+                        <p class="more-info-text">Это не так. Вам нужно заполнить и подписать всего один документ, который распространяется на все службы доставки, которые будут доставлять вашу посылку
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="center sponsors">
+            <div class="sponsors-wrapper">
+                <a href="#"><img src="img/Rectangle.png" alt="arrow-left" class="slide-left" width="17" height="32"></a>
+                <div class="sponsors-icons">
+                    <a href="#"><img src="img/bringo.png" alt="bringo.png" width="94" height="60"></a>
+                    <a href="#"><img src="img/cdek.png" alt="cdek.png" width="94" height="60"></a>
+                    <a href="#"><img src="img/city_express.png" alt="city_express.png" width="94" height="60"></a>
+                    <a href="#"><img src="img/dpd.png" alt="dpd.png" width="94" height="60"></a>
+                    <a href="#"><img src="img/pony.png" alt="pony.png" width="94" height="60"></a>
+                    <a href="#"><img src="img/spsr.png" alt="spsr.png" width="94" height="60"></a>
+                    <a href="#"><img src="img/ups.png" alt="ups.png" width="94" height="63"></a>
+                </div>
+                <a href="#"><img src="img/Rectangle.png" alt="arrow-right" class="slide-right" width="17" height="32"></a>
+
+            </div>
+
+        </section>
+
+        <footer class="center footer">
+            <div class="footer-top">
+                <h3 class="footer-top-tite">ОСТАЛИСЬ ВОПРОСЫ?</h3>
+                <div class="footer-top-info">
+                    <input type="tel" class="footer-top-phone" placeholder="Ваш телефон">
+                    <label class="footer-top-data">
+                        <input type="checkbox" class="footer-top-number">
+                        <p class="footer-top-text">Я согласен на обработку персональных данных</p>
+                    </label>
+                </div>
+                <button class="info-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+
+            <div class="footer-mid">
+                <nav class="footer-mid-nav">
+                    <ul class="footer-mid-wrapper">
+                        <li>
+                            <a href="index.html"><img src="img/footer-name.png" alt="Sendit" width="160" height="48"></a>
+                        </li>
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Описание</a>
+                        </li>
+                        <li>
+                            <a href="#">Преимущества</a>
+                        </li>
+                        <li>
+                            <a href="#">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#">Партнёры</a>
+                        </li>
+                        <li>
+                            <a href="#">Гарантии</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-bot">
+                <h5 class="footer-bot-title">&copy; Все права защищены</h5>
+                <p class="footer-bot-date">2022</p>
+                <nav class="footer-bot-nav">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="img/vk.svg" alt="vkontakte" width="20" height="20"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/inst.svg" alt="instagram" width="20" height="20"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/face.svg" alt="facebook" width="20" height="20"></a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="footer-bot-author">Стариков И.А.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script src="js/Vue.js"></script>
+<script src="js/app.js"></script>
+
+</html>
