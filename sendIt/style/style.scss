@@ -271,9 +271,21 @@ a {
 //     width: 100vw;
 //     position: relative;
 // }
+.modalActive {
+    filter: blur(2px);
+    overflow: hidden;
+}
+
+.modal-win {
+    top: 250%;
+    position: absolute;
+    left: 50%;
+}
+
 .feedback-modal-win {
-    display: none;
-    // display: flex; для клика
+    padding-bottom: 30px;
+    filter: drop-shadow(2px 4px 6px var(--black));
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
