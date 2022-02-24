@@ -42,15 +42,20 @@
                             <a href="#">FAQ</a>
                         </li>
                     </ul>
+                    <button class="header-burger">
+                        <div class="header-burger-first"></div>
+                        <div class="header-burger-second"></div>
+                        <div class="header-burger-third"></div>
+                    </button>
                 </nav>
                 <div class="header-content">
-                    <h1>ПРИДУМАЙТЕ ЧТО ОТПРАВИТЬ </h1>
+                    <h1>ПРИДУМАЙТЕ ЧТО ОТПРАВИТЬ</h1>
                     <h2>А посылка доедет сама</h2>
                     <button class="main-btn">ОТПРАВИТЬ ПОСЫЛКУ</button>
                 </div>
             </header>
 
-
+            <!-- 
             <section class="center agregator">
                 <img src="img/Group2.png" alt="group2__bg" width="660" height="336">
                 <div class="agregator-desc">
@@ -283,13 +288,13 @@
                 <div class="footer-top">
                     <h3 class="footer-top-tite">ОСТАЛИСЬ ВОПРОСЫ?</h3>
                     <div class="footer-top-info">
-                        <input type="tel" class="footer-top-phone" placeholder="Ваш телефон">
+                        <input type="tel" class="footer-top-phone" placeholder="Ваш телефон" v-model="number1">
                         <label class="footer-top-data">
-                        <input type="checkbox" class="footer-top-number">
+                        <input type="checkbox" class="footer-top-number" v-model="isCheckbox1">
                         <p class="footer-top-text">Я согласен на обработку персональных данных</p>
                     </label>
                     </div>
-                    <button class="info-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+                    <button class="info-btn" @click="openModelWin">ЗАКАЗАТЬ ЗВОНОК</button>
                 </div>
 
                 <div class="footer-mid">
@@ -351,10 +356,10 @@
                 <input type="text" placeholder="Ваш телефон" class="feedback-modal-win-num" v-model="number">
                 <button class="info-btn">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
-        </section>
-    </div>
-    <script src="js/Vue.js"></script>
-    <script src="js/app.js"></script>
+        </section> -->
+        </div>
+        <!-- <script src="js/Vue.js"></script> -->
+        <!-- <script src="js/app.js"></script> -->
 </body>
 
 </html>
