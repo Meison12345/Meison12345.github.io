@@ -9,6 +9,7 @@ const app = new Vue({
         number: '',
         number1: '',
         name: '',
+        burgerOpen: false,
     },
     methods: {
         openModelWin() {
