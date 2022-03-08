@@ -10,8 +10,8 @@
     <script src="https://use.fontawesome.com/a2f9fd80e3.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
@@ -40,79 +40,80 @@
                 </ul>
             </nav>
         </header>
+        <div class="middle_main-block">
+            <ul class="secondNav__burger secondNav__burger_active">
+                <li><a href="#">Понравилось</a></li>
+                <li><a href="#">Личный кабинет</a></li>
+                <li><a href="#">Настройки</a></li>
+                <li><a href="#">Войти / Зарегистрироваться</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+            </ul>
 
-        <ul class="secondNav__burger secondNav__burger_active">
-            <li><a href="#">Понравилось</a></li>
-            <li><a href="#">Личный кабинет</a></li>
-            <li><a href="#">Настройки</a></li>
-            <li><a href="#">Войти / Зарегистрироваться</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-        </ul>
-
-        <nav class="secondNav center">
-            <div class="secondNav__logo">
-                <a href="index.html" class="secondNav__logo_">PORTEN</a>
-                <div class="burger nav-icon">
-                    <span class="burger__span"></span>
+            <nav class="secondNav center">
+                <div class="secondNav__logo">
+                    <a href="index.html" class="secondNav__logo_">PORTEN</a>
+                    <div class="burger nav-icon">
+                        <span class="burger__span"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="secondNav__right">
-                <ul class="secondNav__right-ul">
-                    <li><a href="#">Понравилось</a></li>
-                    <li><a href="#">Личный кабинет</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li>
-                        <a href="#"><img src="img/cart.png" alt="cart"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="img/zoom.png" alt="zoom"></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                <div class="secondNav__right">
+                    <ul class="secondNav__right-ul">
+                        <li><a href="#">Понравилось</a></li>
+                        <li><a href="#">Личный кабинет</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li>
+                            <a href="#"><img src="img/cart.png" alt="cart"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/zoom.png" alt="zoom"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-        <div class="sort">
-            Сортировка по цене:
-            <input type="text" id="from" placeholder="от" class="sort-inp"> -
-            <input type="text" id="to" placeholder="до" class="sort-inp">
+            <div class="sort">
+                Сортировка по цене:
+                <input type="text" id="from" placeholder="от" class="sort-inp"> -
+                <input type="text" id="to" placeholder="до" class="sort-inp">
+            </div>
+            <div class="center list">
+
+
+            </div>
+            <section class="center prefooter">
+                <div class="prefooter__info">
+                    <h3 class="prefooter__header">О МАГАЗИНЕ</h3>
+                    <p class="prefooter__main-text prefooter__main-text_">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis.
+                        Pretium quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.</p>
+                </div>
+                <div>
+                    <h3 class="prefooter__header">КАТЕГОРИИ</h3>
+                    <ul class="prefooter__link">
+                        <li><a href="#">Часы</a></li>
+                        <li><a href="#">Браслеты</a></li>
+                        <li><a href="#">Ремни</a></li>
+                        <li><a href="#">Ювелирные изделия</a></li>
+                        <li><a href="#">Запонки</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="prefooter__header">РАССЫЛКА</h3>
+                    <p class="prefooter__main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.</p>
+                    <form class="prefooter__form">
+                        <input type="email" placeholder="Ваша почта" class="prefooter__form-email">
+                        <a href="#" class="prefooter__form-link">ПОДПИСАТЬСЯ</a>
+                    </form>
+                </div>
+            </section>
         </div>
-        <div class="center list middle_main-block">
-
-
-        </div>
-        <section class="center prefooter">
-            <div class="prefooter__info">
-                <h3 class="prefooter__header">О МАГАЗИНЕ</h3>
-                <p class="prefooter__main-text prefooter__main-text_">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium
-                    quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.</p>
-            </div>
-            <div>
-                <h3 class="prefooter__header">КАТЕГОРИИ</h3>
-                <ul class="prefooter__link">
-                    <li><a href="#">Часы</a></li>
-                    <li><a href="#">Браслеты</a></li>
-                    <li><a href="#">Ремни</a></li>
-                    <li><a href="#">Ювелирные изделия</a></li>
-                    <li><a href="#">Запонки</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="prefooter__header">РАССЫЛКА</h3>
-                <p class="prefooter__main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.</p>
-                <form class="prefooter__form">
-                    <input type="email" placeholder="Ваша почта" class="prefooter__form-email">
-                    <a href="#" class="prefooter__form-link">ПОДПИСАТЬСЯ</a>
-                </form>
-            </div>
-        </section>
         <footer class="center footer">
             <p class="footer__text">&copy; 2020 Все права защищены</p>
 
         </footer>
     </div>
-    <script src="main.js"></script>
-    <script src="async.js"></script>
-    <script src="sort.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/async.js"></script>
+    <script src="js/sort.js"></script>
 </body>
 
 </html>
