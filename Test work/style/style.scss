@@ -18,13 +18,14 @@
     --box-shodow-form: rgba(0, 0, 0, 0.15);
     --form-btn-close: #B5B8BE;
     --modal-win-shadow: rgba(155, 155, 155, 0.25);
+    --site-load: 1s;
     --modal-time: 0.5s;
     --goods-time: 0.5s;
     --black: black;
 }
 
 body {
-    animation-duration: var(--modal-time);
+    animation-duration: var(--site-load);
     animation-name: body;
 }
 
@@ -40,6 +41,10 @@ li {
 button {
     background: none;
     border: none;
+}
+
+.active {
+    overflow: hidden;
 }
 
 .center {
@@ -70,6 +75,10 @@ button {
         font-style: normal;
         font-weight: 700;
         cursor: pointer;
+        transition: var(--goods-time);
+    }
+    &__img {
+        transition: var(--goods-time);
     }
 }
 
@@ -131,14 +140,18 @@ button {
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
-        color: var(--gray)
+        color: var(--gray);
+        transition: var(--goods-time);
     }
     &-title {
         font-size: 32px;
         font-style: normal;
         font-weight: 500;
-        &-left {
+        transition: var(--goods-time);
+        &-left,
+        &-right {
             color: var(--Dark-turquoise);
+            background-color: var(--white);
         }
     }
 }
@@ -168,7 +181,7 @@ button {
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
-        color: var(--Dark-turquoise);
+        // color: var(--Dark-turquoise);
         width: 201px;
         display: flex;
         align-items: center;
@@ -239,6 +252,11 @@ button {
 }
 
 .modal-win {
+    // overflow: auto;
+    // max-height: 600px;
+    // Временно, Убрать!!!
+    min-width: 450px;
+    min-height: 400px;
     max-width: 470px;
     padding-bottom: 50px;
     text-align: center;
@@ -309,14 +327,19 @@ button {
         box-sizing: border-box;
         box-shadow: 0px 2px 3px var(--box-shodow-form);
         border-radius: 16px;
+        cursor: pointer;
     }
+}
+
+.modalDaective {
+    display: none;
 }
 
 .modal-win-btn-close {
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 50px;
+    right: 20px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -376,14 +399,81 @@ button {
 }
 
 //Наведение
-.plants__element:hover {
+.plants__element:hover,
+.nav__btn:hover,
+.nav__img:hover {
     transform: scale(1.1);
 }
 
 @media (min-width: 769px) {
-    .slider-next:hover,
-    .slider-previous:hover {
+    .slider-btn:hover,
+    .slider-btn:hover .slider-title {
         background: var(--Dark-turquoise);
         color: var(--white);
+    }
+    // .slider-title:hover {
+    //     color: var(--white)
+    // }
+}
+
+.table {
+    margin-top: 15px;
+}
+
+//СПИНЕР
+.spin-wrapper-active {
+    display: none;
+}
+
+.spin-wrapper {
+    z-index: 5;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    // background: #080705;
+    position: absolute;
+    .spinner {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        border: 3px solid transparent;
+        border-top-color: #A04668;
+        top: 50%;
+        left: 50%;
+        margin: -30px;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            border: 3px solid transparent;
+            border-radius: 50%;
+        }
+        &:before {
+            border-top-color: #254E70;
+            top: -12px;
+            left: -12px;
+            right: -12px;
+            bottom: -12px;
+            animation: spin 3s linear infinite;
+        }
+        &:after {
+            border-top-color: #FFFBFE;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            animation: spin 4s linear infinite;
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

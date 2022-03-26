@@ -15,26 +15,37 @@
 </head>
 
 
-<section class="modal-win modal-win-check">
-    <div class="modal-win-btn-close"></div>
-    <img src="img/geo.svg" alt="geo" width="42" height="40" class="modal-win-img">
-    <div class="modal-win-text">
-        <h4 class="modal-win-title">Форма сайта</h4>
-        <p class="modal-win-desc">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
-    </div>
-    <form class="modal-win-form">
-        <input type="text" class="modal-win-name" placeholder="Имя">
-        <input type="num" class="modal-win-num" placeholder="Номер телефона">
-        <div class="modal-win-btns">
-            <button type="reset" class="modal-win-cancel">Отменить</button>
-            <button type="submit" class="modal-win-submit">Отправить</button>
-        </div>
-    </form>
-</section>
-
-
-
 <body>
+
+    <!-- <div class="wrapper"> -->
+    <section class="modal-win modal-win-check">
+        <div class="modal-win-btn-close"></div>
+        <img src="img/geo.svg" alt="geo" width="42" height="40" class="modal-win-img">
+        <div class="table"></div>
+        <div class="modal-win-text">
+            <h4 class="modal-win-title">Форма сайта</h4>
+            <p class="modal-win-desc">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+        </div>
+        <form class="modal-win-form">
+            <input type="text" class="modal-win-name" placeholder="Имя" value="ilya">
+            <input type="num" class="modal-win-num" placeholder="Номер телефона" value="880005553535">
+            <div class="modal-win-btns">
+                <button type="button" class="modal-win-cancel">Отменить</button>
+                <button type="submit" class="modal-win-submit">Отправить</button>
+            </div>
+            <span class="checkValid"></span>
+        </form>
+    </section>
+    <!-- </div> -->
+
+
+
+    <div class="spin-wrapper spin-wrapper-active">
+        <div class="spinner">
+        </div>
+    </div>
+
+
 
     <header class="center header">
         <nav class="nav">
@@ -55,13 +66,15 @@
                     <h1 class="header__right-title">Kembang Flower Mantap</h1>
                     <p class="header__right-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
                     <div class="header__right-slider slider">
-                        <button type="button" class="slider-previous">
-                            <p class="slider-text"><img src="img/arrow.svg" alt="arrow.svg" class="arrow-left" width="32" height="32">Previous
+                        <button type="button" class="slider-previous slider-btn">
+                            <p class="slider-text"><img src="img/arrow.svg" alt="arrow.svg" class="arrow-left"
+                                    width="32" height="32">Previous
                             </p>
                             <h2 class="slider-title slider-title-left">Kaktus Plant</h2>
                         </button>
-                        <button type="button" class="slider-next">
-                            <p class="slider-text">Next<img src="img/arrow.svg" alt="arrow.svg" class="arrow-right" width="32" height="32"></p>
+                        <button type="button" class="slider-next slider-btn">
+                            <p class="slider-text">Next<img src="img/arrow.svg" alt="arrow.svg" class="arrow-right"
+                                    width="32" height="32"></p>
                             <h2 class="slider-title slider-title-right">Rahasia Plant</h2>
                         </button>
                     </div>
