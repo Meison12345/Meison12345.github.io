@@ -17,11 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeModalWin() {
         modalWin.classList.toggle('modal-win-check');
         body.classList.toggle('active');
+        setBlur();
     }
 
     document.querySelector('.nav__btn').addEventListener('click', closeModalWin)
     closeWinBtn.addEventListener('click', closeModalWin)
     cancelWinBtn.addEventListener('click', closeModalWin)
+
+    function setBlur() {
+        document.querySelector('.body-wrapper').classList.toggle('body-wrapper-filter');
+    }
 
     // Функция проверки формы
     function validate(regex, inp) {
@@ -52,12 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //Выводит элементы массива
     function showData(array, userId = 5, completed = false) {
         array = JSON.parse(array);
-        // let out = `<table class='table'>`;
-        // out += `<tr><td>UserId</td>`;
-        // out += `<td>id</td>`;
-        // out += `<td>title</td>`;
-        // out += `<td>completed</td></tr>`;
-
         let out = `<table class='table' cellspacing='10px'><thead>
                         <tr><td>UserId</td>
                         <td>id</td>
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.table').innerHTML = out;
 
     }
-    //Асинхронная функция получиния данных с url
+    //Асинхронная функция получения данных с url
     async function getData(url = 'https://jsonplaceholder.typicode.com/todos') {
         let data = await fetch(url)
             .then(function(res) {
@@ -100,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('.modal-win-submit').addEventListener('click', function(el) {
         el.preventDefault();
+        setBlur();
         let number = document.querySelector('.modal-win-num').value.trim();
         let name = document.querySelector('.modal-win-name').value.trim();
 

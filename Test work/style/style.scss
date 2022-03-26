@@ -22,6 +22,8 @@
     --modal-time: 0.5s;
     --goods-time: 0.5s;
     --black: black;
+    --light-blue: #CCE1FE;
+    --slider-time: 1s;
 }
 
 body {
@@ -58,6 +60,7 @@ button {
 .nav {
     position: absolute;
     width: 1280px;
+    z-index: 2;
     & ul {
         display: flex;
         align-items: center;
@@ -115,7 +118,8 @@ button {
 
 .slider {
     display: flex;
-    margin-top: 110px;
+    // margin-top: 110px;
+    margin-top: 106px;
     &-next,
     &-previous {
         width: 320px;
@@ -328,6 +332,7 @@ button {
         box-shadow: 0px 2px 3px var(--box-shodow-form);
         border-radius: 16px;
         cursor: pointer;
+        transition: var(--modal-time);
     }
 }
 
@@ -399,21 +404,21 @@ button {
 }
 
 //Наведение
-.plants__element:hover,
-.nav__btn:hover,
-.nav__img:hover {
-    transform: scale(1.1);
-}
-
 @media (min-width: 769px) {
     .slider-btn:hover,
     .slider-btn:hover .slider-title {
         background: var(--Dark-turquoise);
         color: var(--white);
     }
-    // .slider-title:hover {
-    //     color: var(--white)
-    // }
+    .modal-win-cancel:hover,
+    .modal-win-submit:hover {
+        background: var(--light-blue);
+    }
+    .plants__element:hover,
+    .nav__btn:hover,
+    .nav__img:hover {
+        transform: scale(1.1);
+    }
 }
 
 .table {
@@ -430,7 +435,6 @@ button {
     position: relative;
     width: 100%;
     height: 100vh;
-    // background: #080705;
     position: absolute;
     .spinner {
         position: absolute;
@@ -476,4 +480,31 @@ button {
     100% {
         transform: rotate(360deg);
     }
+}
+
+//Слайдер
+.header__left {
+    // max-width: 608px;
+    max-width: 608px;
+}
+
+.slider-line {
+    // width: 1024px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease var(--slider-time);
+}
+
+.slider-elem {
+    overflow: hidden;
+}
+
+.slider-line img:nth-child(2n) {
+    transform: scale(-1, 1);
+}
+
+.body-wrapper-filter {
+    transition: var(--modal-time);
+    filter: blur(5px);
 }
