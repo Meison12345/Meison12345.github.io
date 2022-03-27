@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    /**Выведет сначала дешевые товары*/
+    /**
+     * @description Выведет сначала дешевые товары
+     */
     function goodsSortCheap() {
         let nav = document.querySelector('.plants-shop');
         for (let i = 0; i < nav.children.length; i++) {
@@ -23,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    /**Выведет сначала дорогие товары*/
+    /**
+     * @description Выведет сначала дорогие товары
+     */
     function goodsSortExpres() {
         let nav = document.querySelector('.plants-shop');
         for (let i = 0; i < nav.children.length; i++) {
@@ -35,7 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-
+    /**
+     *@description возвращение эл-тов
+     */
     function insertAfter(elem, refElem) {
         return refElem.parentNode.insertBefore(elem, refElem);
     }

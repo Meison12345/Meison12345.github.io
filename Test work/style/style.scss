@@ -198,11 +198,15 @@ button {
         margin: 25px 5px 20px 5px;
         text-align: center;
         transition: var(--goods-time);
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &-title,
         &-price {
             max-width: fit-content;
             margin: 0 auto;
+            max-height: 55px;
+            overflow: hidden;
         }
         &-title {
             font-size: 16px;
@@ -214,10 +218,6 @@ button {
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translate(-50%);
         }
     }
     &-shop {
@@ -287,6 +287,16 @@ plants__drop-wrapper {
     z-index: 2;
     animation-duration: var(--modal-time);
     animation-name: modal-win;
+    &-wrapper {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: 20;
+        display: none;
+        &-active {
+            display: block;
+        }
+    }
     &-img {
         background: var(--dark-blue);
         padding: 20px;
@@ -592,7 +602,7 @@ plants__drop-wrapper {
 }
 
 //Кастомный селект
-.custom-select {
-    // animation-duration: var(--site-load);
-    // animation-name: customSelect;
-}
+// .custom-select {
+// animation-duration: var(--site-load);
+// animation-name: customSelect;
+// }
