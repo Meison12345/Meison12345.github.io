@@ -8,9 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const cancelWinBtn = document.querySelector('.modal-win-cancel');
     //Ссылка на body
     const body = document.body;
-    const regNum = /^[\+\7|8]\d{10}/;
+    const regNum = /^(8|\+7)[\d\(\)\ -]{9}\d$/gm;
     const regName = /[A-Za-zА-Яа-яЁё]/;
     const spanValid = document.querySelector('.checkValid');
+    const showErrorContainer = document.querySelector('.showError');
     const spin = document.querySelector('.spin-wrapper');
 
     // При нажатии на кнопку формы, открывается модальное окно
@@ -44,9 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
         el.innerHTML = mess;
     }
 
-    //Выводит ошибку, несли статут fetch не 200
+    //Выводит ошибку, если статуc не 200
     function showErrorMess() {
-        spanValid.innerHTML = "Что-то пошло не так"
+        spin.classList.toggle('spin-wrapper-active');
+        showErrorContainer.innerHTML = "Что-то пошло не так<br>Попробуйте ещё раз";
     }
 
     function cleadrModalWin() {
@@ -58,10 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function showData(array, userId = 5, completed = false) {
         array = JSON.parse(array);
         let out = `<table class='table' cellspacing='10px'><thead>
-                        <tr><td>UserId</td>
-                        <td>id</td>
-                        <td>title</td>
-                        <td>completed</td></thead></tr><tbody>`;
+                        <tr><td><strong>UserId</strong></td>
+                        <td><strong>id</strong></td>
+                        <td><strong>title</strong></td>
+                        <td><strong>completed</strong></td></thead></tr><tbody>`;
 
         for (let key in array) {
             if (array[key]['userId'] == 5 && array[key]['completed'] == false) {
@@ -73,33 +75,44 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         out += '</tbody></table>';
-        document.querySelector('.table').innerHTML = out;
+        document.querySelector('.table-wrapper').innerHTML = out;
 
     }
     //Асинхронная функция получения данных с url
     async function getData(url = 'https://jsonplaceholder.typicode.com/todos') {
-        let data = await fetch(url)
+        spin.classList.toggle('spin-wrapper-active');
+        await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'API-Key': 'secret'
+                }
+            })
             .then(function(res) {
                 spin.classList.toggle('spin-wrapper-active');
                 console.log(res.status);
-                if (res.status != 200) {
+                if (res.status != 200 || res.ok == false) {
+                    spin.classList.toggle('spin-wrapper-active');
+                    console.log('error');
                     showErrorMess();
                 } else {
+                    console.log(res);
                     return res.text();
                 }
             }).then(function(body) {
+                spin.classList.toggle('spin-wrapper-active'); //не забыть вкл, если ничего не поменяется
+                showData(body);
                 spin.classList.toggle('spin-wrapper-active');
-                showData(body)
                 return JSON.parse(body);
+            }).catch(function() {
+                console.log('error');
+                showErrorMess();
             });
-
-        // data = await data.json();
-        // console.log(data);
     }
 
     document.querySelector('.modal-win-submit').addEventListener('click', function(el) {
         el.preventDefault();
-        setBlur();
+
         let number = document.querySelector('.modal-win-num').value.trim();
         let name = document.querySelector('.modal-win-name').value.trim();
 
@@ -110,8 +123,35 @@ document.addEventListener('DOMContentLoaded', function() {
             cleadrModalWin();
             getData();
         } else {
-            notValid(spanValid, spanValid, 'Проверка не пройдена');
+            notValid(spanValid, spanValid, 'Проверка не пройдена. Попробуйте ещё раз');
             console.log('Not valid');
         }
     });
+
+    document.querySelector('.modal-win-wrapper').addEventListener('click', function(el) {
+        el.stopPropagation();
+    });
+
+
+
+
+    //Данные будут сохраняться в форме, если перезайти на страницу.
+    // cancelWinBtn.addEventListener('click', function() {
+    //     let number = document.querySelector('.modal-win-num').value.trim();
+    //     let name = document.querySelector('.modal-win-name').value.trim();
+    //     setDataLoaclStor(name, number);
+
+    // });
+
+    // function setDataLoaclStor(name, number) {
+    //     localStorage.setItem('name', name);
+    //     localStorage.setItem('number', number);
+    // }
+
+    // function getDataLoaclStor() {
+
+    // }
+
+
+
 });

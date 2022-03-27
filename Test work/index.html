@@ -20,14 +20,15 @@
         <section class="modal-win modal-win-check">
             <div class="modal-win-btn-close"></div>
             <img src="img/geo.svg" alt="geo" width="42" height="40" class="modal-win-img">
-            <div class="table"></div>
+            <div class="table-wrapper"></div>
+            <div class="showError"></div>
             <div class="modal-win-text">
                 <h4 class="modal-win-title">Форма сайта</h4>
                 <p class="modal-win-desc">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
             </div>
             <form class="modal-win-form">
-                <input type="text" class="modal-win-name" placeholder="Имя" value="ilya">
-                <input type="num" class="modal-win-num" placeholder="Номер телефона" value="880005553535">
+                <input type="text" class="modal-win-name" placeholder="Имя">
+                <input type="num" class="modal-win-num" placeholder="Номер телефона">
                 <div class="modal-win-btns">
                     <button type="button" class="modal-win-cancel">Отменить</button>
                     <button type="submit" class="modal-win-submit">Отправить</button>
@@ -72,16 +73,16 @@
                         <p class="header__right-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
                         <div class="header__right-slider slider">
                             <button type="button" class="slider-previous slider-btn">
-                            <p class="slider-text"><img src="img/arrow.svg" alt="arrow.svg" class="arrow-left"
-                                    width="32" height="32">Previous
-                            </p>
-                            <h2 class="slider-title slider-title-left">Kaktus Plant</h2>
-                        </button>
+                                <p class="slider-text"><img src="img/arrow.svg" alt="arrow.svg" class="arrow-left"
+                                        width="32" height="32">Previous
+                                </p>
+                                <h2 class="slider-title slider-title-left">Kaktus Plant</h2>
+                            </button>
                             <button type="button" class="slider-next slider-btn">
-                            <p class="slider-text">Next<img src="img/arrow.svg" alt="arrow.svg" class="arrow-right"
-                                    width="32" height="32"></p>
-                            <h2 class="slider-title slider-title-right">Rahasia Plant</h2>
-                        </button>
+                                <p class="slider-text">Next<img src="img/arrow.svg" alt="arrow.svg" class="arrow-right"
+                                        width="32" height="32"></p>
+                                <h2 class="slider-title slider-title-right">Rahasia Plant</h2>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -122,41 +123,40 @@
                 <h2 classs="plants-title">Featured Plants</h2>
                 <div class="plants__drop-wrapper">
                     <select name="select" class="plants__drop-menu">
-                    <option value="value1" selected>Cheaper First</option>
-                    <option value="value2">Cheaper First</option>
-                    <option value="value3">Cheaper First</option>
-                </select>
+                        <option value="goodsSortCheap" selected>Cheaper First</option>
+                        <option value="goodsSortExpres">Expensive First</option>
+                    </select>
                 </div>
             </div>
             <div class="plants-shop">
-                <a href="#" class="plants__element">
+                <a href="#" class="plants__element" data-price="85">
                     <img src="img/first.png" alt="Kaktus Plants" width="217" height="217">
                     <h3 class="plants__element-title">Kaktus Plants</h3>
                     <h4 class="plants__element-price">IDR 85.000</h4>
                 </a>
 
-                <a href="#" class="plants__element">
+                <a href="#" class="plants__element" data-price="64">
                     <img src="img/second.png" alt="Kaktus Plants" width="217" height="217">
                     <h3 class="plants__element-title">Kaktus Plants</h3>
-                    <h4 class="plants__element-price">IDR 85.000</h4>
+                    <h4 class="plants__element-price">IDR 64.000</h4>
                 </a>
 
-                <a href="#" class="plants__element">
+                <a href="#" class="plants__element" data-price="99">
                     <img src="img/third.png" alt="Kaktus Plants" width="217" height="217">
                     <h3 class="plants__element-title">Kaktus Plants</h3>
-                    <h4 class="plants__element-price">IDR 85.000</h4>
+                    <h4 class="plants__element-price">IDR 99.000</h4>
                 </a>
 
-                <a href="#" class="plants__element">
+                <a href="#" class="plants__element" data-price="29">
                     <img src="img/fourth.png" alt="Kaktus Plants" width="217" height="217">
                     <h3 class="plants__element-title">Kaktus Plants</h3>
-                    <h4 class="plants__element-price">IDR 85.000</h4>
+                    <h4 class="plants__element-price">IDR 29.000</h4>
                 </a>
 
-                <a href="#" class="plants__element">
+                <a href="#" class="plants__element" data-price="83">
                     <img src="img/five.png" alt="Kaktus Plants" width="217" height="217">
                     <h3 class="plants__element-title">Kaktus Plants</h3>
-                    <h4 class="plants__element-price">IDR 85.000</h4>
+                    <h4 class="plants__element-price">IDR 83.000</h4>
                 </a>
             </div>
         </section>
@@ -167,9 +167,9 @@
 
     </div>
 
-    <script src="js/app.js">
-    </script>
+    <script src="js/app.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/sort.js"></script>
 </body>
 
 

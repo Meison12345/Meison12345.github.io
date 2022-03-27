@@ -118,7 +118,6 @@ button {
 
 .slider {
     display: flex;
-    // margin-top: 110px;
     margin-top: 106px;
     &-next,
     &-previous {
@@ -132,8 +131,6 @@ button {
         transition: var(--goods-time);
     }
     &-next {
-        // background: var(--Dark-turquoise);
-        // color: var(--white);
         padding-left: 50px;
     }
     &-text {
@@ -161,17 +158,9 @@ button {
 }
 
 .information {
-    // margin: 140px 56px 0px 56px;
-    // margin: 140px 25px 0px 57px;
-    // margin: 140px 56px 0px 56px;
-    // grid-auto-rows: minmax(0px, auto);
-    // display: grid;
-    // row-gap: 30px;
-    // grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     display: flex;
     justify-content: space-between;
-    // margin-top: 145px;
-    margin: 145px 10px 0px 10px;
+    margin: 145px 20px 0px 20px;
     flex-wrap: wrap;
     &__element {
         width: 268px;
@@ -202,8 +191,7 @@ button {
 }
 
 .plants {
-    // margin: 80px 56px 0px 56px;
-    margin: 90px 10px 0px 10px;
+    margin: 90px 20px 0px 20px;
     &__header {
         display: flex;
         align-items: center;
@@ -233,7 +221,6 @@ button {
     }
     &-shop {
         display: flex;
-        // align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 24px;
@@ -256,13 +243,10 @@ button {
 }
 
 .modal-win {
-    // overflow: auto;
-    // max-height: 600px;
-    // Временно, Убрать!!!
     min-width: 450px;
     min-height: 400px;
     max-width: 470px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     text-align: center;
     position: relative;
     background: var(--white);
@@ -349,6 +333,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--modal-time);
 }
 
 .modal-win-btn-close:before,
@@ -403,7 +388,7 @@ button {
     }
 }
 
-//Наведение
+//Наведение 
 @media (min-width: 769px) {
     .slider-btn:hover,
     .slider-btn:hover .slider-title {
@@ -419,10 +404,15 @@ button {
     .nav__img:hover {
         transform: scale(1.1);
     }
+    .modal-win-btn-close:hover {
+        transform: scale(1.1);
+    }
 }
 
-.table {
+.table-wrapper {
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 //СПИНЕР
@@ -471,6 +461,11 @@ button {
             animation: spin 4s linear infinite;
         }
     }
+}
+
+.checkValid {
+    margin-top: 20px;
+    display: block;
 }
 
 @keyframes spin {
