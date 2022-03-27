@@ -27,8 +27,8 @@
                 <p class="modal-win-desc">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
             </div>
             <form class="modal-win-form">
-                <input type="text" class="modal-win-name" placeholder="Имя">
-                <input type="num" class="modal-win-num" placeholder="Номер телефона">
+                <input type="text" class="modal-win-name" placeholder="Имя" value="Ilya">
+                <input type="tel" class="modal-win-num" placeholder="Номер телефона" value="89051186660">
                 <div class="modal-win-btns">
                     <button type="button" class="modal-win-cancel">Отменить</button>
                     <button type="submit" class="modal-win-submit">Отправить</button>
@@ -50,9 +50,15 @@
             <nav class="nav">
                 <ul>
                     <li>
-                        <a href="index.html"> <img src="img/p.svg" alt="p.svg" class="nav__img" width="36" height="36"></a>
+                        <a href="index.html">
+                            <img src="img/p.svg" alt="p.svg" class="nav__img" width="36" height="36">
+                        </a>
                     </li>
-                    <li><a href="#"><button class="nav__btn" type="button">Форма</button></a></li>
+                    <li>
+                        <!-- <a href="#"> -->
+                        <button class="nav__btn" type="button">Форма</button>
+                        <!-- </a> -->
+                    </li>
                 </ul>
 
             </nav>
@@ -120,7 +126,7 @@
 
         <section class="center plants">
             <div class="plants__header">
-                <h2 classs="plants-title">Featured Plants</h2>
+                <h2 class="plants-title">Featured Plants</h2>
                 <div class="plants__drop-wrapper">
                     <select name="select" class="plants__drop-menu custom-select">
                         <option value="goodsSortCheap" selected>Cheaper First</option>

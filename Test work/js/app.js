@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const spanValid = document.querySelector('.checkValid');
     const showErrorContainer = document.querySelector('.showError');
     const spin = document.querySelector('.spin-wrapper');
-    /** Функция закрытия модального окна */
+    /** 
+     * @description Функция закрытия модального окна
+     */
     function closeModalWin(el) {
         document.querySelector('.modal-win-wrapper').classList.toggle('modal-win-wrapper-active')
         modalWin.classList.toggle('modal-win-check');
         body.classList.toggle('active');
         setBlur();
     }
-
-    // document.addEventListener('keydown', closeModalWin);
 
     document.querySelector('.nav__btn').addEventListener('click', closeModalWin)
     closeWinBtn.addEventListener('click', closeModalWin)
@@ -59,19 +59,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * @description Вывод ошибки*/
+     * @description Вывод ошибки
+     * */
     function showErrorMess() {
         spin.classList.toggle('spin-wrapper-active');
         showErrorContainer.innerHTML = "Что-то пошло не так<br>Попробуйте ещё раз";
     }
     /**
-     * @description Очистка модального окна*/
+     * @description Очистка модального окна
+     * */
     function clearModalWin() {
         document.querySelector('.modal-win-form').classList.add('modalDaective')
         document.querySelector('.modal-win-text').classList.add('modalDaective')
     }
 
-    /**@description Вывод полученных значений*/
+    /**
+     * @description Вывод полученных значений
+     */
     function showData(array) {
         array = JSON.parse(array);
         let out = `<table class='table' cellspacing='10px'><thead>

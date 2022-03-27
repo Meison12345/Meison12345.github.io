@@ -1,3 +1,23 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat.ttf);
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(../fonts/Nunito-Bold.ttf);
+}
+
+@font-face {
+    font-family: PTSans;
+    src: url(../fonts/PTSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: PTSans-bold;
+    src: url(../fonts/PTSans-bold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -194,6 +214,11 @@ button {
         box-shadow: 0px 1px var(--border-gray);
         margin: 0px 5px 0px 5px;
     }
+    &-title {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+    }
     &__element {
         margin: 25px 5px 20px 5px;
         text-align: center;
@@ -308,15 +333,15 @@ plants__drop-wrapper {
         margin: 20px 0px 40px 0px;
     }
     &-title {
-        font-family: PT Sans;
+        font-family: PTSans-bold;
         font-size: 21px;
         font-style: normal;
         font-weight: 700;
         margin-bottom: 10px;
     }
     &-desc {
-        font-family: PT Sans;
-        font-size: 17px;
+        font-family: PTSans;
+        font-size: 16px;
         font-style: normal;
         font-weight: 400;
         width: 390px;
@@ -330,6 +355,10 @@ plants__drop-wrapper {
         padding: 9px 9px 9px 16px;
         border: 1px solid var(--form-border);
         margin-bottom: 15px;
+        font-family: PTSans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
     }
     &-btns {
         display: flex;
@@ -348,13 +377,16 @@ plants__drop-wrapper {
         border-radius: 15px;
         padding: 10px;
         background: var(--white);
-        background: var(--white);
         border: 1px solid var(--blue-white-frost);
         box-sizing: border-box;
         box-shadow: 0px 2px 3px var(--box-shodow-form);
         border-radius: 16px;
         cursor: pointer;
         transition: var(--modal-time);
+        font-family: PTSans;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
     }
 }
 
@@ -435,7 +467,7 @@ plants__drop-wrapper {
 }
 
 .spin-wrapper {
-    z-index: 5;
+    z-index: 222;
     position: relative;
     width: 100%;
     height: 100vh;
