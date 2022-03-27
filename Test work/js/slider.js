@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function init() {
         console.log('resize');
         width = document.querySelector('.header__left').offsetWidth;
-        height = document.querySelector('.header__left').offsetHeight;
+        // height = document.querySelector('.header__left').offsetHeight;
         sliderLine.style.width = width * images.length + 'px';
         images.forEach(item => {
             item.style.width = width + 'px';
-            item.style.height = height + 'px';
+            // item.style.height = height + 'px';
         });
         twistSlider();
     }

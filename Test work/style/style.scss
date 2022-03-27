@@ -53,19 +53,17 @@ button {
     padding: 0 calc(50% - 640px);
 }
 
-.main-center {
-    padding: 0 calc(50% - 584px);
-}
-
 .nav {
-    position: absolute;
-    width: 1280px;
-    z-index: 2;
+    height: 0;
+    // z-index: 2;
     & ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 40px 56px 0px 56px;
+        padding: 40px 56px 0px 56px;
+        & li {
+            z-index: 2;
+        }
     }
     &__btn {
         background: var(--Dark-turquoise);
@@ -130,9 +128,6 @@ button {
         cursor: pointer;
         transition: var(--goods-time);
     }
-    &-next {
-        padding-left: 50px;
-    }
     &-text {
         display: flex;
         align-items: center;
@@ -143,6 +138,7 @@ button {
         font-weight: 500;
         color: var(--gray);
         transition: var(--goods-time);
+        opacity: 0.5;
     }
     &-title {
         font-size: 32px;
@@ -168,13 +164,11 @@ button {
         padding: 25px;
         border: 1px solid var(--border-gray);
         margin: 10px 5px;
-        // margin: 10px;
     }
     &__title {
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
-        // color: var(--Dark-turquoise);
         width: 201px;
         display: flex;
         align-items: center;
@@ -201,22 +195,29 @@ button {
         margin: 0px 5px 0px 5px;
     }
     &__element {
-        margin-top: 25px;
+        margin: 25px 5px 20px 5px;
         text-align: center;
-        margin: 0px 5px 10px 5px;
         transition: var(--goods-time);
-        &-title {
-            margin: 18px 0px 10px 0px;
+        position: relative;
+        &-title,
+        &-price {
+            max-width: fit-content;
+            margin: 0 auto;
         }
         &-title {
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
+            margin: 18px auto 10px auto;
         }
         &-price {
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translate(-50%);
         }
     }
     &-shop {
@@ -227,6 +228,10 @@ button {
     }
 }
 
+plants__drop-wrapper {
+    position: relative;
+}
+
 .plants__drop-menu {
     -webkit-appearance: none;
     padding: 8px 36px 8px 12px;
@@ -235,7 +240,30 @@ button {
     font-style: normal;
     outline: none;
     font-weight: 500;
+    border: 1px solid var(--border-gray);
+    position: relative;
+    cursor: pointer;
     background: url(../img/arrow-down.svg) no-repeat 110px;
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     display: block;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     right: 220px;
+    //     width: 120px;
+    //     height: 120px;
+    //     background: red;
+    //     z-index: 22;
+    // }
+}
+
+.plants__element:focus,
+.plants__drop-menu:focus,
+.slider-btn:focus,
+.nav__btn:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px var(--border-gray), 0px 0px 10px var(--border-gray);
 }
 
 .footer {
@@ -380,33 +408,9 @@ button {
     }
 }
 
-//Адаптив
-@media (max-width:1154px) {
-    .plants-shop,
-    .information {
-        justify-content: space-around;
-    }
-}
-
-//Наведение 
-@media (min-width: 769px) {
-    .slider-btn:hover,
-    .slider-btn:hover .slider-title {
-        background: var(--Dark-turquoise);
-        color: var(--white);
-    }
-    .modal-win-cancel:hover,
-    .modal-win-submit:hover {
-        background: var(--light-blue);
-    }
-    .plants__element:hover,
-    .nav__btn:hover,
-    .nav__img:hover {
-        transform: scale(1.1);
-    }
-    .modal-win-btn-close:hover {
-        transform: scale(1.1);
-    }
+@keyframes customSelect {
+    from {}
+    to {}
 }
 
 .table-wrapper {
@@ -479,16 +483,17 @@ button {
 
 //Слайдер
 .header__left {
-    // max-width: 608px;
     max-width: 608px;
 }
 
 .slider-line {
-    // width: 1024px;
     display: flex;
     position: relative;
     left: 0;
     transition: all ease var(--slider-time);
+    & img {
+        object-fit: cover;
+    }
 }
 
 .slider-elem {
@@ -502,4 +507,92 @@ button {
 .body-wrapper-filter {
     transition: var(--modal-time);
     filter: blur(5px);
+}
+
+//Адаптив
+@media (min-width:1024px) and (max-width: 1150px) {
+    .slider-previous {
+        margin-top: 5px;
+    }
+    .slider-btn {
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1154px) {
+    .plants-shop,
+    .information {
+        justify-content: space-around;
+    }
+    // .slider-next {
+    //     padding-left: 60px;
+    // }
+}
+
+@media (max-width:1150px) {
+    .slider {
+        margin-top: 0;
+        flex-direction: column;
+    }
+    .header__right {
+        margin-top: 87px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .header__left {
+        max-width: 500px;
+    }
+    .slider-line {
+        width: 2000px;
+        & img {
+            width: 500px;
+        }
+    }
+    .header__right-title,
+    .header__right-desc {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1280px) {
+    // .slider-title {
+    //     font-size: calc(30px + (32 - 30) * (100vw - 1024px) / (1280 - 1024));
+    // }
+    .header__right-desc {
+        font-size: calc(16px + (18 - 16) * (100vw - 1024px) / (1280 - 1024));
+    }
+    .header__right-title {
+        font-size: calc(58px + (68 - 58) * (100vw - 1024px) / (1280 - 1024));
+    }
+}
+
+//Наведение 
+@media (min-width: 769px) {
+    .slider-btn:hover,
+    .slider-btn:hover .slider-title {
+        background: var(--Dark-turquoise);
+        color: var(--white);
+    }
+    .slider-btn:hover .slider-text {
+        color: var(--gray-white);
+    }
+    .modal-win-cancel:hover,
+    .modal-win-submit:hover {
+        background: var(--light-blue);
+    }
+    .plants__element:hover,
+    .nav__btn:hover,
+    .nav__img:hover {
+        transform: scale(1.1);
+    }
+    .modal-win-btn-close:hover {
+        transform: scale(1.1);
+    }
+}
+
+//Кастомный селект
+.custom-select {
+    // animation-duration: var(--site-load);
+    // animation-name: customSelect;
 }

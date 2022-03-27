@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    /**Выведет сначала дешевые товары*/
     function goodsSortCheap() {
         let nav = document.querySelector('.plants-shop');
         for (let i = 0; i < nav.children.length; i++) {
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-
+    /**Выведет сначала дорогие товары*/
     function goodsSortExpres() {
         let nav = document.querySelector('.plants-shop');
         for (let i = 0; i < nav.children.length; i++) {

@@ -1,12 +1,8 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function() {
-    //Модальное окно
     const modalWin = document.querySelector('.modal-win');
-    //Крестик
     const closeWinBtn = document.querySelector('.modal-win-btn-close');
-    //Кнопка отменить
     const cancelWinBtn = document.querySelector('.modal-win-cancel');
-    //Ссылка на body
     const body = document.body;
     const regNum = /^(8|\+7)[\d\(\)\ -]{9}\d$/gm;
     const regName = /[A-Za-zА-Яа-яЁё]/;
@@ -14,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const showErrorContainer = document.querySelector('.showError');
     const spin = document.querySelector('.spin-wrapper');
 
-    // При нажатии на кнопку формы, открывается модальное окно
+    /** Функция закрытия модального окна */
     function closeModalWin() {
         modalWin.classList.toggle('modal-win-check');
         body.classList.toggle('active');
@@ -25,39 +21,51 @@ document.addEventListener('DOMContentLoaded', function() {
     closeWinBtn.addEventListener('click', closeModalWin)
     cancelWinBtn.addEventListener('click', closeModalWin)
 
+    /** Функция установки блюра при открытом модальном окне*/
     function setBlur() {
         document.querySelector('.body-wrapper').classList.toggle('body-wrapper-filter');
     }
 
-    // Функция проверки формы
+    /**Проверка регулярными выражениями входных данных
+     * @param regex - регулярное выражение
+     * @param inp Входные данные 
+     */
     function validate(regex, inp) {
         return regex.test(inp);
     }
-    //Если не корректно
+    /**Если проверка не прошла, вывод сообщения об ошибке
+     * @param inp Входные данные 
+     * @param el Точка вывода
+     * @param mess Выводимое сообщение
+     */
     function notValid(inp, el, mess) {
         inp.classList.add('is-invalid');
         el.innerHTML = mess;
     }
-    //Если корректно
+    /**Если проверка прошла
+     * @param inp Входные данные  
+     * @param el Точка вывода
+     * @param mess Выводимое сообщение
+     */
     function valid(inp, el, mess) {
         inp.classList.remove('is-invalid');
         inp.classList.add('is-invalid');
         el.innerHTML = mess;
     }
 
-    //Выводит ошибку, если статуc не 200
+    /**Вывод ошибки*/
     function showErrorMess() {
         spin.classList.toggle('spin-wrapper-active');
         showErrorContainer.innerHTML = "Что-то пошло не так<br>Попробуйте ещё раз";
     }
-
+    /**Очистка модального окна*/
     function cleadrModalWin() {
         document.querySelector('.modal-win-form').classList.add('modalDaective')
         document.querySelector('.modal-win-text').classList.add('modalDaective')
     }
 
-    //Выводит элементы массива
-    function showData(array, userId = 5, completed = false) {
+    /**Вывод полученных значений*/
+    function showData(array) {
         array = JSON.parse(array);
         let out = `<table class='table' cellspacing='10px'><thead>
                         <tr><td><strong>UserId</strong></td>
@@ -78,7 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.table-wrapper').innerHTML = out;
 
     }
-    //Асинхронная функция получения данных с url
+
+    /**Получение данных
+     * @param {string} url - ссылка
+     */
     async function getData(url = 'https://jsonplaceholder.typicode.com/todos') {
         spin.classList.toggle('spin-wrapper-active');
         await fetch(url, {
@@ -153,5 +164,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // }
 
 
+
+    // document.querySelector('.modal-win-wrapper').addEventListener('click', function(param) {
+    //     console.log('modal', param);
+    // })
 
 });
