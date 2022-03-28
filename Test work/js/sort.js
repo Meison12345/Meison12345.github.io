@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let replacedNode;
     let data = document.querySelector('.plants__drop-menu');
     data.addEventListener('change', function() {
+        setGoodsSort();
         if (data.children[0].selected == true) {
             goodsSortCheap();
         }
@@ -10,6 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
             goodsSortExpres();
         }
     });
+
+    /**
+     *@description Запуск анимации при сортировки товаров
+     */
+    function setGoodsSort() {
+        document.querySelectorAll('.plants__element').forEach(function(el) {
+            el.classList.add('plants__element-animated');
+        })
+    }
 
     /**
      * @description Выведет сначала дешевые товары
@@ -24,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+
     }
     /**
      * @description Выведет сначала дорогие товары

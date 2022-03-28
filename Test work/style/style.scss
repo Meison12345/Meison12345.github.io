@@ -18,6 +18,21 @@
     src: url(../fonts/PTSans-bold.ttf);
 }
 
+@font-face {
+    font-family: MontserratBold;
+    src: url(../fonts/Montserrat-bold.ttf);
+}
+
+@font-face {
+    font-family: MontserratSemiBold;
+    src: url(../fonts/Montserrat-semiBold.ttf);
+}
+
+@font-face {
+    font-family: MontserratMedium;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +55,7 @@
     --modal-win-shadow: rgba(155, 155, 155, 0.25);
     --site-load: 1s;
     --modal-time: 0.5s;
+    --goods-refresh-time: 1s;
     --goods-time: 0.5s;
     --black: black;
     --light-blue: #CCE1FE;
@@ -123,6 +139,7 @@ button {
             line-height: 83px;
             color: var(--Dark-turquoise);
             margin-bottom: 24px;
+            font-family: MontserratMedium;
         }
         &-desc {
             font-size: 18px;
@@ -158,7 +175,8 @@ button {
         font-weight: 500;
         color: var(--gray);
         transition: var(--goods-time);
-        opacity: 0.5;
+        // opacity: 0.5;
+        font-family: MontserratMedium;
     }
     &-title {
         font-size: 32px;
@@ -169,8 +187,14 @@ button {
         &-right {
             color: var(--Dark-turquoise);
             background-color: var(--white);
+            font-family: MontserratMedium;
         }
     }
+}
+
+.arrow-right,
+.arrow-left {
+    transition: var(--goods-time);
 }
 
 .information {
@@ -193,6 +217,11 @@ button {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
+        color: var(--Dark-turquoise);
+        font-family: MontserratBold;
+        &-name {
+            width: 90px;
+        }
     }
     &__desc {
         font-size: 10px;
@@ -218,6 +247,7 @@ button {
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
+        font-family: MontserratMedium;
     }
     &__element {
         margin: 25px 5px 20px 5px;
@@ -226,6 +256,10 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        &-animated {
+            animation-duration: var(--goods-refresh-time);
+            animation-name: goodsSort;
+        }
         &-title,
         &-price {
             max-width: fit-content;
@@ -243,6 +277,7 @@ button {
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
+            font-family: MontserratSemiBold;
         }
     }
     &-shop {
@@ -253,10 +288,9 @@ button {
     }
 }
 
-plants__drop-wrapper {
-    position: relative;
-}
-
+// .plants__drop-wrapper {
+//     position: relative;
+// }
 .plants__drop-menu {
     -webkit-appearance: none;
     padding: 8px 36px 8px 12px;
@@ -269,18 +303,7 @@ plants__drop-wrapper {
     position: relative;
     cursor: pointer;
     background: url(../img/arrow-down.svg) no-repeat 110px;
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     display: block;
-    //     top: 50%;
-    //     transform: translateY(-50%);
-    //     right: 220px;
-    //     width: 120px;
-    //     height: 120px;
-    //     background: red;
-    //     z-index: 22;
-    // }
+    font-family: MontserratMedium;
 }
 
 .plants__element:focus,
@@ -312,6 +335,12 @@ plants__drop-wrapper {
     z-index: 2;
     animation-duration: var(--modal-time);
     animation-name: modal-win;
+    overflow: auto;
+    max-height: 700px;
+    &-hide {
+        animation-duration: var(--modal-time);
+        animation-name: modal-hide;
+    }
     &-wrapper {
         width: 100vw;
         height: 100vh;
@@ -435,9 +464,22 @@ plants__drop-wrapper {
 @keyframes modal-win {
     from {
         opacity: 0;
+        top: -200px;
     }
     to {
         opacity: 1;
+        top: 50%;
+    }
+}
+
+@keyframes modal-hide {
+    from {
+        top: 50%;
+        opacity: 1;
+    }
+    to {
+        top: -200px;
+        opacity: 0;
     }
 }
 
@@ -450,15 +492,37 @@ plants__drop-wrapper {
     }
 }
 
-@keyframes customSelect {
-    from {}
-    to {}
+@keyframes goodsSort {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .table-wrapper {
     margin-top: 15px;
     display: flex;
     justify-content: center;
+}
+
+.table {
+    border-collapse: collapse;
+    & td {
+        padding: 7px;
+        border: none;
+        font-size: 15px;
+        // border: 1px solid var(--gray);
+    }
+    & thead tr {
+        background-color: var(--gray-white);
+    }
+    & tbody tr:nth-child(even) {
+        background: var(--gray-white);
+    }
 }
 
 //СПИНЕР
@@ -566,9 +630,6 @@ plants__drop-wrapper {
     .information {
         justify-content: space-around;
     }
-    // .slider-next {
-    //     padding-left: 60px;
-    // }
 }
 
 @media (max-width:1150px) {
@@ -609,15 +670,20 @@ plants__drop-wrapper {
     }
 }
 
-//Наведение 
+//Наведение
 @media (min-width: 769px) {
     .slider-btn:hover,
     .slider-btn:hover .slider-title {
         background: var(--Dark-turquoise);
         color: var(--white);
     }
+    .slider-btn:hover .arrow-left,
+    .slider-btn:hover .arrow-right {
+        filter: invert(1);
+    }
     .slider-btn:hover .slider-text {
         color: var(--gray-white);
+        opacity: 0.5;
     }
     .modal-win-cancel:hover,
     .modal-win-submit:hover {
@@ -632,9 +698,3 @@ plants__drop-wrapper {
         transform: scale(1.1);
     }
 }
-
-//Кастомный селект
-// .custom-select {
-// animation-duration: var(--site-load);
-// animation-name: customSelect;
-// }

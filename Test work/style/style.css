@@ -18,6 +18,21 @@
   src: url(../fonts/PTSans-bold.ttf);
 }
 
+@font-face {
+  font-family: MontserratBold;
+  src: url(../fonts/Montserrat-bold.ttf);
+}
+
+@font-face {
+  font-family: MontserratSemiBold;
+  src: url(../fonts/Montserrat-semiBold.ttf);
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +56,7 @@
   --modal-win-shadow: rgba(155, 155, 155, 0.25);
   --site-load: 1s;
   --modal-time: 0.5s;
+  --goods-refresh-time: 1s;
   --goods-time: 0.5s;
   --black: black;
   --light-blue: #CCE1FE;
@@ -144,6 +160,7 @@ button {
   line-height: 83px;
   color: var(--Dark-turquoise);
   margin-bottom: 24px;
+  font-family: MontserratMedium;
 }
 
 .header__right-desc {
@@ -197,7 +214,7 @@ button {
   color: var(--gray);
   -webkit-transition: var(--goods-time);
   transition: var(--goods-time);
-  opacity: 0.5;
+  font-family: MontserratMedium;
 }
 
 .slider-title {
@@ -211,6 +228,13 @@ button {
 .slider-title-left, .slider-title-right {
   color: var(--Dark-turquoise);
   background-color: var(--white);
+  font-family: MontserratMedium;
+}
+
+.arrow-right,
+.arrow-left {
+  -webkit-transition: var(--goods-time);
+  transition: var(--goods-time);
 }
 
 .information {
@@ -245,6 +269,12 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
+  color: var(--Dark-turquoise);
+  font-family: MontserratBold;
+}
+
+.information__title-name {
+  width: 90px;
 }
 
 .information__desc {
@@ -281,6 +311,7 @@ button {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
+  font-family: MontserratMedium;
 }
 
 .plants__element {
@@ -298,6 +329,13 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.plants__element-animated {
+  -webkit-animation-duration: var(--goods-refresh-time);
+          animation-duration: var(--goods-refresh-time);
+  -webkit-animation-name: goodsSort;
+          animation-name: goodsSort;
 }
 
 .plants__element-title, .plants__element-price {
@@ -320,6 +358,7 @@ button {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
+  font-family: MontserratSemiBold;
 }
 
 .plants-shop {
@@ -332,10 +371,6 @@ button {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 24px;
-}
-
-plants__drop-wrapper {
-  position: relative;
 }
 
 .plants__drop-menu {
@@ -351,6 +386,7 @@ plants__drop-wrapper {
   position: relative;
   cursor: pointer;
   background: url(../img/arrow-down.svg) no-repeat 110px;
+  font-family: MontserratMedium;
 }
 
 .plants__element:focus,
@@ -387,6 +423,15 @@ plants__drop-wrapper {
           animation-duration: var(--modal-time);
   -webkit-animation-name: modal-win;
           animation-name: modal-win;
+  overflow: auto;
+  max-height: 700px;
+}
+
+.modal-win-hide {
+  -webkit-animation-duration: var(--modal-time);
+          animation-duration: var(--modal-time);
+  -webkit-animation-name: modal-hide;
+          animation-name: modal-hide;
 }
 
 .modal-win-wrapper {
@@ -537,18 +582,44 @@ plants__drop-wrapper {
 @-webkit-keyframes modal-win {
   from {
     opacity: 0;
+    top: -200px;
   }
   to {
     opacity: 1;
+    top: 50%;
   }
 }
 
 @keyframes modal-win {
   from {
     opacity: 0;
+    top: -200px;
   }
   to {
     opacity: 1;
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes modal-hide {
+  from {
+    top: 50%;
+    opacity: 1;
+  }
+  to {
+    top: -200px;
+    opacity: 0;
+  }
+}
+
+@keyframes modal-hide {
+  from {
+    top: 50%;
+    opacity: 1;
+  }
+  to {
+    top: -200px;
+    opacity: 0;
   }
 }
 
@@ -570,17 +641,29 @@ plants__drop-wrapper {
   }
 }
 
-@-webkit-keyframes customSelect {
-  from {
+@-webkit-keyframes goodsSort {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
   }
-  to {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
   }
 }
 
-@keyframes customSelect {
-  from {
+@keyframes goodsSort {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
   }
-  to {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -592,6 +675,24 @@ plants__drop-wrapper {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 7px;
+  border: none;
+  font-size: 15px;
+}
+
+.table thead tr {
+  background-color: var(--gray-white);
+}
+
+.table tbody tr:nth-child(even) {
+  background: var(--gray-white);
 }
 
 .spin-wrapper-active {
@@ -770,8 +871,14 @@ plants__drop-wrapper {
     background: var(--Dark-turquoise);
     color: var(--white);
   }
+  .slider-btn:hover .arrow-left,
+  .slider-btn:hover .arrow-right {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
   .slider-btn:hover .slider-text {
     color: var(--gray-white);
+    opacity: 0.5;
   }
   .modal-win-cancel:hover,
   .modal-win-submit:hover {

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cancelWinBtn = document.querySelector('.modal-win-cancel');
     const body = document.body;
     const regNum = /^(8|\+7)[\d\(\)\ -]{9}\d$/gm;
-    const regName = /[A-Za-zА-Яа-яЁё]/;
+    const regName = /[A-Za-zА-Яа-яЁё]{4,}/gm;
     const spanValid = document.querySelector('.checkValid');
     const showErrorContainer = document.querySelector('.showError');
     const spin = document.querySelector('.spin-wrapper');
@@ -13,15 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
      * @description Функция закрытия модального окна
      */
     function closeModalWin(el) {
-        document.querySelector('.modal-win-wrapper').classList.toggle('modal-win-wrapper-active')
+        document.querySelector('.modal-win-wrapper').classList.toggle('modal-win-wrapper-active');
         modalWin.classList.toggle('modal-win-check');
         body.classList.toggle('active');
         setBlur();
+        // modalWin.classList.toggle('modal-win-hide');
+
     }
 
-    document.querySelector('.nav__btn').addEventListener('click', closeModalWin)
-    closeWinBtn.addEventListener('click', closeModalWin)
-    cancelWinBtn.addEventListener('click', closeModalWin)
+    document.querySelector('.nav__btn').addEventListener('click', closeModalWin);
+    closeWinBtn.addEventListener('click', closeModalWin);
+    cancelWinBtn.addEventListener('click', closeModalWin);
 
     /** Функция установки блюра при открытом модальном окне*/
     function setBlur() {
@@ -78,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function showData(array) {
         array = JSON.parse(array);
-        let out = `<table class='table' cellspacing='10px'><thead>
+        let out = `<table class='table'><thead>
                         <tr><td><strong>UserId</strong></td>
                         <td><strong>id</strong></td>
                         <td><strong>title</strong></td>
@@ -95,16 +97,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         out += '</tbody></table>';
         document.querySelector('.table-wrapper').innerHTML = out;
-
     }
 
     /**
      * @description Получение данных
      * @param {string} url - ссылка
      */
-    async function getData(url = 'https://jsonplaceholder.typicode.com/todos') {
+    function getData(url = 'https://jsonplaceholder.typicode.com/todos') {
         spin.classList.toggle('spin-wrapper-active');
-        await fetch(url, {
+        fetch(url, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -140,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let name = document.querySelector('.modal-win-name').value.trim();
 
 
-        if (name.length > 3 && validate(regName, name) && validate(regNum, number)) {
+        if (validate(regName, name) && validate(regNum, number)) {
             valid(spanValid, spanValid, 'Все верно');
             console.log('Valid');
             clearModalWin();
@@ -151,33 +152,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // document.querySelector('.modal-win-wrapper').addEventListener('click', function(el) {
-    //     el.stopPropagation();
-    // });
 
 
 
-    //Данные будут сохраняться в форме, если перезайти на страницу.
-    // cancelWinBtn.addEventListener('click', function() {
-    //     let number = document.querySelector('.modal-win-num').value.trim();
-    //     let name = document.querySelector('.modal-win-name').value.trim();
-    //     setDataLoaclStor(name, number);
+    /**
+     * @description Данные будут сохраняться в localStarage, если перезайти на страницу.
+     */
+    cancelWinBtn.addEventListener('click', function() {
+        let number = document.querySelector('.modal-win-num').value.trim();
+        let name = document.querySelector('.modal-win-name').value.trim();
+        setDataLoaclStor(name, number);
+    });
 
-    // });
+    /**
+     * @description Сохраняем данные формы в localstaroge
+     */
+    function setDataLoaclStor(name, number) {
+        localStorage.setItem('name', name);
+        localStorage.setItem('number', number);
+    }
 
-    // function setDataLoaclStor(name, number) {
-    //     localStorage.setItem('name', name);
-    //     localStorage.setItem('number', number);
-    // }
+    /**
+     * @description Берём данные формы из localstaroge
+     */
+    function getDataLoaclStor() {
+        document.querySelector('.modal-win-name').value = localStorage.getItem('name');
+        document.querySelector('.modal-win-num').value = localStorage.getItem('number');
+    }
 
-    // function getDataLoaclStor() {
+    //Если открыто модальное окно, его можно закрыть через Esc
+    document.addEventListener('keydown', function(el) {
+        let bodyActive = document.body.classList.contains('active');
+        if (el.key === 'Escape' && bodyActive) {
+            closeModalWin();
+        }
+    });
 
-    // }
 
 
 
-    // document.querySelector('.modal-win-wrapper').addEventListener('click', function(param) {
-    //     console.log('modal', param);
-    // })
 
 });
