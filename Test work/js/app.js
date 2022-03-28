@@ -152,9 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-
-
-
     /**
      * @description Данные будут сохраняться в localStarage, если перезайти на страницу.
      */
@@ -165,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /**
-     * @description Сохраняем данные формы в localstaroge
+     * @description Сохраняем данные формы в localstaroge, назначил для кнопки отменить. Можно будет потом передать в БД или при закрытии вкладки, данные были восстановлены.
      */
     function setDataLoaclStor(name, number) {
         localStorage.setItem('name', name);
@@ -187,9 +184,4 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModalWin();
         }
     });
-
-
-
-
-
 });

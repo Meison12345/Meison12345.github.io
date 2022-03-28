@@ -6,22 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let sliderLeft = document.querySelector('.slider-title-left');
     let count = 0,
         subcount = 1;
-    let width, height;
+    let width;
 
     function init() {
-        // console.log('resize');
         width = document.querySelector('.header__left').offsetWidth;
-        // height = document.querySelector('.header__left').offsetHeight;
         sliderLine.style.width = width * images.length + 'px';
         images.forEach(item => {
             item.style.width = width + 'px';
-            // item.style.height = height + 'px';
         });
         twistSlider();
     }
-
     init();
-    window.addEventListener('resize', init);
+
 
     document.querySelector('.slider-next').addEventListener('click', function() {
         count++;
@@ -75,6 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
         twistSlider();
     });
 
+    /**
+     * @description Пересчёт смещения элемента слайдера
+     */
     function twistSlider() {
         sliderLine.style.transform = 'translate(-' + count * width + 'px)';
     }

@@ -191,6 +191,8 @@ button {
   font-weight: 400;
   line-height: 32px;
   max-width: 493px;
+  max-height: 96px;
+  overflow: hidden;
 }
 
 .slider {
@@ -509,6 +511,8 @@ button {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .modal-win-btns {
@@ -876,6 +880,18 @@ button {
   .header__right-desc {
     margin-right: 10px;
   }
+}
+
+.nav__btn:active,
+.nav__img:active {
+  -webkit-filter: drop-shadow(0px 0px 5px black);
+          filter: drop-shadow(0px 0px 5px black);
+}
+
+.slider-btn:active,
+.plants__element:active {
+  -webkit-box-shadow: 0px 0px 0px var(--gray), 0px 0px 20px var(--gray);
+          box-shadow: 0px 0px 0px var(--gray), 0px 0px 20px var(--gray);
 }
 
 @media (min-width: 769px) {

@@ -162,6 +162,8 @@ button {
             font-weight: 400;
             line-height: 32px;
             max-width: 493px;
+            max-height: 96px;
+            overflow: hidden;
         }
         // &__text {
         //     display: flex;
@@ -196,7 +198,6 @@ button {
         font-weight: 500;
         color: var(--gray);
         transition: var(--goods-time);
-        // opacity: 0.5;
         font-family: MontserratMedium;
     }
     &-title {
@@ -309,9 +310,6 @@ button {
     }
 }
 
-// .plants__drop-wrapper {
-//     position: relative;
-// }
 .plants__drop-menu {
     -webkit-appearance: none;
     padding: 8px 36px 8px 12px;
@@ -409,6 +407,8 @@ button {
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
+        transition: 0.4s;
+        // outline: none;
     }
     &-btns {
         display: flex;
@@ -477,9 +477,6 @@ button {
     display: none;
 }
 
-// .arrow-right {
-//     transform: rotate(180deg);
-// }
 //Анимация
 @keyframes modal-win {
     from {
@@ -665,15 +662,6 @@ button {
     }
 }
 
-// @media (max-width:1150px) {
-//     .slider {
-//         margin-top: 0;
-//         flex-direction: column;
-//     }
-//     .header__right {
-//         margin-top: 87px;
-//     }
-// }
 @media (max-width: 1250px) {
     .header__left {
         max-width: 500px;
@@ -700,6 +688,20 @@ button {
 // .header__right-title {
 //     font-size: calc(58px + (68 - 58) * (100vw - 1024px) / (1280 - 1024));
 // }
+// }
+.nav__btn:active,
+.nav__img:active {
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.slider-btn:active,
+.plants__element:active {
+    box-shadow: 0px 0px 0px var(--gray), 0px 0px 20px var(--gray);
+}
+
+// .modal-win-name:focus,
+// .modal-win-num:focus {
+//     filter: drop-shadow(0px 0px 5px var(--light-blue));
 // }
 //Наведение
 @media (min-width: 769px) {
