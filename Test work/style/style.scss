@@ -148,12 +148,18 @@ button {
             line-height: 32px;
             max-width: 493px;
         }
+        // &__text {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: space-between;
+        // }
     }
 }
 
 .slider {
     display: flex;
     margin-top: 106px;
+    // margin-top: 109px;
     &-next,
     &-previous {
         width: 320px;
@@ -456,10 +462,9 @@ button {
     display: none;
 }
 
-.arrow-right {
-    transform: rotate(180deg);
-}
-
+// .arrow-right {
+//     transform: rotate(180deg);
+// }
 //Анимация
 @keyframes modal-win {
     from {
@@ -617,11 +622,22 @@ button {
 
 //Адаптив
 @media (min-width:1024px) and (max-width: 1150px) {
+    .slider-next,
     .slider-previous {
-        margin-top: 5px;
+        height: 119px;
     }
     .slider-btn {
         width: 100%;
+    }
+    .slider {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    .header__right {
+        margin-top: 87px;
+    }
+    .header__right-desc {
+        font-size: 16px;
     }
 }
 
@@ -632,16 +648,15 @@ button {
     }
 }
 
-@media (max-width:1150px) {
-    .slider {
-        margin-top: 0;
-        flex-direction: column;
-    }
-    .header__right {
-        margin-top: 87px;
-    }
-}
-
+// @media (max-width:1150px) {
+//     .slider {
+//         margin-top: 0;
+//         flex-direction: column;
+//     }
+//     .header__right {
+//         margin-top: 87px;
+//     }
+// }
 @media (max-width: 1250px) {
     .header__left {
         max-width: 500px;
@@ -658,18 +673,17 @@ button {
     }
 }
 
-@media (min-width:1024px) and (max-width:1280px) {
-    // .slider-title {
-    //     font-size: calc(30px + (32 - 30) * (100vw - 1024px) / (1280 - 1024));
-    // }
-    .header__right-desc {
-        font-size: calc(16px + (18 - 16) * (100vw - 1024px) / (1280 - 1024));
-    }
-    .header__right-title {
-        font-size: calc(58px + (68 - 58) * (100vw - 1024px) / (1280 - 1024));
-    }
-}
-
+// @media (min-width:1024px) and (max-width:1280px) {
+// .slider-title {
+//     font-size: calc(30px + (32 - 30) * (100vw - 1024px) / (1280 - 1024));
+// }
+// .header__right-desc {
+//     font-size: calc(16px + (18 - 16) * (100vw - 1024px) / (1280 - 1024));
+// }
+// .header__right-title {
+//     font-size: calc(58px + (68 - 58) * (100vw - 1024px) / (1280 - 1024));
+// }
+// }
 //Наведение
 @media (min-width: 769px) {
     .slider-btn:hover,
