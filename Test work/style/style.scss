@@ -62,9 +62,24 @@
     --slider-time: 1s;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+footer {
+    flex: 1 1 auto;
+}
+
 body {
     animation-duration: var(--site-load);
     animation-name: body;
+}
+
+.body-wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -516,6 +531,8 @@ button {
 
 .table {
     border-collapse: collapse;
+    animation-duration: var(--site-load);
+    animation-name: body;
     & td {
         padding: 7px;
         border: none;

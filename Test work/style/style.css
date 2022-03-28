@@ -63,11 +63,33 @@
   --slider-time: 1s;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+footer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 body {
   -webkit-animation-duration: var(--site-load);
           animation-duration: var(--site-load);
   -webkit-animation-name: body;
           animation-name: body;
+}
+
+.body-wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 a {
@@ -674,6 +696,10 @@ button {
 
 .table {
   border-collapse: collapse;
+  -webkit-animation-duration: var(--site-load);
+          animation-duration: var(--site-load);
+  -webkit-animation-name: body;
+          animation-name: body;
 }
 
 .table td {
