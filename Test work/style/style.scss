@@ -60,6 +60,9 @@
     --black: black;
     --light-blue: #CCE1FE;
     --slider-time: 1s;
+    --spin-red: #A04668;
+    --spin-blue: #254E70;
+    --spin-white: #dfb15b;
 }
 
 html,
@@ -560,7 +563,7 @@ button {
         height: 60px;
         width: 60px;
         border: 3px solid transparent;
-        border-top-color: #A04668;
+        border-top-color: var(--spin-red);
         top: 50%;
         left: 50%;
         margin: -30px;
@@ -574,7 +577,7 @@ button {
             border-radius: 50%;
         }
         &:before {
-            border-top-color: #254E70;
+            border-top-color: var(--spin-blue);
             top: -12px;
             left: -12px;
             right: -12px;
@@ -582,7 +585,7 @@ button {
             animation: spin 3s linear infinite;
         }
         &:after {
-            border-top-color: #FFFBFE;
+            border-top-color: var(--spin-white);
             top: 6px;
             left: 6px;
             right: 6px;
@@ -691,7 +694,7 @@ button {
 // }
 .nav__btn:active,
 .nav__img:active {
-    filter: drop-shadow(0px 0px 5px black);
+    filter: drop-shadow(0px 0px 5px var(--black));
 }
 
 .slider-btn:active,
