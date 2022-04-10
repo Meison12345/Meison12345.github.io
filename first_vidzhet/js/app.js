@@ -1,5 +1,4 @@
 'use strict';
-// document.addEventListener('DOMContentLoaded', function() {
 let textInsert = document.querySelector('.modal-win-text-field');
 let dropMenu = document.querySelector('.dropMenu');
 let dropMenuNav = document.querySelector('.dropMenu-nav');
@@ -29,7 +28,6 @@ let masDropMenu = [{
         name: 'Чёткий',
     },
 ];
-let modalWinTextFieldLi = document.querySelector('.modal-win-text-field-li');
 
 /**
  * @description Выведение категорий в список
@@ -49,131 +47,43 @@ let modalWinTextFieldLi = document.querySelector('.modal-win-text-field-li');
  */
 document.body.addEventListener('keydown', function (param) {
     if (param.key === 'Escape') {
+        document.querySelector('.keyboardShortcut').classList.remove('keyboardShortcut-active');
         dropMenu.classList.add('active');
     }
 });
 
 
-
-// textInsert.textContent = '';
-
 let div;
 textInsert.addEventListener('keydown', function (param) {
-    // getContentedText();
-    // if (textInsert.children[textInsert.childElementCount - 1] === document.querySelectorAll('.li-elem')[document.querySelectorAll('.li-elem').length - 1] && param.key === 'Backspace') {
-    //     console.log('a');
-    // }
-    try {
-        if (document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].textContent === ' ' && param.key === 'Backspace') {
-            document.querySelectorAll('.li-elem')[document.querySelectorAll('.li-elem').length - 1].remove();
-            document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length].remove();
-        }
-
-        // for(let i =0; i< textInsert.children.length; i++){
-        //     if(textInsert.children[i] === ){
-        //     console.log(textInsert.children[i])
-        //     }
-        // }
-    } catch (error) {
-
-    }
-
-
     if (param.key === '[') {
         param.preventDefault();
+        document.querySelector('.keyboardShortcut').classList.remove('keyboardShortcut-active');
         div = document.createElement('span');
         div.classList.add('test');
-        // if (textInsert.children[textInsert.children.length - 1] === document.querySelectorAll('div')[document.querySelectorAll('.test').length - 1]) {
-        //     textInsert.children[textInsert.children.length - 1].append(div);
-        //     div.innerHTML += ' ';
-        // } else {
         textInsert.children[textInsert.children.length - 1].appendChild(div);
-        // div.innerHTML += '&nbsp;'
-        // div.innerHTML += ' ';
         div.innerHTML += ' ';
         try {
             if (textInsert.querySelectorAll('div')[textInsert.querySelectorAll('div').length - 1].textContent === ' ' || textInsert.querySelectorAll('div')[textInsert.querySelectorAll('div').length - 1].textContent === '') {
-                // textInsert.querySelectorAll('div')[textInsert.querySelectorAll('div').length - 1].remove();
                 document.querySelector('br').remove();
             }
-        } catch (error) {
-
-        }
-
-
-        // }
-
+        } catch (error) {}
         openCaret();
         liveSearch();
         dropMenu.classList.remove('active');
-    }
-    // else if (param.key === ']') {
-    //     param.preventDefault();
-    //     dropMenu.classList.add('active');
-    //     let div = document.createElement('span');
-    //     div.classList.add('free-el');
-    //     //Это можно оптимизировать, если смотреть на последний элемент(проверить)
-    //     document.querySelectorAll('.li-elem').forEach(function(el) {
-    //         el.setAttribute('contenteditable', 'false');
-    //     });
-    //     textInsert.appendChild(div);
-    // console.log(div.textContent);
-    // } 
-    else if (param.key === 'Enter') {
+    } else if (textInsert.children[0].textContent[0] == ' ' && textInsert.textContent.trim().length <= 0) {
+        if (param.key === 'Backspace' || param.key === 'Delete')
+            param.preventDefault();
+    } else if (param.key === 'Enter') {
         try {
             document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].dataset.id = '';
             document.querySelectorAll('.help-span')[document.querySelectorAll('.help-span').length - 1].dataset.id = '';
         } catch (error) {}
-        try {
-            // if (document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].textContent === ' ' && param.key === 'Backspace') {
-            //     document.querySelectorAll('.li-elem')[document.querySelectorAll('.li-elem').length - 1].remove();
-            //     document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].remove();
-            //     document.querySelectorAll('.help-span')[document.querySelectorAll('.help-span').length - 1].remove();
-            // }
-            // textInsert.querySelectorAll('div')[textInsert.querySelectorAll('div').length - 1].remove();
-            // document.querySelectorAll('.help-span')[document.querySelectorAll('.help-span').length - 1].remove();
-            // document.querySelector('br').remove();
 
-        } catch (error) {
-
-        }
-        // document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].dataset.id = '';
-        // param.preventDefault();
-        // textInsert.innerHTML += '<div><br></div>'
-        // document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].textContent += ' ';
         document.querySelectorAll('.free-el').forEach(ek => {
             setTimeout(() => {
                 ek.setAttribute('data-id', ek.textContent);
-                if (ek.textContent.length <= 1 && param.key === 'Backspace') {
-                    ek.textContent = ' ';
-                }
             }, 30);
         });
-
-        // let div = document.createElement('div');
-        // div.classList.add('enter');
-        // div.innerText += ' ';
-        // textInsert.appendChild(div);
-
-
-
-        // let el = document.querySelectorAll('.enter')[document.querySelectorAll('.enter').length - 1];
-        // let range = document.createRange();
-        // let sel = window.getSelection();
-
-        // // console.log(el);
-        // range.setStart(el, 1);
-        // range.collapse(true);
-
-        // sel.removeAllRanges();
-        // sel.addRange(range);
-
-
-
-
-
-
-
 
     } else if (textInsert.children[0].textContent[0] == ' ' && textInsert.textContent.trim().length <= 0) {
         if (param.key === 'Backspace' || param.key === 'Delete')
@@ -183,13 +93,12 @@ textInsert.addEventListener('keydown', function (param) {
         document.querySelectorAll('.free-el').forEach(ek => {
             setTimeout(() => {
                 ek.setAttribute('data-id', ek.textContent);
-                if (ek.textContent.length <= 1 && param.key === 'Backspace') {
-                    ek.textContent = ' ';
-                }
+                if (ek.textContent.length <= 1 && param.key === 'Backspace') {}
             }, 30);
         });
 
     } catch (error) {}
+
 });
 
 
@@ -201,19 +110,34 @@ dropMenuNav.addEventListener('click', function (param) {
         span.classList.add('li-elem');
         span.setAttribute('data-id', param.target.dataset.id);
         span.textContent = param.target.textContent;
-        textInsert.appendChild(span);
-        // getContentedText();
+        HelpSpan.appendChild(span);
+        try {
+            if (textInsert.querySelectorAll('div')[textInsert.querySelectorAll('div').length - 1].tagName === 'DIV') {
+                textInsert.querySelectorAll('div')[textInsert.querySelectorAll('div').length - 1].appendChild(HelpSpan);
+                let span = document.createElement('span');
+                span.classList.add('free-el');
+                textInsert.querySelectorAll('div')[textInsert.querySelectorAll('div').length - 1].append(span);
+                span.textContent += ' ';
+                setTimeout(() => {
+                    textInsert.lastElementChild.remove();
+                }, 10);
+
+            } else {}
+        } catch (error) {
+            textInsert.appendChild(HelpSpan);
+        }
+
+        // textInsert.appendChild(HelpSpan); //Тут
         dropMenu.classList.add('active');
         let spanHelp = document.createElement('span');
         spanHelp.classList.add('free-el');
-
-        // spanHelp.innerHTML = ' ';
-        // spanHelp.innerHTML = '';
         spanHelp.insertAdjacentHTML('beforeend', ' ');
+        HelpSpan.innerHTML += '&nbsp;';
 
         document.querySelectorAll('.li-elem').forEach(function (el) {
             el.setAttribute('contenteditable', 'false');
         });
+
         textInsert.appendChild(spanHelp);
 
     }
@@ -255,8 +179,25 @@ span.classList.add('help-span');
 span.setAttribute('contenteditable', 'true');
 span.innerHTML = '&nbsp;';
 textInsert.appendChild(span);
-textInsert.addEventListener('keyup', function () {
+textInsert.addEventListener('keyup', function (param) {
     span.setAttribute('data-id', span.textContent);
+
+    document.querySelectorAll('.www').forEach(function (par) {
+        if (par.nextElementSibling === null && param.key === 'Backspace') {
+            console.log(par);
+            let el = par.previousElementSibling;
+            let range = document.createRange();
+            let sel = window.getSelection();
+
+            range.setStart(el, 1);
+            range.collapse(true);
+
+            sel.removeAllRanges();
+            sel.addRange(range);
+            par.remove();
+        }
+    });
+
 });
 
 /**
@@ -267,7 +208,6 @@ function openCaret() {
     let range = document.createRange();
     let sel = window.getSelection();
 
-    // console.log(el);
     range.setStart(el, 1);
     range.collapse(true);
 
@@ -286,35 +226,34 @@ let resizeObserver = new ResizeObserver(function (param) {
 resizeObserver.observe(textInsert);
 let str, newStr = '';
 
-/**
- * выводит введенные данные пользоватем в невидимый инпут в нужно формате
- */
-// function getContentedText() {
-//     let z = '';
-//     setTimeout(() => {
-//         document.querySelectorAll('.modal-win-text-field span').forEach(el => {
-//             // console.log(z);
-//             z += el.dataset.id + ' ';
-//         });
-//         // if()
-//         // console.log(z);
-//         str = z.trim().replace(/\s+/g, ' ');
-//         str = str.trim().replace(/undefined/gmi, '');
-
-//         outData.textContent = str;
-//     }, 30);
-// }
-
 setInterval(() => {
     let z = '';
+    document.querySelector('.help-span').dataset.id = document.querySelector('.help-span').textContent;
+    document.querySelectorAll('.free-el').forEach(function (el) {
+        el.dataset.id = el.textContent;
+    })
+    try {
+        document.querySelectorAll('.li-elem').forEach(function (el) {
+            el.nextSibling.textContent = ' ';
+        });
+    } catch (error) {
+
+    }
+
+
     document.querySelectorAll('.modal-win-text-field span').forEach(el => {
-        z += el.dataset.id + ' ';
+        z += el.dataset.id + '';
     });
+
+
+
     str = z.trim().replace(/\s+/g, ' ');
     str = str.trim().replace(/undefined/gmi, '');
 
     outData.textContent = str;
-}, 50);
+}, 30);
 
-// });
-// });
+
+document.querySelector('.keyboard').addEventListener('click', function (param) {
+    document.querySelector('.keyboardShortcut').classList.toggle('keyboardShortcut-active');
+});

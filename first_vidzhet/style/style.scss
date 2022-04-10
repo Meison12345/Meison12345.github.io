@@ -18,16 +18,14 @@ li {
     list-style-type: none;
 }
 
-// span {
-//     background-color: white;
-// }
-
 .modal-win {
     position: relative;
     margin-top: 200px;
     margin-left: 100px;
+
     &-text-field {
-        padding: 5px;
+        position: relative;
+        padding: 5px 30px 5px 5px;
         background: #FFFFFF;
         border: 1px solid #DBDEDF;
         box-shadow: 0px 1px 1px rgba(152, 152, 152, 0.12);
@@ -39,6 +37,7 @@ li {
 }
 
 .dropMenu {
+
     background: white;
     position: absolute;
     top: -207px;
@@ -48,6 +47,7 @@ li {
     filter: drop-shadow(0px 12px 24px rgba(0, 0, 0, 0.1));
     border-radius: 4px;
     overflow: auto;
+
     &-elem {
         padding: 10px;
         cursor: pointer;
@@ -59,7 +59,7 @@ li {
 }
 
 .li-elem,
-.backtick{
+.backtick {
     background-color: #E5E5E5;
 }
 
@@ -82,10 +82,102 @@ li {
 .li-elem {
     padding: 2px 5px;
     border-radius: 5px;
-    margin: 1px;
+    margin: 1px 0px;
     display: inline-block;
 }
 
 .block {
     display: block;
+}
+
+.keyboard {
+    position: absolute;
+    cursor: pointer;
+    padding: 2px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    left: 226px;
+    top: 5px;
+
+    &-active {
+        display: none;
+    }
+}
+
+.keyboardShortcut {
+    animation: keyboard 0.5s;
+    position: absolute;
+    top: -55px;
+    left: 90px;
+    display: none;
+    padding: 7px;
+    width: 185px;
+    height: 58px;
+
+
+    background: #FFFFFF;
+    border: 1px solid #C3C3C3;
+    /* тень для тултипов */
+
+    box-shadow: 0px 11.9408px 23.8816px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 32px;
+        bottom: -10px;
+        border: 5px solid transparent;
+        border-top: 5px solid white;
+    }
+
+    &-down {
+        display: flex;
+    }
+
+    &-active {
+        display: block;
+    }
+}
+
+@keyframes keyboard {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dropMenu-elem:hover {
+    background-color: #efefef;
+}
+
+/* полоса прокрутки (скроллбар) */
+.dropMenu::-webkit-scrollbar {
+    width: 10px;
+    /* ширина для вертикального скролла */
+    height: 5px;
+    /* высота для горизонтального скролла */
+    background-color: #eaeaea;
+}
+
+/* ползунок скроллбара */
+.dropMenu::-webkit-scrollbar-thumb {
+    background-color: #cdcdcd;
+    border-radius: 9em;
+}
+
+.dropMenu::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+}
+
+.dropMenu::-webkit-scrollbar-button:vertical:start:decrement,
+.dropMenu::-webkit-scrollbar-button:vertical:end:increment {
+    display: none;
 }
