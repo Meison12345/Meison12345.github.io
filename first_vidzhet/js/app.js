@@ -66,8 +66,14 @@ textInsert.addEventListener('keydown', function (param) {
     try {
         if (document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].textContent === ' ' && param.key === 'Backspace') {
             document.querySelectorAll('.li-elem')[document.querySelectorAll('.li-elem').length - 1].remove();
-            document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].remove();
+            document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length].remove();
         }
+
+        // for(let i =0; i< textInsert.children.length; i++){
+        //     if(textInsert.children[i] === ){
+        //     console.log(textInsert.children[i])
+        //     }
+        // }
     } catch (error) {
 
     }
@@ -119,11 +125,11 @@ textInsert.addEventListener('keydown', function (param) {
             document.querySelectorAll('.help-span')[document.querySelectorAll('.help-span').length - 1].dataset.id = '';
         } catch (error) {}
         try {
-            if (document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].textContent === ' ' && param.key === 'Backspace') {
-                document.querySelectorAll('.li-elem')[document.querySelectorAll('.li-elem').length - 1].remove();
-                document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].remove();
-                document.querySelectorAll('.help-span')[document.querySelectorAll('.help-span').length - 1].remove();
-            }
+            // if (document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].textContent === ' ' && param.key === 'Backspace') {
+            //     document.querySelectorAll('.li-elem')[document.querySelectorAll('.li-elem').length - 1].remove();
+            //     document.querySelectorAll('.free-el')[document.querySelectorAll('.free-el').length - 1].remove();
+            //     document.querySelectorAll('.help-span')[document.querySelectorAll('.help-span').length - 1].remove();
+            // }
             // textInsert.querySelectorAll('div')[textInsert.querySelectorAll('div').length - 1].remove();
             // document.querySelectorAll('.help-span')[document.querySelectorAll('.help-span').length - 1].remove();
             // document.querySelector('br').remove();
@@ -178,7 +184,7 @@ textInsert.addEventListener('keydown', function (param) {
             setTimeout(() => {
                 ek.setAttribute('data-id', ek.textContent);
                 if (ek.textContent.length <= 1 && param.key === 'Backspace') {
-                    // ek.textContent = ' ';
+                    ek.textContent = ' ';
                 }
             }, 30);
         });
