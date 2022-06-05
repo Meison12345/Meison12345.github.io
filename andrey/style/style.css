@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --hover-link: 0.5s,
+;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  padding: 0 calc(50% - 700px);
+}
+
+.header {
+  -webkit-box-shadow: 0px -10px 10px 5px black;
+          box-shadow: 0px -10px 10px 5px black;
+  background: white;
+}
+
+.header-nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+}
+
+.header-nav-ul li a {
+  display: block;
+  padding: 15px;
+  color: black;
+  -webkit-transition: var(--hover-link);
+  transition: var(--hover-link);
+}
+
+.header-nav-ul li a:hover {
+  color: darkblue;
+}
+
+.main-title {
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-first {
+  white-space: break-spaces;
+}
+
+.text-custom-center {
+  text-align: center;
+}
+
+.text-custom-center p {
+  width: 500px;
+  margin: 20px auto;
+}
+
+.table-score {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table-score thead {
+  background-color: gainsboro;
+}
+
+.table-score tr {
+  border: 1px solid black;
+}
+
+.table-score td {
+  border-right: 1px solid black;
+  width: 50%;
+}
+
+.table-score tr:nth-child(2n) {
+  background-color: gainsboro;
+}
+
+.text-center {
+  text-align: center;
+  margin: 35px 0px;
+}
+/*# sourceMappingURL=style.css.map */
