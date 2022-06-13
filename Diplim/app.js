@@ -7,19 +7,6 @@ for (let i = 1; i < 21; i++) {
 }
 
 
-// const swiper = new Swiper(".mySwiper", {
-//     effect: "cube",
-//     grabCursor: true,
-//     cubeEffect: {
-//         shadow: true,
-//         slideShadows: true,
-//         shadowOffset: 20,
-//         shadowScale: 0.94,
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//     },
-// });
 var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
