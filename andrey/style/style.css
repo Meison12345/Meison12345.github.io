@@ -44,8 +44,8 @@ a {
   display: block;
   padding: 15px;
   color: black;
-  -webkit-transition: var(--hover-link);
-  transition: var(--hover-link);
+  -webkit-transition: let(--hover-link);
+  transition: let(--hover-link);
 }
 
 .header-nav-ul li a:hover {

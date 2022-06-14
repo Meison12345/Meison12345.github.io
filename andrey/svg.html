@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<!--  manifest="manifest.appcache" -->
+<html lang="en" itemscope itemtype="https://schema.org/SoftwareApplication">
+
+<head lang="en">
+    <meta name="description" content="- Create unique artwork with shapes, color gradients and layers.
+    - Use Vector Paint for posters, web graphics or diagrams.
+
+    This free drawing program uses vector graphics, which provide a clear image whatever the magnification.
+
+    HTML5, no flash, and a freely exportable, open format.
+            " />
+    <meta name="keywords"
+        content="artwork, drawing, SVG, paint, vector, editor, SVG web app, vector drawing program, free drawing program" />
+
+    <meta name="copyright" content="Ben McDonald 2013">
+    <meta name="author" content="Ben McDonald">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width">
+
+    <meta property="og:title" content="Vector Paint" />
+    <meta property="og:description"
+        content="You should check out Vector Paint and create some cool artwork! vector-paint.com/app" />
+    <meta property="og:site_name" content="Vector Paint" />
+
+    <title>Vector Paint - SVG Editor</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class='bodyColor pure-form markers-plugin advanced-text-plugin'>
+    <!-- Place this asynchronous JavaScript just before your </body> tag -->
+
+    <article class="features">
+        <header>
+            <h1>SVG Editor</h1>
+        </header>
+        Vector Paint is a drawing program, with a simple yet powerful interface, that lets you draw points, lines,
+        curves and shapes.
+
+        <h4>Features</h4>
+        <ol>
+            <li>New</li>
+            <li>Save</li>
+            <li>Save As</li>
+            <li>Open</li>
+            <li>Export as PNG</li>
+            <li>Export as JPEG</li>
+            <li>Undo</li>
+            <li>Redo</li>
+            <li>Pull shape forward</li>
+            <li>Push shape backwards</li>
+            <li>Pull layer forward</li>
+            <li>Push layer backwards</li>
+            <li>Shape to front</li>
+            <li>Shape to back</li>
+            <li>Layer to front</li>
+            <li>Layer to back</li>
+            <li>Delete shape</li>
+            <li>Delete node</li>
+            <li>Delete layer</li>
+            <li>Clone shape</li>
+            <li>Clone node</li>
+            <li>Clone layer</li>
+            <li>Group shapes</li>
+            <li>Ungroup shape</li>
+            <li>Zoom in</li>
+            <li>Zoom out</li>
+            <li>Zoom to selected</li>
+            <li>Zoom to canvas</li>
+            <li>Zoom to selection</li>
+            <li>Zoom to multiplier</li>
+            <li>View canvas as wireframe</li>
+            <li>View ruler</li>
+            <li>Align left</li>
+            <li>Align center horizontal</li>
+            <li>Align right</li>
+            <li>Align top</li>
+            <li>Align center vertical</li>
+            <li>Align bottom</li>
+            <li>Align relative to page</li>
+            <li>Align relative to selected bounding box</li>
+            <li>Align relative to first selected</li>
+            <li>Add layer</li>
+            <li>Hide layer</li>
+            <li>Merge layer back</li>
+            <li>Merge all layers</li>
+            <li>Move shapes to layer</li>
+            <li>Draw lines, rectangles, ellipses, polygon, text, shapes, images</li>
+            <li>Assign effect to shape</li>
+            <li>Set fill solid color</li>
+            <li>Set fill gradient color</li>
+            <li>Set fill pattern</li>
+            <li>Set stroke solid color</li>
+            <li>Set stroke gradient color</li>
+            <li>Set stroke width</li>
+            <li>Set stroke pattern</li>
+            <li>Set shapes opacity</li>
+            <li>and more...</li>
+        </ol>
+
+        <button type="button" data-toggle="features" class="close">
+            X
+        </button>
+    </article>
+
+    <button data-togglebody="hide-right-panel">
+
+    </button>
+
+    <div class="rendering-message">
+        <h3>
+            Rendering image...
+        </h3>
+    </div>
+
+    <div class="model-overlay" data-hide="model-overlay">
+        <div class="help-popup">
+
+            <button type="button" data-hide="help-popup model-overlay" class="help">Start Help Slideshow</button>
+
+            <button type="button" class="vector-help">Where is the fill tool? Where is the erase tool? Learn about
+                vector graphics</button>
+
+            <br />
+            <br />
+            <br />
+            <footer>
+                <a href="https://t.me/joinchat/CACX3U9L4mrUoizNqr8uoA" target="_black">Join Telegram Group!</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSePisa-Uml_o8xZVjY23LTHVy0ueCvpsAjXOBEXJYLEpIrm5g/viewform?usp=sf_link"
+                    target="_black">Business development</a>
+                <a href="https://twitter.com/BenMcDonald___" target="_black">Author @BenMcDonald</a>
+                <div itemscope itemtype="http://schema.org/Organization" style="display:none;">
+                    <a href="https://twitter.com/BenMcDonald___" target="_black"><span itemprop="copyrightHolder"
+                            rel="author">Vector Paint</span></a>
+                    <a itemprop="url" href="http://vectorpaint.yaks.co.nz/">Home</a>
+                    <img itemprop="logo" src="logo/vector_paint_icon256.png" />
+                </div>
+            </footer>
+        </div>
+
+        <div class="plugins">
+            <ul class="pluginslist">
+                <li>
+                    <h3>Advanced text features</h3>
+                    <ul>
+                        <li>
+                            1000+ extra high quality fonts <a href="http://www.google.com/fonts/" target="_black">(click
+                                here to browse and choose fonts)</a>
+                        </li>
+                        <li>
+                            Adjust text letter spacing
+                        </li>
+                        <li>
+                            Adjust text word spacing
+                        </li>
+                        <li>
+                            Adjust text line height
+                        </li>
+                    </ul>
+
+
+                    <button class="togglePlugin" data-togglebody="advanced-text-plugin" type="button">
+                        Add
+                    </button>
+                    <!--      
+                    <button class="button" data-purchase="advanced-text-plugin">
+                        Add
+                        <span class="price">US$1.60</span>
+                    </button>
+                     -->
+                    <!--                     <button class="togglePlugin purchased debug-only" data-togglebody="advanced-text-plugin" type="button">
+                        Add (Purchased)
+                    </button>
+ -->
+                </li>
+                <li>
+                    <h3>Markers</h3>
+                    <ul>
+                        <li>
+                            Add arrows and dots to the start, middle or ends of paths and lines.
+                        </li>
+                    </ul>
+                    <button class="togglePlugin" data-togglebody="markers-plugin" type="button">
+                        Add
+                    </button>
+                </li>
+                <!--                 <li>
+                    <h3>Layers</h3>
+                      <ul>
+                        <li>
+                            Add layers to your artwork
+                        </li>
+                        <li>
+                            Merge down layers
+                        </li>
+                        <li>
+                            Move selected objects to certain layers
+                        </li>
+                    </ul>
+                    <button class="togglePlugin" data-togglebody="layers-plugin" type="button">
+                        Add
+                    </button>
+                </li> -->
+                <li>
+                    <h3>Color and Attribute Picker</h3>
+                    <ul>
+                        <li>
+                            Duplicate colors and attributes on shapes with a picker.
+                        </li>
+                    </ul>
+                    <button class="togglePlugin" data-togglebody="picker-plugin" type="button">
+                        Add
+                    </button>
+                </li>
+                <!--                 <li>
+                    <h3>Masks and Clip Paths</h3>
+                    <ul>
+                        <li>
+                            Use masks and clip paths to change the visibility and transparency of areas of an object.
+                        </li>
+                    </ul>
+                    <button class="togglePlugin" data-togglebody="mask-plugin" type="button">
+                        Add
+                    </button>
+                </li> -->
+                <li class="debug-only">
+                    <h3>Alignment</h3>
+                    <ul>
+                        <li>
+                            Show grid
+                        </li>
+                        <li>
+                            Snap to grid
+                        </li>
+                        <li>
+                            Distribute objects
+                        </li>
+                    </ul>
+                    <button class="togglePlugin" data-togglebody="align-plugin" type="button">
+                        Add
+                    </button>
+                </li>
+                <li>
+                    <h3>Pattern Shape Fill</h3>
+                    <ul>
+                        <li>
+                            Add repeating images to create patterns on shapes.
+                        </li>
+                    </ul>
+                    <button class="togglePlugin" data-togglebody="pattern-plugin" type="button">
+                        Add
+                    </button>
+                </li>
+                <li>
+                    <h3>Dev Tools</h3>
+                    <ul>
+                        <li>
+                            Generate CSS code to add your image to the background of a web page. (Click File -> "CSS
+                            Background" to run.)
+                        </li>
+                        <!--                     <li>
+                            Open file from URL or data URL
+                        </li> -->
+                        <!--                     <li>
+                            Edit Source
+                        </li>
+                        <li>
+                            Add links
+                        </li> -->
+                    </ul>
+                    <button class="togglePlugin" data-togglebody="css-background-plugin" type="button">
+                        Add
+                    </button>
+                </li>
+
+                <!--
+                 <li class="debug-only">
+                    <h3>Barcode Generate</h3>
+                      <ul>
+                        <li>
+                            Generate barcodes in CODE128 (B), EAN (13), or UPC-A format
+                        </li>
+                    </ul>
+                    <button class="togglePlugin" data-togglebody="barcode-plugin" type="button">
+                        Add
+                    </button>
+                </li>  -->
+            </ul>
+
+
+            <label>
+                <input data-toggle="lineoptions" id="b" type="checkbox" />
+                Extra Stroke and Fill Options
+            </label>
+        </div>
+    </div>
+
+    <!--         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="0">
+            <defs>
+               <filter id="blur-background" x="-20%" y="-20%" width="120%" height="120%">
+                    <feOffset result = "offOut" in = "SourceGraphic" dx = "-1" dy = "-1"/>
+                    <feColorMatrix result = "matrixOut" in = "offOut" type = "matrix" values = "0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.1 0 0 0 0 0 0.3 0"/>
+                    <feGaussianBlur result = "blurOut" in = "matrixOut" stdDeviation = "1"/>
+                    <feBlend in = "SourceGraphic" in2 = "blurOut" mode = "normal"/>
+              </filter>
+               <filter id="glow" x="-20%" y="-20%" width="120%" height="120%">
+                    <feOffset result = "offOut" in = "SourceGraphic" dx = "0" dy = "0"/>
+                    <feGaussianBlur result = "blurOut" in = "offOut" stdDeviation = "2"/>
+                    <feBlend in = "SourceGraphic" in2 = "blurOut" mode = "normal"/>
+              </filter>
+            </defs>
+        </svg>
+ -->
+    <div id="dialogContainer">
+
+        <button data-togglebody="dialog">
+            Close
+        </button>
+    </div>
+    <!--   -->
+    <!--                 <label>
+                    <select name="operator">
+                        <option value="over">
+                            Over
+                        </option>
+                        <option value="in">
+                            In
+                        </option>
+                        <option value="out">
+                            Out
+                        </option>
+                        <option value="atop">
+                            Atop
+                        </option>
+                        <option value="xor">
+                            Xor
+                        </option>
+                        <option value="arithmetic">
+                            Arithmetic
+                        </option>
+                    </select>
+                </label> -->
+    <!--         <template id="feMorphology">
+            <fieldset action="feMorphology">
+                <legend>Morphology</legend>
+                <label>
+                    <input name="in" type="text" hidden="true" value="SourceGraphic" />
+                </label>
+                <label>
+                    <select name="operator">
+                        <option value="erode" selected="true">Erode</option>
+                        <option value="dilate">Dilate</option>
+                    </select>
+                </label>
+                <label>
+                    Radius
+                    <input name="radius" type="number" min="1" step="1" value="1"/>
+                </label>
+            </fieldset>
+        </template>
+        <template id="linearGradient">
+            <fieldset action="linearGradient">
+                <legend>Linear Gradient</legend>
+                <label>
+                    X1
+                    <input name="x1" type="range" step="0.001" min="0" max="1" />
+                </label>
+                <label>
+                    Y1
+                    <input name="y1" type="range" step="0.001" min="0" max="1" />
+                </label>
+                <label>
+                    X2
+                    <input name="x2" type="range" step="0.001" min="0" max="1" />
+                </label>
+                <label>
+                    Y2
+                    <input name="y2" type="range" step="0.001" min="0" max="1" />
+                </label>
+
+                <button data-addchildelement="stop">
+                    Add Color Point
+                </button>
+            </fieldset>
+        </template>
+        <template id="stop">
+            <fieldset action="stop">
+                <legend>Color Point</legend>
+                <label>
+                    <input name="stop-color" type="color" />
+                </label>
+                <label>
+                    Opacity
+                    <input name="stop-opacity" type="range" step="0.001" min="0" max="1"/>
+                </label>
+                <label>
+                    Offset
+                    <input name="offset" type="range" step="0.001" min="0" max="1" />
+                </label>
+            </fieldset>
+        </template> -->
+
+    <menu type="context" id="canvasMenu" class="showcase">
+        <command label="Copy" class="copy"></command>
+        <command label="Cut" class="cut"></command>
+        <command label="Paste" class="paste"></command>
+        <command label="Delete" class="delete"></command>
+        <command label="Group/Ungroup" class="group"></command>
+        <command label="Front" class="front"></command>
+        <command label="Forward" class="forward"></command>
+        <command label="Backward" class="backward"></command>
+        <command label="Back" class="back"></command>
+    </menu>
+
+    <div class="leftsidepanel">
+        <div class="tools">
+            <button data-hotkey="esc del" class="tool_button_current" id="tool_select" title="Select Tool"> </button>
+
+
+
+            <button data-hotkey="v" class="toolStyle" id="tool_fhpath" title="Pencil Tool">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="-12 -12 40 40" width="100%"
+                    height="100%">
+                    <path class="target"
+                        d="m3.19298,1.77277c0,0.08354 -0.02379,0.25618 -0.08354,0.41771c-0.09722,0.2628 -0.23328,0.55005 -0.37594,0.87719c-0.14934,0.34247 -0.33417,0.71011 -0.50125,1.12782c-0.16709,0.41771 -0.4419,0.98854 -0.54303,1.62907c-0.12394,0.78503 0.07874,1.09751 0.16709,1.12782c0.20146,0.06912 0.37796,0.07074 0.58479,0.04177c0.30116,-0.04218 0.62471,-0.17279 1.00251,-0.2924c0.41576,-0.13162 0.83939,-0.28187 1.2949,-0.45948c0.50593,-0.19726 1.20682,-0.55344 1.96324,-0.87719c0.70601,-0.30218 1.42022,-0.62657 2.1721,-0.96074c0.75188,-0.33416 1.41755,-0.67411 2.04679,-0.96073c1.12315,-0.51161 1.52972,-0.87428 1.67084,-0.75188c0.09979,0.08655 -0.17206,0.28915 -0.33417,0.54302c-0.47422,0.74267 -1.44555,2.25592 -2.75689,4.01003c-0.64059,0.85688 -2.40431,2.35522 -2.00501,2.96575c0.04572,0.06991 0.78847,-0.18668 2.96574,-0.75188c2.50052,-0.64912 4.47191,-1.23232 5.30493,-0.66834c0.07735,0.05236 -0.18254,0.45472 -1.46199,1.33667c-0.69638,0.48004 -2.06649,1.59225 -2.04678,1.62908c0.07107,0.13278 0.73973,0.1745 1.62907,0.79365c0.97084,0.67588 1.07976,1.41487 0.79365,1.92147c-0.2342,0.4147 -0.6039,0.71474 -0.58479,0.75188c0.16442,0.3195 2.29106,0.51896 3.13283,1.79615c0.56353,0.85503 -0.2924,1.58731 -0.62657,2.1721l1.37845,1.46199l3.92648,2.46449"
+                        stroke-width="2" stroke="#000000" fill-opacity='0.0' />
+                </svg>
+            </button>
+
+
+
+            <button data-hotkey="l" class="toolStyle" id="tool_line" title="Line Tool">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewbox="0 0 64 64">
+                    <line class="target" y2="62.5%" x2="75%" y1="37.5%" x1="25%" stroke-width="4" stroke="#000000" />
+                </svg>
+            </button>
+
+
+
+            <button data-hotkey="w" class="toolStyle" id="tool_rect" title="Rectangle">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewbox="0 0 64 64">
+                    <rect class="target" x="25%" y="25%" width="50%" height="40%" stroke-width="4" />
+                </svg>
+            </button>
+
+
+            <button data-hotkey="e" class="  toolStyle" id="tool_ellipse" title="Ellipse">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewbox="0 0 64 64">
+                    <ellipse class="target" rx="25%" ry="20%" cy="50%" cx="50%" stroke-width="4" />
+                </svg>
+            </button>
+
+            <button data-hotkey="p" class="  toolStyle" id="tool_path" title="Path Tool">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="-6 -6 36 36" width="100%" height="100%">
+                    <path class="target"
+                        d="m4.06652,19.02639l12.92382,1.97361l3.00965,-5.92085l-4.03648,-11.07915l-12.46352,2.73615l0.56652,12.29024z"
+                        stroke-width="2" />
+                </svg>
+            </button>
+            <!--
+                <button data-toolmode="text" title="Text">
+                    New
+                </button>
+ -->
+            <button data-hotkey="t" id="tool_foreign" title="Text">
+                Aa
+            </button>
+
+            <button data-hotkey="i" class="" id="tool_image" title="Image Tool"></button>
+
+            <div id="tools_left" class="tools_panel"></div>
+        </div>
+    </div>
+
+
+    <datalist id="resolutions">
+        <option>600</option>
+        <option>800</option>
+        <option>768</option>
+        <option>960</option>
+        <option>1024</option>
+        <option>1200</option>
+        <option>1280</option>
+        <option>1600</option>
+    </datalist>
+
+    <datalist id="twoSquared">
+        <option>16</option>
+        <option>32</option>
+        <option>64</option>
+        <option>128</option>
+        <option>256</option>
+        <option>512</option>
+        <option>1024</option>
+        <option>2048</option>
+    </datalist>
+
+    <datalist id="color">
+        <option>#ff0000</option>
+        <option>#0000ff</option>
+        <option>#00ff00</option>
+        <option>#ffff00</option>
+        <option>#00ffff</option>
+    </datalist>
+
+    <div class="right-panel-wrap">
+        <div class="rightPanel">
+            <label class="advanced">
+                <input required="true" type="text" data-attr="fill"
+                    pattern="^#[a-fA-F0-9]{6}|#[a-fA-F0-9]{3}|rgb *\( *[0-9]{1,3}%? *, *[0-9]{1,3}%? *, *[0-9]{1,3}%? *\)|rgba *\( *[0-9]{1,3}%? *, *[0-9]{1,3}%? *, *[0-9]{1,3}%? *, *[0-9]{1,3}%? *\)|black|green|silver|gray|olive|white|yellow|maroon|navy|red|blue|purple|teal|fuchsia|aqua|url\(#[^\)]+\)$"
+                    value="#4a90d6" />
+                <label class="opacity_background">
+                    <input type="range" min="0" max="1" step=".01" data-attr="fill-opacity" value="1" />
+                </label>
+                <label>
+                    Effect
+                    <input type="text" data-attr="filter" pattern="^url\(#[^\)]+\)$" value="1" />
+                </label>
+
+                <input type="text" data-attr="stroke" pattern="^#[a-fA-F0-9]{6}|#[a-fA-F0-9]{3}|rgb *\( *[0-9]{1,3}%? *, *[0-9]{1,3}%? *, *[0-9]{1,3}%? *\)|rgba *\( *[0-9]{1,3}%? *, *[0-9]{1,3}%? *, *[0-9]{1,3}%? *, *[0-9]{1,3}%? *\)|black|green|silver|gray|olive|white|yellow|maroon|navy|red|blue|purple|teal|fuchsia|aqua|url\(#[^\)]+\)$
+    " value="#222222" />
+                <label class="opacity_background">
+                    <input type="range" min="0" max="1" step=".01" data-attr="stroke-opacity" value="1" />
+                </label>
+            </label>
+
+
+            <h5>
+                Fill
+                <button class="clear-attr" data-attr="fill" data-attr-rm="fill-opacity" title="No fill"
+                    value="none"></button>
+                <button data-pick-attr="fill fill-opacity fill-width fill-dasharray fill-linejoin fill-linecap"
+                    title="Pick fill"></button>
+            </h5>
+            <div class="fill_palette clearfix" title="Click to change fill color, shift-click to change stroke color">
+            </div>
+
+            <button data-require-attr="fill" id="tool_fill" class="fullWidth">
+            </button>
+
+            <label class="pattern-control button">
+                Pattern
+                <input id="asignPattern" type="file" accept="image/*" />
+            </label>
+            <!--
+                <select id="patterns" data-attr="fill"></select>
+                <select name="Colors" data-attr="fill" data-urlreferences="lineargradient radialgradient"></select>
+                <select name="Colors" data-attr="stroke" data-urlreferences="lineargradient radialgradient"></select> -->
+
+            <div class="pattern advanced">
+                <label>
+                    Width
+                    <input class="pattern_width" type="number" data-pattern="width" min="1" />
+                </label>
+                <label>
+                    Height
+                    <input class="pattern_height" type="number" data-pattern="height" min="1" />
+                </label>
+                <input type="file" accept="image/*" />
+            </div>
+
+            <h5>
+                Stroke
+                <button class="clear-attr" data-attr="stroke" data-attr-rm="stroke-opacity" title="No stroke"
+                    value="none"></button>
+                <button
+                    data-pick-attr="stroke stroke-opacity stroke-width stroke-dasharray stroke-linejoin stroke-linecap"
+                    data-pick-style="color" title="Pick stroke"></button>
+            </h5>
+            <div class="stroke_palette clearfix" title="Click to change fill color, shift-click to change stroke color">
+            </div>
+
+            <button data-require-attr="stroke color" id="tool_stroke" class="fullWidth">
+            </button>
+
+            <label class="stroke_width_background">
+                <input title="Stroke Width" min="1" type="number" value="2" data-attr="stroke-width"
+                    class="fullWidth" />
+            </label>
+            <select title="Change stroke dash style" data-attr="stroke-dasharray" class="fullWidth">
+                <option selected="selected" value="none">_______________</option>
+                <option value="2,2">..............................</option>
+                <option value="5,5">- - - - - - - - - - - - - - -</option>
+                <option value="5,2,2,2">- . - . - - . - . - - . - . -</option>
+                <option value="5,2,2,2,2,2">- .. - .. - .. - .. - .. - ..</option>
+            </select>
+            <div class="lineoptions">
+                <label>
+                    Line Join
+                    <select data-attr="stroke-linejoin" class="fullWidth">
+                        <option value="miter">Miter</option>
+                        <option selected="selected" value="round">Round</option>
+                        <option value="bevel">Bevel</option>
+                    </select>
+                </label>
+                <label>
+                    Line Cap
+                    <select data-attr="stroke-linecap" class="fullWidth">
+                        <option selected="selected" value="butt">Butt</option>
+                        <option value="round">Round</option>
+                        <option value="square">Square</option>
+                    </select>
+                </label>
+
+                <label>
+                    Dash Offset
+                    <input type="number" data-attr="stroke-dashoffset" />
+                </label>
+
+                <label>
+                    Insideness
+                    <select data-attr="fill-rule">
+                        <option selected="selected" value="nonzero">Zero</option>
+                        <option value="evenodd">Even</option>
+                    </select>
+                </label>
+            </div>
+
+            <input data-attr="id" class="advanced" type="text" />
+            <!--
+                <div class="widget"  style="display: none;">
+                    <label>
+                        Blur
+                        <input class='filter' data-filtername='feGaussianBlur' data-filterproperty='stdDeviation'
+                            value="0" min='0.0' step='0.1' type="number" />
+                    </label>
+                </div>
+    -->
+            <!--
+                <button data-referenceform="linearGradient" data-setattribute="fill">
+                    Fill Linear Gradient
+                </button>
+                <button data-referencetemplate="filter" data-setattribute="filter">
+                    Filter
+                </button>
+
+                <button data-referencetemplate="blur" data-setattribute="filter">
+                    Blur
+                </button> -->
+            <h5>
+                Opacity
+                <button class="clear-attr" data-attr="opacity" title="Clear opacity" value="1"></button>
+                <button data-pick-attr="opacity" title="Pick opacity"></button>
+            </h5>
+            <label class="opacity_background">
+                <input class="fullWidth" min="0" max="1" step=".01" type="range" value="1" data-attr="opacity" />
+            </label>
+
+            <div data-visableif-attr="filter">
+                <h5>
+                    Effect
+                    <button class="clear-attr" data-attr="filter" title="Clear filter" value=""></button>
+                    <button data-pick-attr="filter" title="Pick filter"></button>
+                </h5>
+                <label>
+                    Warning: can be slow
+                    <select id="filters" class="fullWidth" data-attr="filter">
+                        <option value="">No Effect</option>
+                    </select>
+                </label>
+            </div>
+
+            <div
+                data-elementcontext="g path polyline polygon rect image use ellipse a line feImage tspan text svg textPath tref">
+                <div class="mask-group">
+                    <h5>
+                        Clip Path
+                        <button class="clear-attr" data-attr="clip-path" title="Clear Clip Path" value=""></button>
+                        <button data-pick-attr="clip-path" title="Pick Clip Path"></button>
+                    </h5>
+                    <button type="button" class="pick-clip-path">Clip Path</button>
+
+                    <h5>
+                        Mask
+                        <button class="clear-attr" data-attr="mask" title="Clear mask" value=""></button>
+                        <button data-pick-attr="mask" title="Pick mask"></button>
+                    </h5>
+                    <button type="button" class="pick-mask">Mask</button>
+                </div>
+            </div>
+
+            <!--
+                    <label>Width <input pattern="[0-9.]*%?" placeholder="Pixel number or page percentage" min="1" step='1' type="number" data-attr="width" list="twoSquared"/> </label>
+                    <label>Height <input pattern="[0-9.]*%?" placeholder="Pixel number or page percentage" min="1" step='1' type="number" data-attr="height" list="twoSquared"/> </label>
+                    <label class="advanced">
+                    </label> -->
+
+            <div class="widget text" data-elementcontext="foreignobject text">
+                <h4>Text
+                    <button data-pick-attr="font-size font-weight font-style font-family letter-spacing word-spacing"
+                        data-pick-style="line-height color text-align" title="Pick text"></button>
+                </h4>
+
+                <label class="advanced">
+                    Color
+                    <input type="color" data-style="color" value="#000" />
+                </label>
+
+                <h5 />
+                <label>
+                    Size
+                    <input min="1" value="100" step='1' type="number" data-attr="font-size" />
+                </label>
+
+
+                <button class="toogle-attr" data-hotkey="ctrl+b" data-attr="font-weight" value="bold">B</button>
+                <button class="toogle-attr" data-hotkey="ctrl+i" data-attr="font-style" value="italic">i</button>
+
+                <h5 />
+                <label>
+                    Font Family
+                    <select class="advanced-text fullWidth" data-attr="font-family">
+                        <option value=""></option>
+                        <option value="Georgia, serif">Georgia</option>
+                        <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">Palatino
+                            Linotype</option>
+                        <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                        <option selected="selected" value="Arial, Helvetica, sans-serif">Arial</option>
+                        <option value="'Arial Black', Gadget, sans-serif">Arial Black</option>
+                        <option value="'Comic Sans MS', cursive, sans-serif">Comic Sans MS</option>
+                        <option value="Impact, Charcoal, sans-serif">Impact, Charcoal</option>
+                        <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida
+                            Sans Unicode</option>
+                        <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+                        <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+                        <option value="Verdana, Geneva, sans-serif">Verdana</option>
+                        <option value="cursive">Cursive</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="'Courier New', Courier, monospace">Courier New</option>
+                        <option value="'Lucida Console', Monaco, monospace">Lucida Console</option>
+                    </select>
+                    <select class="basic-fonts fullWidth" data-attr="font-family">
+                        <option value=""></option>
+                        <option value="Georgia, serif">Georgia</option>
+                        <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">Palatino
+                            Linotype</option>
+                        <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                        <option selected="selected" value="Arial, Helvetica, sans-serif">Arial</option>
+                        <option value="'Arial Black', Gadget, sans-serif">Arial Black</option>
+                        <option value="'Comic Sans MS', cursive, sans-serif">Comic Sans MS</option>
+                        <option value="Impact, Charcoal, sans-serif">Impact, Charcoal</option>
+                        <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida
+                            Sans Unicode</option>
+                        <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+                        <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+                        <option value="Verdana, Geneva, sans-serif">Verdana</option>
+                        <option value="cursive">Cursive</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="'Courier New', Courier, monospace">Courier New</option>
+                        <option value="'Lucida Console', Monaco, monospace">Lucida Console</option>
+                    </select>
+                </label>
+
+                <button value="left" data-style="text-align"></button>
+                <button value="right" data-style="text-align"></button>
+                <button value="center" data-style="text-align"></button>
+                <button value="justify" data-style="text-align">
+                </button>
+
+                <div class="advanced-text">
+                    <h5>
+                        Letter Spacing
+                        <button class="clear-attr" data-attr="letter-spacing" title="Clear letter spacing"
+                            value="0"></button>
+                    </h5>
+                    <label>
+                        <input value="0" step='1' type="number" data-attr="letter-spacing" />
+                    </label>
+
+                    <h5>
+                        Word Spacing
+                        <button class="clear-attr" data-attr="word-spacing" title="Clear word spacing"
+                            value="0"></button>
+                    </h5>
+                    <label>
+                        <input value="0" step='1' type="number" data-attr="word-spacing" />
+                    </label>
+
+                    <h5>
+                        Line Height
+                        <button class="clear-attr" data-style="line-height" title="Clear line height"
+                            value="1"></button>
+                    </h5>
+                    <label>
+                        <input type="number" value="1" data-style="line-height" />
+                    </label>
+                </div>
+            </div>
+
+            <!--
+                    <label>
+                        Writing Mode
+                        <select data-attr="writing-mode" class="fullWidth">
+                            <option value="horizontal-tb"> horizontal-tb </option>
+                            <option value="rl-tb"> rl-tb </option>
+                            <option value="vertical-lr"> vertical-lr </option>
+                            <option value="vertical-rl"> vertical-rl </option>
+                            <option value="bt-rl"> bt-rl </option>
+                            <option value="bt-lr"> bt-lr </option>
+                            <option value="lr-bt"> lr-bt </option>
+                            <option value="rl-bt"> rl-bt </option>
+                        </select>
+                    </label>
+                    <label>
+                        Anchor
+                        <select data-attr="text-anchor" class="fullWidth">
+                            <option value="start">Start</option>
+                            <option value="middle">Middle</option>
+                            <option value="end">End</option>
+                        </select>
+                    </label>
+     -->
+
+            <div class="widget path" data-elementcontext="path">
+                <h4>Path</h4>
+
+                <button data-hotkey="n" id="tool_reorient" class="" title="Reorient path">
+                    Reorient
+                </button>
+
+                <button data-hotkey="h" class="editMode">Edit</button>
+
+                <button data-hotkey="o" id="tool_openclose_path" title="Open/close sub-path">
+                    Open/Close
+                </button>
+                <!--
+                    <select id="seg_continuation" title="Change Segment type">
+                        <option value="opened">Opened</option>
+                        <option value="closed">Closed</option>
+                    </select>
+ -->
+                <button data-hotkey="a" id="tool_add_subpath" title="Add sub-path">
+                    Continue Path
+                </button>
+
+                <select id="seg_type" title="Change Segment type">
+                    <option id="straight_segments" selected="selected" value="4">Straight</option>
+                    <option id="curve_segments" value="6">Curved</option>
+                </select>
+
+                <label class="marker-controls">
+                    Start Marker
+                    <select class="fullWidth" data-attr="marker-start">
+                        <optgroup class="markers" label="Markers">
+                            <option value="">No Marker</option>
+                        </optgroup>
+                    </select>
+                </label>
+                <label class="marker-controls">
+                    Mid Marker
+                    <select class="fullWidth marker" data-attr="marker-mid">
+                        <optgroup class="markers" label="Markers">
+                            <option value="">No Marker</option>
+                        </optgroup>
+                    </select>
+                </label>
+                <label class="marker-controls">
+                    End Marker
+                    <select class="fullWidth marker" data-attr="marker-end">
+                        <optgroup class="markers" label="Markers">
+                            <option value="">No Marker</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </div>
+
+            <div class="widget path" data-elementcontext="polyline">
+                <h4>Polyline</h4>
+                <button data-hotkey="h" class="smoothPath">Smooth to path</button>
+            </div>
+            <div class="widget rectangle" data-elementcontext="rect">
+                <h4>Rectangle</h4>
+
+                <h5>
+                    Roundness
+                    <button class="clear-attr" data-attr="rx ry" title="Clear roundness" value="0"></button>
+                    <button data-pick-attr="rx ry" title="Pick roundness"></button>
+                </h5>
+                <label>
+                    <input min='0' value='0' step='1' type="number" data-attr="rx ry" />
+                </label>
+
+                <button data-hotkey="b" class="fullWidth tool_topath" title="Convert to Path">Convert to Path</button>
+            </div>
+            <div class="widget rectangle" data-elementcontext="ellipse circle line">
+                <h4>Ellipse/Line</h4>
+
+                <button data-hotkey="b" class="fullWidth tool_topath" title="Convert to Path">Convert to Path</button>
+            </div>
+
+            <div class="widget" data-elementcontext="ellipse">
+                <h4>Ellipse</h4>
+
+                <label>
+                    Radius
+                </label>
+                <input min='1' placeholder="radius" value='0' step='1' type="number" data-attr="rx" />
+                <input min='1' placeholder="radius" value='0' step='1' type="number" data-attr="ry" />
+            </div>
+
+            <div class="widget" data-elementcontext="circle">
+                <h4>Circle</h4>
+
+                <label>
+                    Radius
+                </label>
+                <input min='1' placeholder="radius" value='0' step='1' type="number" data-attr="r" />
+            </div>
+
+            <div class="widget backgroundImage">
+                <h4>Background</h4>
+                <input class="advanced" data-attr="xlink:href" type="text" />
+                <input class="addBackground fullWidth" accept="image/*" type="file" />
+                <button class="clearBackground fullWidth">Clear</button>
+            </div>
+
+
+            <div class="widget" data-elementcontext="use tspan a cursor felImage filter">
+                <h4>Use</h4>
+                <input data-attr="href" type="text" />
+            </div>
+
+            <div class="widget image" data-elementcontext="image">
+                <h4>Image</h4>
+                <label class="button">
+                    Change Image
+                    <input id="change_image_url" accept="image/*" class="fullWidth" type="file" />
+                </label>
+
+                <form id="set-barcode">
+                    <label>
+                        Barcode string
+                        <input name="barcode-string" required="true" accept="image/*" class="fullWidth" type="file" />
+                    </label>
+                    <label>
+                        Encoding
+                        <select>
+                            <option value="CODE">
+                                CODE128 (B)
+                            </option>
+                            <option value="EAN">
+                                EAN (13)
+                            </option>
+                            <option value="UPC">
+                                UPC-A
+                            </option>
+                        </select>
+                    </label>
+                </form>
+
+
+
+                <select class="advanced" id="hrefAssign" data-attr="xlink:href">
+                </select>
+                <!--                 <input data-attr="align" value="xMinYMin" type="text" />
+                    <button id="edit_image" class="fullWidth">Edit Externally</button>
+     -->
+            </div>
+        </div>
+    </div>
+
+
+    <div id="svg_editor">
+        <div id="rulers">
+            <div id="ruler_corner"></div>
+            <div id="ruler_x">
+                <div>
+                    <canvas height="15"></canvas>
+                </div>
+            </div>
+            <div id="ruler_y">
+                <div>
+                    <canvas width="15"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class='workareaContainer'>
+
+            <div class="menu_links" itemscope itemtype="http://schema.org/WebApplication">
+
+            </div>
+
+            <div class="widget file">
+                <div class="fileName"></div>
+                <button id="tool_new_file" data-hotkey="ctrl+m" class="newImage fullWidth">
+                    New
+                </button>
+                <label class="button open fullWidth">
+                    Open SVG
+                </label>
+                <!--
+                    <button class="open-url fullWidth debug-only">
+                        Open SVG from URL
+                    </button>
+ -->
+                <button class="save fullWidth" data-hotkey="ctrl+s">
+                    Save
+                </button>
+
+                <button class="saveAs fullWidth" data-hotkey="ctrl+shift+s">
+                    Download
+                </button>
+
+                <button class="save_as_png fullWidth" data-hotkey="ctrl+q">
+                    Download As PNG
+                </button>
+
+                <button title="PNG is likely to have a smaller file size and a higher quality"
+                    class="save_as_jpeg fullWidth" data-hotkey="ctrl+l">
+                    Download As JPEG
+                </button>
+
+                <button class="svgBackground fullWidth" data-hotkey="ctrl+b">
+                    CSS Background
+                </button>
+                <!--
+                    <a target="_blank" href="/file_system/login?dest_url=http://www.vector-paint.com/file_system/filelist.json">
+                        Open from vector-paint.com (depricated)
+                    </a>
+
+
+                    <button class="open" data-hotkey="ctrl+o" >
+                        Open
+                    </button>
+        -->
+            </div>
+            <div class="widget alignment">
+                <button data-hotkey="4" id="tool_alignleft" title="Align Left"></button>
+                <button data-hotkey="5" id="tool_aligncenter" title="Align Center"></button>
+                <button data-hotkey="6" id="tool_alignright" title="Align Right"></button>
+                <button data-hotkey="8" id="tool_aligntop" title="Align Top"></button>
+                <button data-hotkey="3" id="tool_alignmiddle" title="Align Middle"></button>
+                <button data-hotkey="2" id="tool_alignbottom" title="Align Bottom"></button>
+                <label>relative to:
+                    <select id="align_relative_to" title="Align relative to ...">
+                        <option selected="selected" id="page" value="page">page</option>
+                        <option id="selected_objects" value="selected">selected bounding box</option>
+                        <option id="largest_object" value="largest">largest selected</option>
+                        <option id="smallest_object" value="smallest">smallest selected</option>
+                        <option id="fist_object" value="first">first selected</option>
+                    </select>
+                </label>
+
+                <div class="advanced-align">
+                    <input id="xpos-input" type="number" min="0.0001" step="any" name="xpos" /> x
+                    <input id="ypos-input" type="number" min="0.0001" step="any" name="ypos" />
+                    <br />
+                    <input id="width-input" type="number" min="0.0001" step="any" name="shapewidth" /> by
+                    <input id="height-input" type="number" min="0.0001" step="any" name="shapeheight" />
+
+                    <button data-hotkey="1" class="distributeX"
+                        title="Distribute with even spaces horizontally">Distribute horizontally</button>
+                    <button data-hotkey="7" class="distributeY"
+                        title="Distribute with even spaces vertically">Distribute vertically</button>
+
+                    <label>
+                        <input id="show-grid" type="checkbox" /> Show Grid
+                    </label>
+                    <button data-hotkey="s" class="snapping" title="Snap objects to grid">Snap to grid</button>
+                    <input class="snappingStep" title="Grid spacing" type="number" min="2" value="50" />
+                </div>
+
+                <!--                Snapping
+                    <input data-hotkey="ctrl+g" type="checkbox" value="snapping_on" id="grid_snapping_on" />
+                    <input type="number" disabled="disabled" id="grid_snapping_step" min='2' value="10" />
+                     <label class="" id="tool_node_x">
+                        x
+                        <input pattern="[0-9.]*%?" placeholder="Pixel number or page percentage" id="path_node_x" class="attr_changer" title="Change node's x coordinate" type="number" data-attr="x cx" list="twoSquared" />
+                    </label>
+                    <label id="tool_node_y">
+                        y
+                        <input pattern="[0-9.]*%?" placeholder="Pixel number or page percentage" id="path_node_y" class="attr_changer" title="Change node's y coordinate" type="number" data-attr="y cy" list="twoSquared" />
+                    </label> -->
+
+
+
+            </div>
+
+            <div class="widget layers">
+                <table id="layerlist">
+                    <tbody class="sortable sortable-placeholder">
+                        <tr class='newLayer'>
+                            <td> </td>
+                            <td>.....add.....</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="mergeLayer">Merge Down</button>
+                <button class="mergeAllLayers">Merge All</button>
+
+                <label id="selLayerLabel">Move selected to:</label>
+
+                <select id="selLayerNames" title="Move selected shapes to a different layer" disabled="disabled">
+                    <option selected="selected" value="layer1">Layer 1</option>
+                </select>
+            </div>
+
+            <div class="advancedZoom widget">
+
+                <input class="view_advanced" id="zoomSlider2" type="range" step="0.01" min="4" max="35" title="Zoom"
+                    value="100" list="expoZoomLevels" />
+
+                <button class="zoom" value="canvas" data-hotkey="c" style="display: none;">Canvas</button>
+                <button class="zoom" value="content" data-hotkey="q" style="display: none;">Content</button>
+
+
+                <input id="zoom2" min="0" type="text" value="100" list="zoomLevels" />
+
+
+                <datalist id="zoomLevels">
+                    <option>50</option>
+                    <option>100</option>
+                    <option>200</option>
+                    <option>400</option>
+                    <option>800</option>
+                </datalist>
+
+                <button class="fullWidth" data-hotkey="z" id="tool_zoom" title="Zoom to Selection"></button>
+                <button class="fullWidth" data-togglebody="wireframe" data-hotkey="f">Wireframe</button>
+                <button class="fullWidth" id="show_rulers" data-hotkey="r">Rulers</button>
+
+                <div class="" id="zoom_panel"></div>
+            </div>
+
+            <div class="topbar">
+                <div class="tool-area">
+                    <button data-hoveropen="file">File</button>
+                    <!--                        <button type="button" data-hide="help-popup" data-toggle="plugins model-overlay" class="add-plugins">Plugins</button>-->
+                    <button type="button" data-hide="plugins" data-toggle="help-popup model-overlay"
+                        class="show-help">Info</button>
+
+                    <button data-hotkey="ctrl+z" id="tool_undo" title="Undo">
+                    </button>
+                    <button data-hotkey="ctrl+y" disabled="true" id="tool_redo" title="Redo">
+                    </button>
+
+                    <div class='manageObjects'>
+
+                        <button data-hotkey="end" class="back" hidden="true"> </button>
+                        <button data-hotkey="home" class="front" hidden="true"> </button>
+                        <button data-hotkey="pageup" class="forward"
+                            title="Pull Forward (double click to pull to front)"> </button>
+                        <button data-hotkey="pagedown" class="backward"
+                            title="Push Back (double click to push to back)"> </button>
+
+                        <button data-hotkey="del" class="delete" title="Delete"> </button>
+                        <button data-hotkey="d" class="clone" title="Duplicate"> </button>
+                        <button class="group" title="Group" data-hotkey="g"> </button>
+                        <button class="ungroup" title="Ungroup" data-hotkey="ctrl+g"> </button>
+
+                    </div>
+                </div>
+                <div data-hoveropen="advancedZoom" class="widget canvasColor zoom">
+                    <datalist id="expoZoomLevels">
+                        <option>7.08</option>
+                        <option>10</option>
+                        <option>14.15</option>
+                    </datalist>
+
+                    <button id="zoomOut" data-hotkey="[" title="Zoom Out (hold for canvas zoom)"></button>
+                    <button id="zoomIn" data-hotkey="]" title="Zoom In (hold for selection zoom)"></button>
+                </div>
+                <div class="tool-area">
+
+                    <button data-toggle="alignment" data-hoveropen="alignment">Alignment</button>
+                    <button data-toggle="layers" data-hoveropen="layers">Layers</button>
+
+                </div>
+            </div>
+            <div id="workarea" class='canvasColor'>
+
+
+                <style id="styleoverrides" media="screen" scoped="scoped" type="text/css"></style>
+                <div id="svgcanvas" class='canvasColor' style="position: relative" contextmenu="canvasMenu">
+                    <svg id="svgroot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <style type="text/css" scoped="true">
+                            @import url(styles/svgstyle.css);
+                        </style>
+                        <defs>
+                            <filter id="canvashadow" filterUnits="objectBoundingBox">
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                                <feOffset in="blur" dx="5" dy="5" result="offsetBlur" />
+                                <feMerge>
+                                    <feMergeNode in="offsetBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                            <pattern id="tile" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox"
+                                x="0" y="0" width=".1" height=".1">
+                                <circle r="0.01" cx=".01" cy=".020" fill="#0000FF" />
+                                <circle r="0.01" cx=".04" cy=".080" fill="#0000FF" />
+                                <circle r="0.01" cx=".06" cy=".04" fill="#0000FF" />
+                                <circle r="0.01" cx=".03" cy=".070" fill="#0000FF" />
+                                <circle r="0.01" cx=".08" cy=".010" fill="#0000FF" />
+                                <circle r="0.01" cx=".07" cy=".080" fill="#0000FF" />
+                            </pattern>
+                            <g class="selection-template">
+                                <rect class="selection-box" style="pointer-events:none;" />
+                                <image xlink:href="" class="resize-grip" width="5" height="5" data-dx="1" data-dy="1" />
+                                <circle class="resize-grip" r="5" data-dx="1" data-dy="0" />
+                                <circle class="resize-grip" r="5" data-dx="1" data-dy="-1" />
+
+                                <circle class="resize-grip" r="5" data-dx="-1" data-dy="1" />
+                                <circle class="resize-grip" r="5" data-dx="-1" data-dy="0" />
+                                <circle class="resize-grip" r="5" data-dx="-1" data-dy="-1" />
+
+                                <circle class="resize-grip" r="5" data-dx="0" data-dy="1" />
+                                <circle class="resize-grip" r="5" data-dx="0" data-dy="-1" />
+                            </g>
+                            <rect class="selection-box-template" style="pointer-events:none;" />
+                        </defs>
+
+                        <g id="canvas-background-view">
+                            <svg id="canvasBackground" overflow="none" style="pointer-events:none">
+                                <pattern id="checkerPattern" patternUnits="userSpaceOnUse" x="0" y="0" width="20"
+                                    height="20" viewBox="0 0 10 10">
+                                    <rect x="0" y="0" width="10" height="10" fill="#fff"></rect>
+                                    <rect x="0" y="0" width="5" height="5" fill="#eee"></rect>
+                                    <rect x="5" y="5" width="5" height="5" fill="#eee"></rect>
+                                </pattern>
+                                <rect width="100%" height="100%" x="0" y="0" stroke-width="0" stroke="none"
+                                    fill="url(#checkerPattern)" style="pointer-events:none"></rect>
+
+                                <foreignObject pointer-events="all" x="0" y="100%" width="60" height="30"
+                                    class="bottom_canvas">
+                                    <input xmlns="http://www.w3.org/1999/xhtml" class="changeCanvasSizeWidth"
+                                        list="resolutions" min="1" step="1" type="number" />
+                                </foreignObject>
+                                <foreignObject pointer-events="all" x="100%" y="0" width="60" height="30"
+                                    class="right_canvas">
+                                    <input xmlns="http://www.w3.org/1999/xhtml" class="changeCanvasSizeHeight"
+                                        list="resolutions" min="1" step="1" type="number" />
+                                </foreignObject>
+                                <svg id="canvasBackground" x="100%" y="100%" width="500" height="20">
+                                    <title>Click for more canvas controls</title>
+                                    <image class="resize_canvas_anchore clickable"
+                                        title="Click for more canvas controls" xlink:href="images/resize.svg" width="20"
+                                        height="20"></image>
+                                    <foreignObject pointer-events="all" x="20" y="0" width="100" height="40"
+                                        class="right_canvas" style="display: inline;">
+                                        <button xmlns="http://www.w3.org/1999/xhtml" class="fitCanvas" type="button">
+                                            Fit to Content
+                                        </button>
+                                        <select id="base_unit">
+                                            <option value="px">Pixels</option>
+                                            <option value="cm">Centimeters</option>
+                                            <option value="mm">Millimeters</option>
+                                            <option value="in">Inches</option>
+                                            <option value="pt">Points</option>
+                                            <option value="pc">Picas</option>
+                                            <option value="em">Ems</option>
+                                            <option value="ex">Exs</option>
+                                        </select>
+                                    </foreignObject>
+                                </svg>
+                            </svg>
+                        </g>
+                        <g class="zoom-view">
+                            <svg id="svgcontent" width="777" height="480" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:se="http://svg-edit.googlecode.com" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
+                                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                                <title>my vector image</title>
+                                <!-- Created with Vector Paint - http://www.vectorpaint.yaks.com/ https://chrome.google.com/webstore/detail/hnbpdiengicdefcjecjbnjnoifekhgdo -->
+                                <rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="#FFFFFF"
+                                    stroke="none"></rect>
+                            </svg>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <canvas style="display: none;" id="board"></canvas>
+
+            <!--                 <label>
+                        Erode
+                        <input class='filter' data-filteroperator="erode" data-filtername='feMorphology'
+                            data-filterproperty='radius' value="0" min='0.0' step='1' type="number" />
+                    </label>
+                    <label>
+                        Turbulence
+                        <input class='filter' data-filtername='feTurbulence' data-filterproperty='baseFrequency'
+                            value="0" min='0.0' step='0.01' type="number" />
+                    </label>
+                    <label>
+                        Dilate
+                        <input id="blur" class='filter' data-filteroperator="dilate" data-filtername='feMorphology'
+                            data-filterproperty='radius' value="0" min='0.0' step='0.1' type="number" />
+                    </label> -->
+
+            <!--                 <div id='feildDiv5'>
+                        <ul id="history_menu">
+                            <li></li>
+                        </ul>
+                    </div> -->
+            <!--
+
+                    <label class="advanced">
+                        Font Stretch
+                        <select data-attr="font-stretch">
+                            <option value="normal">normal</option>
+                            <option value="wider">wider</option>
+                            <option value="narrower">narrower</option>
+                            <option value="ultra-condensed">ultra-condensed</option>
+                            <option value="extra-condensed">extra-condensed</option>
+                            <option value="condensed">condensed</option>
+                            <option value="semi-condensed"></option>
+                            <option value="semi-expanded"></option>
+                            <option value="expanded"></option>
+                            <option value="extra-expanded"></option>
+                            <option value="ultra-expanded"></option>
+                        </select>
+                    </label>
+
+                    -->
+
+
+            <div class="color_tool" style="display: none;">
+                <div class="color_block">
+                    <div id="fill_bg"></div>
+                    <div id="fill_color" class="color_block"></div>
+                </div>
+                <label class="icon_label " title="Change fill color"></label>
+            </div>
+
+            <div class="color_tool" style="display: none;">
+                <div class="color_block">
+                    <div id="stroke_bg"></div>
+                    <div id="stroke_color" class="color_block" title="Change stroke color">
+                    </div>
+                </div>
+                <label class="icon_label " title="Change stroke color">
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <style type="text/css" scoped="true">
+            @import url(styles/jgraduate.css);
+        </style>
+        <div id="color_picker"> </div>
+    </div>
+
+    <template id="palette-fill-template">
+        <div class="palette_item" data-attr="fill fill-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
+                height="100%" viewBox="0 0 170 170">
+                <circle cx="50%" cy="50%" r="48%" fill-opacity="1"></circle>
+            </svg>
+        </div>
+    </template>
+    <!--
+        <script>window.jQuery || document.write('<script src="components/jquery/jquery.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+        <script src="components/color/one-color.js" defer="true"></script>
+        <script src="components/color-scheme-js/lib/color-scheme.min.js" defer="true"></script>
+ -->
+
+    <script src="js/scri.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js" defer="true"
+        onload="parseUrl()"></script>
+
+
+    <script src="js/min.js" defer="true" onload="loadIntro()"></script>
+
+    <script>
+        var _gaq = [['_setAccount', 'UA-20045142-3'], ['_trackPageview']];
+        (function (d, t) {
+            var g = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+            g.async = true;
+            g.src = '//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s);
+        })(document, 'script');
+    </script>
+
+    <script></script>
+</body>
+
+</html>

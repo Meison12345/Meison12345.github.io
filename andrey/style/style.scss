@@ -39,7 +39,7 @@ body {
                 display: block;
                 padding: 15px;
                 color: black;
-                transition: var(--hover-link);
+                transition: let(--hover-link);
 
                 &:hover {
                     color: darkblue
