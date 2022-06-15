@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.center {
+    padding: 0 calc(50% - 600px);
+}
+
+
+.header {
+    &-nav {
+        &-menu {
+            display: flex;
+            
+        }
+        &-link{
+            display: block;
+            padding: 10px;
+        }
+    }
+}
