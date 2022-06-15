@@ -3,6 +3,12 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: UZSans;
+}
+
+@font-face {
+  font-family: UZSans;
+  src: url(../fonts/UZSans-Regular.ttf);
 }
 
 :root {
@@ -52,6 +58,12 @@ a {
   color: darkblue;
 }
 
+.custom-margin {
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .main-title {
   text-align: center;
   margin: 50px 0px;
@@ -67,10 +79,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.text-first {
-  white-space: break-spaces;
 }
 
 .text-custom-center {
@@ -107,5 +115,147 @@ a {
 .text-center {
   text-align: center;
   margin: 35px 0px;
+}
+
+.line {
+  width: 35px;
+  height: 3px;
+  display: block;
+  background: black;
+}
+
+.line1,
+.line2 {
+  margin-bottom: 5px;
+}
+
+nav.header-nav > a,
+.hamburger-lines {
+  display: none;
+}
+
+.main > h1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mobile-ind {
+  color: black;
+}
+
+.visible {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.block-scroll {
+  overflow: hidden;
+}
+
+.mobile-menu {
+  background: #323232;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  display: none;
+}
+
+form {
+  margin: 10px;
+}
+
+table {
+  margin: 10px;
+}
+
+p,
+.text-first {
+  margin: 10px;
+  line-height: 20px;
+}
+
+.mobile-menu-block li a {
+  display: block;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.mobile-menu-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-block li a {
+    display: none;
+  }
+}
+
+@media (max-width: 935px) {
+  div.main-wrapper img {
+    width: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  div.main-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.main-wrapper img {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 30px;
+  }
+  nav.header-nav > a,
+  .hamburger-lines {
+    display: block;
+  }
+  .header-nav {
+    width: auto;
+  }
+  ul.header-nav-ul {
+    display: none;
+  }
+  img {
+    width: 90%;
+  }
+  .main > h1 {
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
