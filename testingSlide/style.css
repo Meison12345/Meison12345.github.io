@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-wrapper {
+    max-height: 400px;
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+.simplebar-scrollbar::before {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    background-color: green;
+}
+
+.simplebar-scrollbar.simplebar-visible::before{
+    opacity: 1;
+}
