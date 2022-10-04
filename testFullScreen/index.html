@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <img src="https://img1.akspic.ru/attachments/crops/9/4/7/9/99749/99749-volna-more-bereg-vodoem-voda-1366x768.jpg"
+            width="500" class="w" />
+    </div>
+</body>
+<script>
+    function fullScreen(element) {
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.webkitrequestFullscreen) {
+            element.webkitRequestFullscreen();
+        } else if (element.mozRequestFullscreen) {
+            element.mozRequestFullScreen();
+        }
+    }
+
+    document.querySelector('.w').addEventListener('click', function (e) {
+        this.requestFullscreen();
+        fullScreen(this);
+    });
+
+    document.querySelector('.w').addEventListener('touch', function (e) {
+        this.requestFullscreen();
+        fullScreen(this);
+    });
+
+    document.querySelector('div').requestFullscreen();
+</script>
+
+</html>
