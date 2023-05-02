@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Майнкрафт кликер</title>
+    <!-- `Yandex Games SDK  -->
+    <script src="https://yandex.ru/games/sdk/v2"></script>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="progress-bar">
+        <img src="assets/img/UI/icon.png" alt="иконка игры" width="256" height="256">
+        <div class="progress"></div>
+    </div>
+    <div class="center startGame">
+        <div class="clicker-wrapper">
+            <div class="clicker">
+
+                <div class="clicker__center-wrapper leftPanel">
+                    <div class="clicker__upgrade1">
+                        <img draggable="false" src="assets/img/weapons/1.webp" alt="Деревянная кирка" width="128"
+                            height="128">
+                        <button class="clicker__upgrade1-button"> Деревянная кирка
+                            (+1) <div class="clicker__upgrade1-cost">100</div></button>
+                    </div>
+
+                    <div class="clicker__upgrade1">
+                        <img draggable="false" src="assets/img/weapons/2.webp" alt="Каменная кирка" width="128"
+                            height="128">
+                        <button class="clicker__upgrade11-button">Каменная кирка (+3) <div
+                                class="clicker__upgrade11-cost">
+                                300</div></button>
+
+                    </div>
+
+                    <div class="clicker__upgrade1">
+                        <img draggable="false" src="assets/img/weapons/3.webp" alt="Железная кирка" width="128"
+                            height="128">
+                        <button class="clicker__upgrade12-button">Железная кирка (+7) <div
+                                class="clicker__upgrade12-cost">
+                                700</div></button>
+                    </div>
+                </div>
+
+
+                <div class="clicker__center-wrapper">
+                    <div class="clicker__counter">0</div>
+                    <div class="clicker-button-wrapper">
+                        <img ontouchstart="2" draggable="false" class="clicker__button" src="assets/img/block/1.png"
+                            alt="any block from minecraft">
+                    </div>
+                </div>
+
+                <div class="upgrade__wrapper rightPanel">
+                    <div class="clicker__upgrade1">
+                        <img draggable="false" src="assets/img/weapons/4.webp" alt=">Золотая кирка" width="128"
+                            height="128">
+                        <button class="clicker__upgrade13-button">Золотая кирка (+10) <div
+                                class="clicker__upgrade13-cost">
+                                1500</div></button>
+                    </div>
+
+                    <div class="clicker__upgrade1">
+                        <img draggable="false" src="assets/img/weapons/5.webp" alt="Алмазная кирка" width="128"
+                            height="128">
+                        <button class="clicker__upgrade14-button">Алмазная кирка (+20) <div
+                                class="clicker__upgrade14-cost">
+                                5000</div></button>
+                    </div>
+
+                    <div class="clicker__upgrade1">
+                        <img draggable="false" src="assets/img/weapons/6.webp" alt="Незеритовая кирка" width="128"
+                            height="128">
+                        <button class="clicker__upgrade15-button">Незеритовая кирка (+40) <div
+                                class="clicker__upgrade15-cost">20000</div></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clicker-upgrade-wrapper">
+                <div class="clicker__upgrade2">
+                    <button class="clicker__upgrade2-button ads"><img src="assets/img/UI/cinema-clapperboard.png"
+                            width="32" height="32" alt="Автоклик за рекламу"><span class="clicker__upgrade2-text">
+                            Автоклик</span></button>
+                </div>
+
+                <div class="clicker__upgrade2">
+                    <button class="clicker__upgrade2-button ads"><img src="assets/img/UI/cinema-clapperboard.png"
+                            width="32" height="32" alt="Клик х2 за рекламу"><span class="clicker__upgrade2-text">Клик
+                            X2</span></button>
+                </div>
+
+                <div class="clicker__upgrade3">
+                    <button class="clicker__upgrade3-button">Сменить задний фон</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="centerPanelMobile">
+            <div class="clicker__upgrade1 mb20">
+                <img draggable="false" src="assets/img/weapons/1.webp" alt="Деревянная кирка" width="128" height="128">
+                <button class="clicker__upgrade1-button"> Деревянная кирка
+                    (+1) <div class="clicker__upgrade1-cost">10</div></button>
+            </div>
+
+            <div class="clicker__upgrade1 mb20">
+                <img draggable="false" src="assets/img/weapons/2.webp" alt="Каменная кирка" width="128" height="128">
+                <button class="clicker__upgrade11-button">Каменная кирка (+3) <div class="clicker__upgrade11-cost">
+                        100</div></button>
+
+            </div>
+
+            <div class="clicker__upgrade1 mb20">
+                <img draggable="false" src="assets/img/weapons/3.webp" alt="Железная кирка" width="128" height="128">
+                <button class="clicker__upgrade12-button">Железная кирка (+7) <div class="clicker__upgrade12-cost">
+                        500</div></button>
+            </div>
+
+            <div class="clicker__upgrade1 mb20">
+                <img draggable="false" src="assets/img/weapons/4.webp" alt=">Золотая кирка" width="128" height="128">
+                <button class="clicker__upgrade13-button">Золотая кирка (+10) <div class="clicker__upgrade13-cost">
+                        2000</div></button>
+            </div>
+
+            <div class="clicker__upgrade1 mb20">
+                <img draggable="false" src="assets/img/weapons/5.webp" alt="Алмазная кирка" width="128" height="128">
+                <button class="clicker__upgrade14-button">Алмазная кирка (+20) <div class="clicker__upgrade14-cost">
+                        5000</div></button>
+            </div>
+
+            <div class="clicker__upgrade1 mb20">
+                <img draggable="false" src="assets/img/weapons/6.webp" alt="Незеритовая кирка" width="128" height="128">
+                <button class="clicker__upgrade15-button">Незеритовая кирка (+40) <div class="clicker__upgrade15-cost">
+                        20000</div></button>
+            </div>
+
+            <!-- <div class="clicker__upgrade3 mb20">
+                <button class="clicker__upgrade3-button">Сменить задний фон <span
+                        class="clicker__upgrade3-cost">150</span></button>
+            </div> -->
+
+            <div class="clicker__upgrade1 mb20">
+                <button class="clicker__upgrade2-button ads"><img draggable="false"
+                        src="assets/img/UI/cinema-clapperboard.png" width="32" height="32"
+                        alt="Автоклик за рекламу"><span class="clicker__upgrade2-text">
+                        Автоклик</span></button>
+            </div>
+
+            <div class="clicker__upgrade1 mb20">
+                <button class="clicker__upgrade2-button ads"><img draggable="false"
+                        src="assets/img/UI/cinema-clapperboard.png" width="32" height="32"
+                        alt="Автоклик за рекламу"><span class="clicker__upgrade2-text">
+                        Клик X2</span></button>
+            </div>
+
+        </div>
+
+        <div class="control__panel-music">
+            <img draggable="false" class="sound sound-on" src="assets/img/UI/sound-on-svgrepo-com.svg"
+                alt="звук включен" width="100" height="100">
+            <img draggable="false" class="sound sound-off sound-icon-visible"
+                src="assets/img/UI/sound-off-svgrepo-com.svg" alt="звук выключен" width="100" height="100">
+        </div>
+
+
+        <!-- <div class="rate__panel">
+            <img draggable="false" class="rate__panel-us" src="assets/img/UI/rateUs.svg" alt="Оценить нас" width="100"
+                height="100">
+        </div> -->
+
+
+        <!-- <div class="control__panel-sound">
+            <img draggable="false" class="sound soundClickOn" src="assets/img/UI/soundon.png" alt="звук включен" width="100"
+                height="100">
+            <img draggable="false" class="sound soundClickOff sound-icon-visible" src="assets/img/UI/soundoff.png"
+                alt="звук выключен" width="100" height="100">
+        </div> -->
+
+        <!-- <div class="control__panel-achievements">
+            <img draggable="false" class="achievements" src="assets/img/UI/achievements.svg" alt="окно достижений"
+                width="100" height="100">
+        </div> -->
+    </div>
+    <audio id="click-sound" src="assets/sound/click.mp3" preload="auto"></audio>
+    <audio id="click-main-theme" src="assets/sound/mainsound.mp3" loop preload="auto"></audio>
+    <audio id="checkbox-volume" src="assets/sound/enablevolume.mp3" preload="auto"></audio>
+    <audio id="achievements-open" src="assets/sound/achievementsclick.mp3" preload="auto"></audio>
+
+    <!-- Yandex Games SDK -->
+    <script src="js/yandex.js" defer></script>
+    <script src="js/preloadMinJs.js" defer></script>
+    <script src="js/preload.js" defer></script>
+    <script src="js/app.js" defer></script>
+</body>
+
+
+</html>

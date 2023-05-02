@@ -1,0 +1,317 @@
+/* TODO провести код через scss компилятор */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* для Safari */
+    -moz-user-select: none; /* для Firefox */
+    -ms-user-select: none; /* для Internet Explorer */
+    user-select: none;
+}
+
+body {
+    /* background-image: url(../assets/img/background/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; */
+    user-select: none;
+    max-height: 100vh;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+}
+
+.center {
+    padding: 0 calc(50% - 700px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../assets/img/background/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.startGame {
+    display: none;
+}
+.progress-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.progress {
+    border-radius: 10px;
+    position: absolute;
+    height: 15px;
+    background: green;
+}
+
+.clicker {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.clicker__center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clicker__counter {
+    margin-bottom: 20px;
+}
+
+.clicker__button {
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 300px;
+}
+
+.clicker__upgrade1 {
+    display: flex;
+    align-items: center;
+}
+
+.clicker__upgrade1-cost {
+    margin-bottom: 10px;
+}
+
+.clicker__upgrade2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clicker__upgrade2-cost {
+    margin-bottom: 10px;
+}
+
+.clicker__upgrade2-button {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.clicker__upgrade2-text {
+    margin-left: 20px;
+}
+
+.clicker__upgrade3 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clicker__upgrade3-cost {
+    margin-bottom: 10px;
+}
+
+.clicker__upgrade3-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.sound {
+    cursor: pointer;
+    display: none;
+}
+
+.sound-icon-visible {
+    display: block;
+}
+
+.particle {
+    height: 32px;
+    width: 32px;
+    background: url(../assets/img/block/miniDiamond.png) no-repeat center;
+    position: absolute;
+    position: absolute;
+    pointer-events: none;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.rate__panel {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control__panel-music {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.clicker__upgrade1-cost::after,
+.clicker__upgrade11-cost::after,
+.clicker__upgrade12-cost::after,
+.clicker__upgrade13-cost::after,
+.clicker__upgrade14-cost::after,
+.clicker__upgrade15-cost::after,
+.clicker__counter::after,
+.clicker__upgrade2-cost::after,
+.clicker__upgrade3-cost::after {
+    content: "$";
+}
+
+.clicker__upgrade11-cost,
+.clicker__counter,
+.clicker__upgrade1-cost,
+.clicker__upgrade12-button,
+.clicker__upgrade13-button,
+.clicker__upgrade14-button,
+.clicker__upgrade15-button,
+.clicker__upgrade11-button,
+.clicker__upgrade1-button {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+button {
+    color: white;
+}
+
+.ads,
+.clicker__upgrade3-button {
+    box-shadow: 0px 0px 10px 1px white;
+    background: rgba(255, 255, 255, 0.2);
+    height: 60px;
+}
+
+.ads {
+    margin: 0 auto 20px auto;
+    display: flex;
+    width: 180px;
+}
+
+.leftPanel,
+.rightPanel {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+}
+
+.control__panel-achievements {
+    right: 100px;
+    bottom: 100px;
+    padding: 20px;
+    cursor: pointer;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.clicker-wrapper {
+    font-family: fantasy;
+    color: white;
+    font-size: 16px;
+}
+
+.control__panel-sound {
+    position: absolute;
+    left: 250px;
+    bottom: 100px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.clicker__counter {
+    font-size: 26px;
+}
+
+.centerPanelMobile {
+    display: none;
+}
+
+.clicker-upgrade-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* АДАПТИВ */
+
+@media screen and (max-width: 968px) {
+    .leftPanel {
+        display: none;
+    }
+    .rightPanel {
+        display: none;
+    }
+    .clicker-upgrade-wrapper {
+        display: none;
+    }
+
+    .control__panel-music {
+        left: 25px;
+        bottom: 25px;
+    }
+
+    .control__panel-music,
+    .sound {
+        width: 50px;
+        height: 50px;
+    }
+
+    .center {
+        flex-direction: inherit;
+    }
+    .clicker__center-wrapper {
+        margin-top: 30px;
+    }
+    .clicker__counter {
+        font-size: 30px;
+    }
+    .clicker-button-wrapper {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .clicker__button {
+        width: 250px;
+    }
+    .centerPanelMobile {
+        display: block;
+        position: absolute;
+        max-height: 52%;
+        overflow: auto;
+        top: 12%;
+        padding: 0px 20px;
+        z-index: 1;
+    }
+}
