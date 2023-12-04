@@ -1,25 +1,32 @@
 'use strict';
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const modalWin = document.querySelector('.modal-win');
+    const modalWinWrapper = document.querySelector('.modal-win-wrapper');
     const closeWinBtn = document.querySelector('.modal-win-btn-close');
     const cancelWinBtn = document.querySelector('.modal-win-cancel');
     const body = document.body;
-    const regNum = /^(8|\+7)[\d\(\)\ -]{9}\d$/gm;
+    const regNum = /^(8|\+7)\s?\d{2,4}\s?\d{7}$/gm;
     const regName = /[A-Za-zА-Яа-яЁё]{4,}/gm;
     const spanValid = document.querySelector('.checkValid');
     const showErrorContainer = document.querySelector('.showError');
     const spin = document.querySelector('.spin-wrapper');
+
     /** 
      * @description Функция закрытия модального окна
      */
-    function closeModalWin(el) {
+    function closeModalWin() {
         document.querySelector('.modal-win-wrapper').classList.toggle('modal-win-wrapper-active');
         modalWin.classList.toggle('modal-win-check');
         body.classList.toggle('active');
         setBlur();
-        // modalWin.classList.toggle('modal-win-hide');
-
     }
+
+    modalWinWrapper.addEventListener('click', function (event) {
+        const targer = event.target;
+        if (targer === modalWinWrapper && !modalWin.contains(targer)) {
+            closeModalWin();
+        }
+    });
 
     document.querySelector('.nav__btn').addEventListener('click', closeModalWin);
     closeWinBtn.addEventListener('click', closeModalWin);
@@ -92,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 out += `<td>${array[key]['id']}</td>`;
                 out += `<td>${array[key]['title']}</td>`;
                 out += `<td>${array[key]['completed']}</td></tr>`;
-                console.log(array[key]['userId']);
             }
         }
         out += '</tbody></table>';
@@ -112,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'API-Key': 'secret'
                 }
             })
-            .then(function(res) {
+            .then(function (res) {
                 spin.classList.toggle('spin-wrapper-active');
                 console.log(res.status);
                 if (res.status != 200 || res.ok == false) {
@@ -123,18 +129,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log(res);
                     return res.text();
                 }
-            }).then(function(body) {
+            }).then(function (body) {
                 spin.classList.toggle('spin-wrapper-active'); //не забыть вкл, если ничего не поменяется
                 showData(body);
                 spin.classList.toggle('spin-wrapper-active');
                 return JSON.parse(body);
-            }).catch(function() {
+            }).catch(function () {
                 console.log('error');
                 showErrorMess();
             });
     }
 
-    document.querySelector('.modal-win-submit').addEventListener('click', function(el) {
+    document.querySelector('.modal-win-submit').addEventListener('click', function (el) {
         el.preventDefault();
 
         let number = document.querySelector('.modal-win-num').value.trim();
@@ -143,19 +149,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (validate(regName, name) && validate(regNum, number)) {
             valid(spanValid, spanValid, 'Все верно');
-            console.log('Valid');
             clearModalWin();
             getData();
         } else {
             notValid(spanValid, spanValid, 'Проверка не пройдена. Попробуйте ещё раз');
-            console.log('Not valid');
         }
     });
 
     /**
      * @description Данные будут сохраняться в localStarage, если перезайти на страницу.
      */
-    cancelWinBtn.addEventListener('click', function() {
+    cancelWinBtn.addEventListener('click', function () {
         let number = document.querySelector('.modal-win-num').value.trim();
         let name = document.querySelector('.modal-win-name').value.trim();
         setDataLoaclStor(name, number);
@@ -178,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //Если открыто модальное окно, его можно закрыть через Esc
-    document.addEventListener('keydown', function(el) {
+    document.addEventListener('keydown', function (el) {
         let bodyActive = document.body.classList.contains('active');
         if (el.key === 'Escape' && bodyActive) {
             closeModalWin();

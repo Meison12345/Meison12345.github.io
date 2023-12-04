@@ -1,5 +1,5 @@
 'use strict';
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('.header__left img');
     const sliderLine = document.querySelector('.slider-line');
     let sliderRight = document.querySelector('.slider-title-right');
@@ -19,9 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     init();
 
 
-    document.querySelector('.slider-next').addEventListener('click', function() {
+    document.querySelector('.slider-next').addEventListener('click', function () {
         count++;
-        // console.log(subcount);
         if (subcount >= images.length - 1) {
             sliderLeft.textContent = images[subcount - 1].dataset.name;
             subcount = 0;
@@ -43,10 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
         twistSlider();
     });
 
-    document.querySelector('.slider-previous').addEventListener('click', function() {
+    document.querySelector('.slider-previous').addEventListener('click', function () {
         count--;
         subcount--;
-        console.log(subcount);
 
         if (subcount === 0) {
             sliderLeft.textContent = images[images.length - 2].dataset.name;
@@ -55,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
             subcount = images.length - 1
             sliderLeft.textContent = images[subcount - 2].dataset.name;
             sliderRight.textContent = images[subcount].dataset.name;
-            console.log(subcount);
         } else if (subcount === 1) {
             sliderLeft.textContent = images[images.length - 1].dataset.name;
             sliderRight.textContent = images[subcount].dataset.name;
