@@ -96,47 +96,56 @@
 
 
 
-    <section class="center info">
-        <div class="info__left">
-            <h1 class="info__left-title">Постоянный персонал</h1>
-            <img src="img/home.png" alt="дом">
-            <p class="info__left-desc">Наличие в доме обслуживающего
-                персонала - водителя, няни,
-                гувернантки, горничной,
-                домработницы - это вовсе не
-                дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами
-                сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени. </p>
-            <div class="info-btn-wrapper-left">
-                <button class="info-btn info-btn">Подробнее</button>
-            </div>
-        </div>
-        <div class=" info__right">
-            <h1 class="info__right-title">Временный персонал</h1>
-            <img src="img/clock.png" alt="часы">
-            <p class="info__right-desc"> Наличие в доме обслуживающего
-                персонала - водителя, няни,
-                гувернантки, горничной,
-                домработницы - это вовсе не
-                дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами
-                сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени. </p>
-            <div class="info-btn-wrapper-right">
-                <button class="info-btn info-btn">Подробнее</button>
-            </div>
-        </div>
-    </section>
 
 
 
-
-    <section class="center photo">
-        <img src="img/info1.png" alt="">
-        <img src="img/info2.png" alt="">
-        <img src="img/info3.png" alt="">
-        <img src="img/info4.png" alt="">
-    </section>
 
     <main class="center main">
-        <h1 class="main__title">Заголовок</h1>
+        <h1 class="main__title main__title-recruit">Подобрать персонал</h1>
+
+        <section class="main__calc">
+            <img src="img/double-ornament.png" class="main__calc-ornament" alt="орнамент">
+            <div class="main__calc-left">
+                <p>Показать только</p>
+                <select name="worker" id="recruit-worker">
+                    <option value="Няня" selected>Няня</option>
+                    <option value="Гувернантка">Гувернантка</option>
+                    <option value="Дворник">Дворник</option>
+                    <option value="Водитель">Водитель</option>
+                    <option value="Садовник">Садовник</option>
+
+                </select>
+            </div>
+            <div class="main__calc-mid">
+                <p>Стаж от <input class="range-inp" value="1" type="text">до <input class="range-inp" value="30"
+                        type="text">лет</p>
+                <p>Возраст от <input type class="range-inp" value="25" type="text">до <input class="range-inp"
+                        value="65" type="text">лет</p>
+            </div>
+            <div class="main__calc-right">
+                <button>Подобрать</button>
+            </div>
+
+        </section>
+
+
+
+
+
+        <section class="center table">
+            <table class="table-wrapper">
+                <thead class="table__head">
+                    <tr>
+                        <th class="table__head-name">ФИО</th>
+                        <th class="table__head-position">Должность</th>
+                        <th class="table__head-age">Возраст</th>
+                        <th class="table__head-timework">Стаж работы</th>
+                    </tr>
+                </thead>
+                <tbody class="table__body" id="resultBody"></tbody>
+            </table>
+        </section>
+
         <div class="main__desc">
             <p>
                 Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это<br>
@@ -176,24 +185,6 @@
                     сиделки или няни пользуются сегодня<br>
                     те, кто отлично знает цену деньгам и своему времени. Люди, для которых
                     важно не только вырастить ребенка, но и создать основу<br>
-                    <!-- будущего благосостояния, построив свою карьеру - вот
-                    основная
-                    категорий заказчиков, которые ежедневно пользуются услугами нашей компании по подбору домашнего
-                    персонала.
-                    Заказ няни, сиделки или домработницы является благом не только для женщины, которая имеет
-                    возможность
-                    строить свою карьеру или получить, наконец, передышку от выполнения бесконечных домашних
-                    обязанностей,
-                    но и
-                    для всех остальных членов семьи, которые могут провести вместе свободный вечер или выходные. А
-                    доступные
-                    цены, которые устанавливает на свои услуги наша компания, и предлагаемый нами широкий выбор
-                    различных
-                    категорий домашнего персонала делают исключительно удобным и, главное, безопасным процесс поиска
-                    няни
-                    для
-                    малыша, сиделки для пожилых членов семьи или домработницы для квартиры или загородного особняка.
-                    . -->
                 </p>
         </div>
     </main>
@@ -224,5 +215,6 @@
 </body>
 <script src="js/slider.js"></script>
 <script src="js/popup.js"></script>
+<script src="js/search.js"></script>
 
 </html>

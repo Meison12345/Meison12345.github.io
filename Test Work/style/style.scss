@@ -13,6 +13,16 @@
     src: url(../fonts/garamond.ttf);
 }
 
+@font-face {
+    font-family: verdana;
+    src: url(../fonts/verdana.ttf);
+}
+
+@font-face {
+    font-family: tahoma;
+    src: url(../fonts/tahoma.ttf);
+}
+
 :root {
     --black: black;
     --white: white;
@@ -70,6 +80,7 @@ button {
         justify-content: space-between;
         align-items: center;
         padding: 8px 23px;
+        height: 70px;
         font-family: bookantiqua;
 
         &__left {
@@ -91,10 +102,12 @@ button {
                 border: solid 1px #d8c992;
                 background-image: linear-gradient(to top, #faedc7, #eacf8f, #e8c478, #fff9e0, #fff9e0);
                 border-radius: 5px;
+                height: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 4px 0px;
 
-                &:not(:last-child) {
-                    margin-bottom: 9px;
-                }
             }
 
         }
@@ -104,6 +117,55 @@ button {
         background-image: linear-gradient(0deg, rgb(164, 103, 31) 0%, rgb(131, 76, 11) 14%, rgb(119, 71, 11) 25%, rgb(176, 120, 43) 55%, rgb(233, 192, 135) 100%);
         box-shadow: 0px 1px 0px 0px rgba(126, 79, 19, 0.004);
         height: 40px;
+        position: relative;
+
+        &-link {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 113px;
+
+            &>a {
+                font-size: 11px;
+                font-family: 'verdana';
+                color: rgb(255, 255, 255);
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-shadow: 0px 1px 0px rgba(17, 17, 26, 0.46);
+            }
+        }
+
+        &>ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        & ul li a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        & ul li ul {
+            width: 192px;
+            height: 129px;
+            top: 100%;
+            position: absolute;
+            z-index: 1;
+            font-size: 14px;
+            font-family: verdana;
+            line-height: 2.286;
+            background-color: #fcebc6;
+            border: 1px solid rgb(191, 164, 133);
+
+            & a {
+                color: rgb(69, 37, 10);
+                padding-left: 10px;
+            }
+        }
     }
 
     &-nav>ul {
@@ -168,28 +230,42 @@ button {
     box-shadow: 0 0 0 1px rgba(199, 109, 2, 0.48);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .info {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-image: url(../img/ornament.png);
+    background-repeat: no-repeat;
+    background-position: center 78px;
+
+    &-btn {
+        border: 1px solid rgb(199, 168, 101);
+        background-image: linear-gradient(0deg, rgb(250, 237, 199) 0%, rgb(234, 207, 143) 13%, rgb(232, 196, 120) 58%, rgb(255, 249, 224) 96%, rgb(255, 249, 224) 100%);
+        width: 126px;
+        height: 29px;
+        font-size: 13px;
+        font-family: verdana;
+        margin-top: 20px;
+        color: rgb(78, 44, 30);
+        line-height: 1.2;
+        text-align: center;
+        border-radius: 5px;
+
+
+
+        &-wrapper-left {
+            text-align: end;
+        }
+
+        &-wrapper-right {
+            text-align: start;
+        }
+    }
 
     &__left,
     &__right {
         width: 50%;
+        margin: 60px;
 
         &-title {
             background-image: linear-gradient(to top, #150702, #5e3625, #82451c), linear-gradient(to bottom, #4e2c1e, #4e2c1e);
@@ -201,6 +277,7 @@ button {
             line-height: normal;
             letter-spacing: normal;
             color: #4e2c1e;
+            width: 150px;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -231,11 +308,19 @@ button {
 
 .main {
     color: var(--brown-bcgk);
-    padding: 23px;
+    padding: 25px 25px 105px 25px;
     font-family: arialmt;
 
     &__title {
         font-size: 24px;
+
+        &-recruit {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 25px;
+            font-family: 'bookantiqua';
+            color: rgb(78, 44, 30);
+        }
     }
 
     &__desc {
@@ -245,6 +330,42 @@ button {
             margin-bottom: 14px;
             text-align: justify;
             text-align-last: justify;
+        }
+    }
+
+    &__calc {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: rgba(190, 137, 63, 0.14);
+        box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.5), inset 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        height: 107px;
+        position: relative;
+        width: 861px;
+        margin: 0px auto 31px;
+
+        &-ornament {
+            position: absolute;
+            top: -9px;
+            left: -10px;
+            pointer-events: none;
+        }
+
+        &-mid {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &-right>button {
+            border-style: solid;
+            border-width: 1px;
+            border: 1px solid rgb(171, 110, 23);
+            background-image: linear-gradient(0deg, rgb(250, 237, 199) 0%, rgb(119, 71, 11) 0%, rgb(211, 149, 56) 73%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
+            width: 145px;
+            color: var(--white);
+            height: 29px;
+            border-radius: 5px;
         }
     }
 }
@@ -285,7 +406,8 @@ button {
 
     &__bottom {
         background-image: linear-gradient(360deg, rgb(173, 139, 99) 0%, rgb(78, 44, 30) 100%);
-        color: white;
+        color: var(--white);
+        ;
         height: 45px;
         display: flex;
         justify-content: space-between;
@@ -303,14 +425,21 @@ button {
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 10.317px;
+            font-family: tahoma;
+            color: var(--white);
+            line-height: 1.551;
         }
     }
 }
 
 
+
+
 // popup
 
-.application-popup {
+.application-popup,
+.resume-popup {
     border: 1px solid var(--orange);
     background-image: linear-gradient(90deg, rgb(247, 236, 212) 0%, rgb(255, 255, 255) 100%);
     opacity: 0.871;
@@ -354,24 +483,98 @@ button {
 
 }
 
+.resume-popup {
+    top: 72px;
+}
+
 .application-inactive {
     display: none;
 }
 
-
-////
-
+///////// 
 
 
+.show {
+    display: block;
+}
 
+.main-logo {
+    width: 240px;
+    z-index: 1;
+    position: relative;
+    bottom: 5px;
+}
 
+.submenu-btn-active {
+    border: 1px solid rgb(216, 201, 146);
+    background-image: -webkit-linear-gradient(90deg, rgb(250, 237, 199) 0%, rgb(234, 207, 143) 13%, rgb(232, 196, 120) 58%, rgb(255, 249, 224) 96%, rgb(255, 249, 224) 100%);
+}
 
+.range-inp {
+    border: 1px solid rgb(177, 177, 177);
+    background-color: var(--white);
+    width: 40px;
+    height: 33px;
+    text-align: center;
+    padding: 5px;
+}
 
-//Адаптив для кликов
-@media screen and (min-width:768px) {
-    .header-top__right--btn:active {
-        border-color: rgb(171, 110, 23);
-        background-image: linear-gradient(0deg, rgb(250, 237, 199) 0%, rgb(119, 71, 11) 0%, rgb(211, 149, 56) 73%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
-        color: var(--white)
+.table {
+    margin-bottom: 40px;
+
+    &-wrapper {
+        text-align: center;
+        width: 100%;
     }
+
+    &__head {
+        background-image: linear-gradient(0deg, rgb(119, 71, 11) 0%, rgb(119, 71, 11) 0%, rgb(164, 103, 31) 0%, rgb(78, 44, 30) 14%, rgb(118, 73, 54) 63%, rgb(124, 81, 64) 100%);
+        height: 35px;
+        color: var(--white);
+        font-size: 15px;
+        font-family: arialmt;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-shadow: 0px 1px 0px rgba(17, 17, 26, 0.46);
+
+        &-name {
+            width: 348px;
+        }
+
+        &-position {
+            width: 228px;
+        }
+
+        &-age {
+            width: 143px;
+        }
+
+        &-timework {
+            width: 159px;
+        }
+    }
+
+    &__body {
+        & tr {
+            height: 31px;
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+}
+
+thead th {
+    border: 1px solid rgb(211, 168, 108);
+}
+
+tr:nth-child(2n) td {
+    border: 1px solid rgb(211, 168, 108);
+    background-color: var(--white);
+}
+
+.main:after {
+    content: '';
 }
