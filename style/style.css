@@ -87,6 +87,13 @@ button {
   font-family: bookantiqua;
 }
 
+.header-top__left-desc, .header-top__right-desc {
+  font-family: 'arialmt';
+  font-size: 13px;
+  line-height: normal;
+  color: #35190d;
+}
+
 .header-top__left--number {
   font-size: 26px;
   letter-spacing: 0.65px;
@@ -127,10 +134,11 @@ button {
 .header-nav {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#a4671f), color-stop(14%, #834c0b), color-stop(25%, #77470b), color-stop(55%, #b0782b), to(#e9c087));
   background-image: linear-gradient(0deg, #a4671f 0%, #834c0b 14%, #77470b 25%, #b0782b 55%, #e9c087 100%);
-  -webkit-box-shadow: 0px 1px 0px 0px rgba(126, 79, 19, 0.004);
-          box-shadow: 0px 1px 0px 0px rgba(126, 79, 19, 0.004);
+  -webkit-box-shadow: 0px -3px 0px 0px var(--brown-bcgk);
+          box-shadow: 0px -3px 0px 0px var(--brown-bcgk);
   height: 40px;
   position: relative;
+  border-radius: 5px;
 }
 
 .header-nav-link {
@@ -145,6 +153,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   width: 113px;
+  position: relative;
 }
 
 .header-nav-link > a {
@@ -208,7 +217,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  padding: 0px 28px;
 }
 
 .header-nav > ul a {
@@ -226,6 +234,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 325px;
+  -webkit-box-shadow: 0px 1px 8px 0px #b2a38f;
+          box-shadow: 0px 1px 8px 0px #b2a38f;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
@@ -284,7 +295,7 @@ button {
           align-items: center;
   background-image: url(../img/ornament.png);
   background-repeat: no-repeat;
-  background-position: center 78px;
+  background-position: center;
 }
 
 .info-btn {
@@ -310,9 +321,36 @@ button {
   text-align: start;
 }
 
+.info__left {
+  margin: 60px 38px 60px 60px;
+}
+
+.info__left-span {
+  text-align: justify;
+  display: block;
+}
+
+.info__left > img {
+  float: right;
+  margin-left: 10px;
+}
+
+.info__right {
+  margin: 60px 60px 60px 38px;
+}
+
+.info__right-right {
+  text-align: justify;
+  display: block;
+}
+
+.info__right > img {
+  float: left;
+  margin-right: 10px;
+}
+
 .info__left, .info__right {
   width: 50%;
-  margin: 60px;
 }
 
 .info__left-title, .info__right-title {
@@ -320,12 +358,8 @@ button {
   background-image: linear-gradient(to top, #150702, #5e3625, #82451c), linear-gradient(to bottom, #4e2c1e, #4e2c1e);
   font-family: garamond;
   font-size: 22.5px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #4e2c1e;
+  display: inline-block;
   width: 150px;
   -webkit-background-clip: text;
   background-clip: text;
@@ -333,14 +367,10 @@ button {
 }
 
 .info__left-desc, .info__right-desc {
-  font-size: 14px;
+  font-size: 13px;
   font-family: arialmt;
   color: #35190d;
   line-height: 1.2;
-}
-
-.info__left > img, .info__right > img {
-  float: inline-end;
 }
 
 .photo {
@@ -349,17 +379,19 @@ button {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0px 63px 0px 60px;
+  padding: 0px 63px 31px 60px;
 }
 
 .main {
   color: var(--brown-bcgk);
-  padding: 25px 25px 105px 25px;
+  padding: 0px 25px 105px 25px;
   font-family: arialmt;
 }
 
 .main__title {
+  margin: 0;
   font-size: 24px;
+  margin-bottom: 18px;
 }
 
 .main__title-recruit {
@@ -419,6 +451,10 @@ button {
           align-items: flex-end;
 }
 
+.main__calc-mid p:not(:last-child) {
+  margin-bottom: 17px;
+}
+
 .main__calc-right > button {
   border-style: solid;
   border-width: 1px;
@@ -429,6 +465,10 @@ button {
   color: var(--white);
   height: 29px;
   border-radius: 5px;
+}
+
+.main__calc-left > p {
+  margin-bottom: 17px;
 }
 
 .footer-nav__top {
@@ -532,8 +572,10 @@ button {
 
 .application-popup input,
 .application-popup textarea,
+.application-popup select,
 .resume-popup input,
-.resume-popup textarea {
+.resume-popup textarea,
+.resume-popup select {
   border: 1px solid var(--orange);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff6e2), color-stop(30%, #fff6e2), color-stop(65%, white), to(white));
   background-image: linear-gradient(90deg, #fff6e2 0%, #fff6e2 30%, white 65%, white 100%);
@@ -542,7 +584,7 @@ button {
   width: 306px;
   height: 30px;
   margin-top: 13px;
-  padding: 10px;
+  padding: 0px 10px;
 }
 
 .application-popup button,
@@ -584,6 +626,10 @@ button {
   z-index: 1;
   position: relative;
   bottom: 5px;
+}
+
+.submenu {
+  left: 0px;
 }
 
 .submenu-btn-active {

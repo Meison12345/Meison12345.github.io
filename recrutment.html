@@ -105,16 +105,18 @@
 
         <section class="main__calc">
             <img src="img/double-ornament.png" class="main__calc-ornament" alt="орнамент">
-            <div class="main__calc-left">
+            <div class="main__calc-left box">
                 <p>Показать только</p>
-                <select name="worker" id="recruit-worker">
-                    <option value="Няня" selected>Няня</option>
-                    <option value="Гувернантка">Гувернантка</option>
-                    <option value="Дворник">Дворник</option>
-                    <option value="Водитель">Водитель</option>
-                    <option value="Садовник">Садовник</option>
-
-                </select>
+                <label for="recruit-worker" class="select-wrapper">
+                    <select name="worker" id="recruit-worker" class="custom-select">
+                        <option class="select-option" value="Няня" selected>Няня</option>
+                        <option class="select-option" value="Гувернантка">Гувернантка</option>
+                        <option class="select-option" value="Дворник">Дворник</option>
+                        <option class="select-option" value="Водитель">Водитель</option>
+                        <option class="select-option" value="Садовник">Садовник</option>
+                    </select>
+                    <!-- <span class="select-icon"><img src="img/dropBtn.svg" width="24" alt=""></span> -->
+                </label>
             </div>
             <div class="main__calc-mid">
                 <p>Стаж от <input class="range-inp" value="1" type="text">до <input class="range-inp" value="30"

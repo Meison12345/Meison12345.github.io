@@ -21,5 +21,8 @@
     border: 1px solid #c7a865;
     background-image: -ms-linear-gradient(90deg, #faedc7 0%, #eacf8f 13%, #e8c478 58%, #fff9e0 96%, #fff9e0 100%);
   }
+  .submenu-btn:active {
+    background-image: -webkit-linear-gradient(90deg, #faedc7 0%, #eacf8f 13%, #e8c478 58%, #fff9e0 96%, #fff9e0 100%);
+  }
 }
 /*# sourceMappingURL=adaptive.css.map */
