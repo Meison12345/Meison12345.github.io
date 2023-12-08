@@ -526,10 +526,12 @@ button {
 
     & input,
     textarea,
-    select, .select_wrap_resume{
-        border: 1px solid var(--orange);
+    select,
+    .select_wrap_resume {
+        border: none;
+        box-shadow: 0 0 0 1px var(--orange);
         background-image: linear-gradient(90deg, rgb(255, 246, 226) 0%, rgb(255, 246, 226) 30%, rgb(255, 255, 255) 65%, rgb(255, 255, 255) 100%);
-        box-shadow: inset 0px 0px 0px 0px rgba(141, 84, 8, 0.004);
+        // box-shadow: inset 0px 0px 0px 0px rgba(141, 84, 8, 0.004);
         width: 306px;
         height: 30px;
         margin-top: 13px;
@@ -549,7 +551,7 @@ button {
     #custom-textarea {
         resize: none;
         background-image: linear-gradient(90deg, rgb(255, 246, 226) 0%, rgb(255, 246, 226) 30%, rgb(255, 255, 255) 65%, rgb(255, 255, 255) 100%);
-        box-shadow: inset 0px 0px 0px 0px rgba(141, 84, 8, 0.004);
+        box-shadow: 0 0 0 1px var(--orange);
         height: 72px;
     }
 
@@ -752,15 +754,10 @@ tr:nth-child(2n) td {
 }
 
 .select_wrap_resume .default_option_resume {
-    background: var(--white);
-    border: 1px solid #ab6e17;
-    position: relative;
-    cursor: pointer;
     height: 31px;
 }
 
 .select_wrap_resume .default_option_resume li {
-    padding: 0px 12px;
     height: 100%;
     text-align: center;
     display: flex;
@@ -783,8 +780,8 @@ tr:nth-child(2n) td {
 
 .select_wrap_resume .select_ul_resume {
     position: absolute;
-    top: 30px;
-    left: 0;
+    top: 28px;
+    left: 0px;
     width: 100%;
     background: #fff;
     display: none;
@@ -792,9 +789,8 @@ tr:nth-child(2n) td {
 }
 
 .select_wrap_resume .select_ul_resume li {
-    padding: 10px 20px;
     cursor: pointer;
-    padding: 0px 20px;
+    padding: 0px 10px;
     cursor: pointer;
     height: 33px;
     display: flex;
@@ -812,5 +808,6 @@ tr:nth-child(2n) td {
 
 .select_wrap_resume.active .select_ul_resume {
     display: block;
-    border: 1px solid #ab6e17;
+    width: 306px;
+    box-shadow: 0 0 0 1px var(--orange);
 }

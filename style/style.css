@@ -587,16 +587,17 @@ button {
 
 .application-popup input,
 .application-popup textarea,
-.application-popup select, .application-popup .select_wrap_resume,
+.application-popup select,
+.application-popup .select_wrap_resume,
 .resume-popup input,
 .resume-popup textarea,
 .resume-popup select,
 .resume-popup .select_wrap_resume {
-  border: 1px solid var(--orange);
+  border: none;
+  -webkit-box-shadow: 0 0 0 1px var(--orange);
+          box-shadow: 0 0 0 1px var(--orange);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff6e2), color-stop(30%, #fff6e2), color-stop(65%, white), to(white));
   background-image: linear-gradient(90deg, #fff6e2 0%, #fff6e2 30%, white 65%, white 100%);
-  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(141, 84, 8, 0.004);
-          box-shadow: inset 0px 0px 0px 0px rgba(141, 84, 8, 0.004);
   width: 306px;
   height: 30px;
   margin-top: 13px;
@@ -620,8 +621,8 @@ button {
   resize: none;
   background-image: -webkit-gradient(linear, left top, right top, from(#fff6e2), color-stop(30%, #fff6e2), color-stop(65%, white), to(white));
   background-image: linear-gradient(90deg, #fff6e2 0%, #fff6e2 30%, white 65%, white 100%);
-  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(141, 84, 8, 0.004);
-          box-shadow: inset 0px 0px 0px 0px rgba(141, 84, 8, 0.004);
+  -webkit-box-shadow: 0 0 0 1px var(--orange);
+          box-shadow: 0 0 0 1px var(--orange);
   height: 72px;
 }
 
@@ -830,15 +831,10 @@ tr:nth-child(2n) td {
 }
 
 .select_wrap_resume .default_option_resume {
-  background: var(--white);
-  border: 1px solid #ab6e17;
-  position: relative;
-  cursor: pointer;
   height: 31px;
 }
 
 .select_wrap_resume .default_option_resume li {
-  padding: 0px 12px;
   height: 100%;
   text-align: center;
   display: -webkit-box;
@@ -873,8 +869,8 @@ tr:nth-child(2n) td {
 
 .select_wrap_resume .select_ul_resume {
   position: absolute;
-  top: 30px;
-  left: 0;
+  top: 28px;
+  left: 0px;
   width: 100%;
   background: #fff;
   display: none;
@@ -882,9 +878,8 @@ tr:nth-child(2n) td {
 }
 
 .select_wrap_resume .select_ul_resume li {
-  padding: 10px 20px;
   cursor: pointer;
-  padding: 0px 20px;
+  padding: 0px 10px;
   cursor: pointer;
   height: 33px;
   display: -webkit-box;
@@ -910,6 +905,8 @@ tr:nth-child(2n) td {
 
 .select_wrap_resume.active .select_ul_resume {
   display: block;
-  border: 1px solid #ab6e17;
+  width: 306px;
+  -webkit-box-shadow: 0 0 0 1px var(--orange);
+          box-shadow: 0 0 0 1px var(--orange);
 }
 /*# sourceMappingURL=style.css.map */
