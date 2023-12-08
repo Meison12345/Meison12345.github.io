@@ -587,10 +587,11 @@ button {
 
 .application-popup input,
 .application-popup textarea,
-.application-popup select,
+.application-popup select, .application-popup .select_wrap_resume,
 .resume-popup input,
 .resume-popup textarea,
-.resume-popup select {
+.resume-popup select,
+.resume-popup .select_wrap_resume {
   border: 1px solid var(--orange);
   background-image: -webkit-gradient(linear, left top, right top, from(#fff6e2), color-stop(30%, #fff6e2), color-stop(65%, white), to(white));
   background-image: linear-gradient(90deg, #fff6e2 0%, #fff6e2 30%, white 65%, white 100%);
@@ -815,6 +816,99 @@ tr:nth-child(2n) td {
 }
 
 .select_wrap.active .select_ul {
+  display: block;
+  border: 1px solid #ab6e17;
+}
+
+.select_wrap_resume {
+  width: 201px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.select_wrap_resume .default_option_resume {
+  background: var(--white);
+  border: 1px solid #ab6e17;
+  position: relative;
+  cursor: pointer;
+  height: 31px;
+}
+
+.select_wrap_resume .default_option_resume li {
+  padding: 0px 12px;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_resume .default_option_resume:before {
+  content: url(../img/dropBtn.svg);
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  height: 100%;
+  width: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #e7cba4), color-stop(8%, #ecc385), color-stop(15%, #e5b266), color-stop(86%, #e4ac59), color-stop(96%, #f5dcb9), to(#fff9e0));
+  background: linear-gradient(360deg, #faedc7 0%, #e7cba4 0%, #ecc385 8%, #e5b266 15%, #e4ac59 86%, #f5dcb9 96%, #fff9e0 100%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.select_wrap_resume .select_ul_resume {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: none;
+  background-color: #fcebc6;
+}
+
+.select_wrap_resume .select_ul_resume li {
+  padding: 10px 20px;
+  cursor: pointer;
+  padding: 0px 20px;
+  cursor: pointer;
+  height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_resume .select_ul_resume li:hover {
+  background-color: #d8af75;
+}
+
+.select_wrap_resume .option_resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_resume.active .select_ul_resume {
   display: block;
   border: 1px solid #ab6e17;
 }

@@ -78,6 +78,24 @@ document.addEventListener('DOMContentLoaded', function () {
 const defaultOption = document.querySelector(".default_option");
 const selectUlItems = document.querySelectorAll(".select_ul li");
 
+const defaultOptionResume = document.querySelector(".default_option_resume");
+const selectUlResume = document.querySelectorAll(".select_ul_resume li");
+
+
+defaultOptionResume.addEventListener("click", function() {
+    this.parentElement.classList.toggle("active");
+  });
+  
+  selectUlResume.forEach(function(item) {
+    item.addEventListener("click", function() {
+      const currentElement = this.innerHTML;
+      document.querySelector(".default_option_resume li").innerHTML = currentElement;
+      this.closest(".select_wrap_resume").classList.remove("active");
+    });
+  });
+
+
+
 defaultOption.addEventListener("click", function() {
   this.parentElement.classList.toggle("active");
 });
