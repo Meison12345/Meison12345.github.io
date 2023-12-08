@@ -107,16 +107,44 @@
             <img src="img/double-ornament.png" class="main__calc-ornament" alt="орнамент">
             <div class="main__calc-left box">
                 <p>Показать только</p>
-                <label for="recruit-worker" class="select-wrapper">
-                    <select name="worker" id="recruit-worker" class="custom-select">
-                        <option class="select-option" value="Няня" selected>Няня</option>
-                        <option class="select-option" value="Гувернантка">Гувернантка</option>
-                        <option class="select-option" value="Дворник">Дворник</option>
-                        <option class="select-option" value="Водитель">Водитель</option>
-                        <option class="select-option" value="Садовник">Садовник</option>
-                    </select>
-                    <!-- <span class="select-icon"><img src="img/dropBtn.svg" width="24" alt=""></span> -->
-                </label>
+                <div class="select_wrap">
+                    <ul class="default_option" id="recruit-worker">
+                        <li>
+                            <div class="option">
+                                <p>Няня</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="select_ul">
+                        <li>
+                            <div class="option">
+                                <p>Гувернантка</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option">
+                                <p>Няня</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option">
+                                <p>Двороник</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option">
+                                <p>Водитель</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="option">
+                                <p>Садовник</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
             </div>
             <div class="main__calc-mid">
                 <p>Стаж от <input class="range-inp" value="1" type="text">до <input class="range-inp" value="30"

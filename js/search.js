@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function searchPersonnel() {
-        const position = document.getElementById('recruit-worker').value;
+        const position = document.getElementById('recruit-worker').textContent.trim();
+        console.log(position);
         const minExperience = +(document.querySelector('.main__calc-mid').children[0].children[0].value);
         const maxExperience = +(document.querySelector('.main__calc-mid').children[0].children[1].value);
         const minAge = +(document.querySelector('.main__calc-mid').children[1].children[0].value);

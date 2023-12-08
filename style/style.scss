@@ -425,8 +425,12 @@ button {
             border-radius: 5px;
         }
 
-        &-left>p {
-            margin-bottom: 17px;
+        &-left {
+            height: 69px;
+
+            &>p {
+                margin-bottom: 25px;
+            }
         }
     }
 }
@@ -586,7 +590,7 @@ button {
     border: 1px solid rgb(177, 177, 177);
     background-color: var(--white);
     width: 40px;
-    height: 33px;
+    height: 31px;
     text-align: center;
     padding: 5px;
 }
@@ -649,4 +653,82 @@ tr:nth-child(2n) td {
 
 .main:after {
     content: '';
+}
+
+
+
+.wrapper .title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+.select_wrap {
+    width: 201px;
+    position: relative;
+    user-select: none;
+}
+
+.select_wrap .default_option {
+    background: var(--white);
+    border: 1px solid #ab6e17;
+    position: relative;
+    cursor: pointer;
+    height: 31px;
+}
+
+.select_wrap .default_option li {
+    padding: 0px 12px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap .default_option:before {
+    content: url(../img/dropBtn.svg);
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    height: 100%;
+    width: 27px;
+    display: flex;
+    background: linear-gradient(360deg, rgb(250, 237, 199) 0%, rgb(231, 203, 164) 0%, rgb(236, 195, 133) 8%, rgb(229, 178, 102) 15%, rgb(228, 172, 89) 86%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
+    align-items: center;
+    justify-content: center;
+}
+
+.select_wrap .select_ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    background-color: rgb(252, 235, 198);
+}
+
+.select_wrap .select_ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+    padding: 0px 20px;
+    cursor: pointer;
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap .select_ul li:hover {
+    background-color: rgb(216, 175, 117);
+}
+
+.select_wrap .option {
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap.active .select_ul {
+    display: block;
+    border: 1px solid #ab6e17;
 }
