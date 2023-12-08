@@ -2,8 +2,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const personnelData = JSON.parse('[{"name":"Лопухова Надежда Александровна","position":"Гувернантка","age":45,"experience":15},{"name":"Ермакова Надежда Ивановна","position":"Няня","age":30,"experience":5},{"name":"Филимонов Евгений Семенович","position":"Садовник","age":50,"experience":20},{"name":"Лопухова Надежда Александровна","position":"Уборщица","age":35,"experience":7},{"name":"Миронов Юрий Герасимович","position":"Конюх","age":60,"experience":15},{"name":"Новикова Нина Алексеевна","position":"Повар","age":55,"experience":30},{"name":"Лопухова Надежда Александровна","position":"Гувернантка","age":45,"experience":15},{"name":"Лопухова Надежда Александровна","position":"Гувернантка","age":45,"experience":15},{"name":"Лопухова Надежда Александровна","position":"Гувернантка","age":45,"experience":15}]');
     const tableBody = document.getElementById('resultBody');
+    const parentElement = document.querySelector('.main__calc-mid');
 
-    // Заполняем таблицу данными о персонале
+    // Проверяем вводимые данные
+    parentElement.addEventListener('input', function (event) {
+        const target = event.target;
+        if (target.classList.contains('range-inp')) {
+            target.value = target.value.replace(/\D/g, '');
+        }
+    });
+
+
+
+    // Заполняем таблицу данными о персонале. Имитация получения данных с сервера
     personnelData.forEach(person => {
         const row = tableBody.insertRow();
         const nameCell = row.insertCell();
@@ -34,14 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function displayResults(data) {
-
-
         // Очистка таблицы перед обновлением
         tableBody.innerHTML = '';
-
         // Создание новых строк с данными
         data.forEach(person => {
-
             const row = document.createElement('tr');
             const nameCell = document.createElement('td');
             nameCell.textContent = person.name;

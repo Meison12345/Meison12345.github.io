@@ -127,10 +127,11 @@ button {
 
     &-nav {
         background-image: linear-gradient(0deg, rgb(164, 103, 31) 0%, rgb(131, 76, 11) 14%, rgb(119, 71, 11) 25%, rgb(176, 120, 43) 55%, rgb(233, 192, 135) 100%);
-        box-shadow: 0px -3px 0px 0px var(--brown-bcgk);
+        box-shadow: 0px -10px 0px var(--brown-bcgk), 0px 1px 0px 0px #d2b690, 0px 2px 0px 0px var(--brown-bcgk);
         height: 40px;
         position: relative;
         border-radius: 5px;
+        z-index: 2;
 
         &-link {
             height: 100%;
@@ -139,6 +140,13 @@ button {
             justify-content: center;
             width: 113px;
             position: relative;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(5),
+            &:nth-child(6) {
+                box-shadow: 1px 0px 0px #77470b, 2px 0px 0px 0px #d2b690;
+            }
 
             &>a {
                 font-size: 11px;
@@ -225,7 +233,6 @@ button {
     height: 13px;
     margin: 0px 9px;
     box-shadow: inset 0px 2px 3px 0 rgba(51, 27, 2, 0.75);
-    background-blend-mode: multiply, ;
     background-image: linear-gradient(to bottom, rgba(199, 109, 2, 0.48), rgba(199, 109, 2, 0.48)), linear-gradient(to bottom, #4e2c1e, #4e2c1e);
     border-radius: 50%;
     cursor: pointer;
@@ -243,7 +250,7 @@ button {
     right: -2px;
     bottom: -2px;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(199, 109, 2, 0.48);
+    box-shadow: 0 0 0 1px rgba(101, 46, 2, 0.5);
 }
 
 .info {
@@ -427,8 +434,8 @@ button {
 .footer {
     &-nav {
         &__top {
-            padding: 18px 0px 13px 0px;
-            box-shadow: 0px 1px 1px 0 rgba(17, 17, 26, 0.86);
+            // padding: 18px 0px 13px 0px;
+            // box-shadow: 0px 1px 1px 0 rgba(17, 17, 26, 0.86);
             background-image: linear-gradient(to top, #4e2c1e, #4e2c1e);
 
             & ul li {
@@ -447,18 +454,23 @@ button {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                z-index: 2;
+                box-shadow: 0px 1px 0px 0px var(--black);
+                position: relative;
+                padding: 18px 0px 13px 0px;
+                text-transform: uppercase;
 
                 & li a {
                     color: var(--white);
+                    // text-transform: uppercase;
                 }
             }
         }
     }
 
     &__bottom {
-        background-image: linear-gradient(360deg, rgb(173, 139, 99) 0%, rgb(78, 44, 30) 100%);
+        background-image: -webkit-gradient(linear, left bottom, left top, from(#a6845e), to(#79573d));
         color: var(--white);
-        ;
         height: 45px;
         display: flex;
         justify-content: space-between;
@@ -467,7 +479,7 @@ button {
 
         &>a {
             font-size: 19px;
-            font-family: garamond;
+            font-family: GaramondC;
             color: var(--white);
             line-height: 1.2;
         }

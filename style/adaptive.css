@@ -8,6 +8,9 @@
   .header-nav ul li ul li:active {
     background-color: #d8af75;
   }
+  li.header-nav-link:active {
+    background-color: #d8af75;
+  }
   .info-btn:active {
     border-color: #ab6e17;
     background-image: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #77470b), color-stop(73%, #d39538), color-stop(96%, #f5dcb9), to(#fff9e0));
