@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-
     // Заполняем таблицу данными о персонале. Имитация получения данных с сервера
     personnelData.forEach(person => {
         const row = tableBody.insertRow();
@@ -28,12 +27,18 @@ document.addEventListener('DOMContentLoaded', function () {
         experienceCell.textContent = person.experience + ' лет';
     });
 
+    /**
+     * @description получение входных данных, сравнение, подготовка подходящих данных в формате [{},]
+     */
     function searchPersonnel() {
-        const position = document.getElementById('recruit-worker').textContent.trim();
-        const minExperience = +(document.querySelector('.main__calc-mid').children[0].children[0].value);
-        const maxExperience = +(document.querySelector('.main__calc-mid').children[0].children[1].value);
         const minAge = +(document.querySelector('.main__calc-mid').children[1].children[0].value);
         const maxAge = +(document.querySelector('.main__calc-mid').children[1].children[1].value);
+        const minExperience = +(document.querySelector('.main__calc-mid').children[0].children[0].value);
+        const maxExperience = +(document.querySelector('.main__calc-mid').children[0].children[1].value);
+        
+        if (minAge >= maxAge || minExperience >= maxExperience) showErrorMsg();
+
+        const position = document.getElementById('recruit-worker').textContent.trim();
 
         const filteredData = personnelData.filter(person =>
             person.position === position &&
@@ -45,7 +50,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /**
+     * @description Вывод ошибки при неправильном вводе данных
+     */
+    function showErrorMsg() {
+        console.log('Ошибка. От не может быть больше, чем до');
+    }
+
+    /**
      * @description Очистка таблицы перед обновлением и создание новых строк с данными
+     * @param {[{},]} data массив объектов, которые подходят под входные данные
      */
     function displayResults(data) {
         tableBody.innerHTML = '';

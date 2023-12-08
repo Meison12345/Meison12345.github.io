@@ -31,6 +31,7 @@
   --grey-brown: rgb(171, 110, 23);
   --orange: rgb(205, 142, 49);
   --mahogany-brown: rgb(78, 44, 30);
+  --sandy-yellow: rgb(199, 168, 101);
   --time-delation: 1.3s;
 }
 
@@ -167,7 +168,7 @@ button {
 .header-nav-link > a {
   font-size: 11px;
   font-family: 'verdana';
-  color: white;
+  color: var(--white);
   text-transform: uppercase;
   line-height: 1.2;
   text-shadow: 0px 1px 0px rgba(17, 17, 26, 0.46);
@@ -312,7 +313,7 @@ button {
 }
 
 .info-btn {
-  border: 1px solid #c7a865;
+  border: 1px solid var(--sandy-yellow);
   background-image: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(13%, #eacf8f), color-stop(58%, #e8c478), color-stop(96%, #fff9e0), to(#fff9e0));
   background-image: linear-gradient(0deg, #faedc7 0%, #eacf8f 13%, #e8c478 58%, #fff9e0 96%, #fff9e0 100%);
   width: 126px;
