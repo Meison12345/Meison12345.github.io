@@ -3,6 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const personnelData = JSON.parse('[{"name":"Лопухова Надежда Александровна","position":"Гувернантка","age":45,"experience":15},{"name":"Ермакова Надежда Ивановна","position":"Няня","age":30,"experience":5},{"name":"Филимонов Евгений Семенович","position":"Садовник","age":50,"experience":20},{"name":"Лопухова Надежда Александровна","position":"Уборщица","age":35,"experience":7},{"name":"Миронов Юрий Герасимович","position":"Конюх","age":60,"experience":15},{"name":"Новикова Нина Алексеевна","position":"Повар","age":55,"experience":30},{"name":"Лопухова Надежда Александровна","position":"Гувернантка","age":45,"experience":15},{"name":"Лопухова Надежда Александровна","position":"Гувернантка","age":45,"experience":15},{"name":"Лопухова Надежда Александровна","position":"Гувернантка","age":45,"experience":15}]');
     const tableBody = document.getElementById('resultBody');
     const parentElement = document.querySelector('.main__calc-mid');
+    const defaultOption = document.querySelector(".default_option");
+    const selectUlItems = document.querySelectorAll(".select_ul li");
+
+    
+    defaultOption.addEventListener("click", function () {
+        this.parentElement.classList.toggle("active");
+    });
+
+    selectUlItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+            const currentElement = this.innerHTML;
+            document.querySelector(".default_option li").innerHTML = currentElement;
+            this.closest(".select_wrap").classList.remove("active");
+        });
+    });
+
 
     // Проверяем вводимые данные
     parentElement.addEventListener('input', function (event) {
@@ -35,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const maxAge = +(document.querySelector('.main__calc-mid').children[1].children[1].value);
         const minExperience = +(document.querySelector('.main__calc-mid').children[0].children[0].value);
         const maxExperience = +(document.querySelector('.main__calc-mid').children[0].children[1].value);
-        
+
         if (minAge >= maxAge || minExperience >= maxExperience) showErrorMsg();
 
         const position = document.getElementById('recruit-worker').textContent.trim();
@@ -81,5 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
             tableBody.appendChild(row);
         });
     }
+
     document.querySelector('.main__calc-right > button').addEventListener('click', searchPersonnel);
 });

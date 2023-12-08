@@ -22,12 +22,12 @@
             </div>
             <div class="header-top__right">
                 <button class="header-top__right--btn" id="application">Оставить заявку</button>
-                <div class="application-popup application-inactive">
-                    <input type="text" placeholder="ФИО">
-                    <input type="text" placeholder="Телефон">
+                <form class="application-popup application-inactive">
+                    <input type="text" placeholder="ФИО" class="application-FIO">
+                    <input type="text" placeholder="Телефон" class="application-phone">
 
                     <div class="select_wrap_work">
-                        <ul class="default_option_work">
+                        <ul class="default_option_work application-work">
                             <li>
                                 <div class="option_work">
                                     <p>Няня</p>
@@ -63,7 +63,7 @@
                         </ul>
                     </div>
                     <div class="select_wrap_time">
-                        <ul class="default_option_time">
+                        <ul class="default_option_time application-workTime">
                             <li>
                                 <div class="option_time">
                                     <p>Полный день</p>
@@ -95,15 +95,17 @@
                     </div>
 
 
-                    <textarea class="custom-textarea" placeholder="Дополнительная информация"></textarea>
-                    <button>Отправить</button>
-                </div>
+                    <textarea class="custom-textarea application-custom-textarea"
+                        placeholder="Дополнительная информация"></textarea>
+                    <button id="btn-application">Отправить</button>
+                </form>
+
                 <button class="header-top__right--btn" id="resume">Отправить резюме</button>
-                <div class="resume-popup application-inactive">
-                    <input type="text" placeholder="ФИО">
-                    <input type="text" placeholder="Телефон">
+                <form class="resume-popup application-inactive">
+                    <input type="text" placeholder="ФИО" class="resume-FIO">
+                    <input type="text" placeholder="Телефон" class="resume-phone">
                     <div class="select_wrap_resume">
-                        <ul class="default_option_resume">
+                        <ul class="default_option_resume resume-work">
                             <li>
                                 <div class="option_resume">
                                     <p>Няня</p>
@@ -138,10 +140,11 @@
                             </li>
                         </ul>
                     </div>
-                    <input type="text" placeholder="Образование">
-                    <textarea class="custom-textarea" placeholder="Дополнительная информация"></textarea>
-                    <button>Отправить</button>
-                </div>
+                    <input type="text" placeholder="Образование" class="resume-education">
+                    <textarea class="custom-textarea resume-custom-textarea"
+                        placeholder="Дополнительная информация"></textarea>
+                    <button id="btn-resume">Отправить</button>
+                </form>
             </div>
         </div>
 
@@ -321,6 +324,7 @@
         </div>
     </footer>
 
+    <script src="js/headerdropbox.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/search.js"></script>
