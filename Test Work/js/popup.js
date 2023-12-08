@@ -3,10 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const resumeBtn = document.getElementById('resume');
     const applicationBtn = document.getElementById('application');
     const applicationPopup = document.querySelector('.application-popup');
+    const submenuItems = document.querySelectorAll('.submenu > li');
     const resumePopup = document.querySelector('.resume-popup');
     const submenuBtn = document.querySelector('.submenu-btn');
     const submenu = document.querySelector('.submenu');
 
+
+
+    // Отмена всплытия события click
+    submenuItems.forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+    });
 
     applicationBtn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -56,5 +65,4 @@ document.addEventListener('DOMContentLoaded', function () {
             submenu.classList.add('application-inactive');
         }
     });
-
 });
