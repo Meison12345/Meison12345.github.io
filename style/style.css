@@ -607,8 +607,7 @@ button {
   border: none;
   -webkit-box-shadow: 0 0 0 1px var(--orange);
           box-shadow: 0 0 0 1px var(--orange);
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff6e2), color-stop(30%, #fff6e2), color-stop(65%, white), to(white));
-  background-image: linear-gradient(90deg, #fff6e2 0%, #fff6e2 30%, white 65%, white 100%);
+  background: var(--white);
   width: 306px;
   height: 30px;
   margin-top: 13px;
@@ -635,8 +634,7 @@ button {
 .application-popup .custom-textarea,
 .resume-popup .custom-textarea {
   resize: none;
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff6e2), color-stop(30%, #fff6e2), color-stop(65%, white), to(white));
-  background-image: linear-gradient(90deg, #fff6e2 0%, #fff6e2 30%, white 65%, white 100%);
+  background: var(--white);
   -webkit-box-shadow: 0 0 0 1px var(--orange);
           box-shadow: 0 0 0 1px var(--orange);
   height: 72px;
@@ -750,7 +748,10 @@ tr:nth-child(2n) td {
   color: #fff;
 }
 
-.select_wrap {
+.select_wrap,
+.select_wrap_resume,
+.select_wrap_time,
+.select_wrap_work {
   width: 201px;
   position: relative;
   -webkit-user-select: none;
@@ -761,279 +762,24 @@ tr:nth-child(2n) td {
 
 .select_wrap .default_option {
   background: var(--white);
-  border: 1px solid #ab6e17;
-  position: relative;
-  cursor: pointer;
-  height: 31px;
-}
-
-.select_wrap .default_option li {
-  padding: 0px 12px;
-  height: 100%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap .default_option:before {
-  content: url(../img/dropBtn.svg);
-  position: absolute;
-  right: 0px;
-  top: 50%;
-  -webkit-transform: translate(0px, -50%);
-          transform: translate(0px, -50%);
-  height: 100%;
-  width: 27px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #e7cba4), color-stop(8%, #ecc385), color-stop(15%, #e5b266), color-stop(86%, #e4ac59), color-stop(96%, #f5dcb9), to(#fff9e0));
-  background: linear-gradient(360deg, #faedc7 0%, #e7cba4 0%, #ecc385 8%, #e5b266 15%, #e4ac59 86%, #f5dcb9 96%, #fff9e0 100%);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.select_wrap .select_ul {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  display: none;
-  background-color: #fcebc6;
-}
-
-.select_wrap .select_ul li {
-  padding: 10px 20px;
-  cursor: pointer;
-  padding: 0px 20px;
-  cursor: pointer;
-  height: 33px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap .select_ul li:hover {
-  background-color: #d8af75;
-}
-
-.select_wrap .option {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap.active .select_ul {
-  display: block;
-  border: 1px solid #ab6e17;
-}
-
-.select_wrap_resume {
-  width: 201px;
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.select_wrap_resume .default_option_resume {
-  height: 31px;
-}
-
-.select_wrap_resume .default_option_resume li {
-  height: 100%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap_resume .default_option_resume:before {
-  content: url(../img/dropBtn.svg);
-  position: absolute;
-  right: 0px;
-  top: 50%;
-  -webkit-transform: translate(0px, -50%);
-          transform: translate(0px, -50%);
-  height: 100%;
-  width: 27px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #e7cba4), color-stop(8%, #ecc385), color-stop(15%, #e5b266), color-stop(86%, #e4ac59), color-stop(96%, #f5dcb9), to(#fff9e0));
-  background: linear-gradient(360deg, #faedc7 0%, #e7cba4 0%, #ecc385 8%, #e5b266 15%, #e4ac59 86%, #f5dcb9 96%, #fff9e0 100%);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.select_wrap_resume .select_ul_resume {
-  position: absolute;
-  top: 28px;
-  left: 0px;
-  width: 100%;
-  background: #fff;
-  display: none;
-  background-color: #fcebc6;
-}
-
-.select_wrap_resume .select_ul_resume li {
-  cursor: pointer;
-  padding: 0px 10px;
-  cursor: pointer;
-  height: 33px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap_resume .select_ul_resume li:hover {
-  background-color: #d8af75;
-}
-
-.select_wrap_resume .option_resume {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap_resume.active .select_ul_resume {
-  display: block;
-  width: 306px;
+  padding-left: 12px;
   -webkit-box-shadow: 0 0 0 1px var(--orange);
           box-shadow: 0 0 0 1px var(--orange);
-}
-
-.select_wrap_work {
-  width: 201px;
   position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.select_wrap_work .default_option_work {
+  cursor: pointer;
   height: 31px;
 }
 
-.select_wrap_work .default_option_work li {
-  height: 100%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap_work .default_option_work:before {
-  content: url(../img/dropBtn.svg);
-  position: absolute;
-  right: 0px;
-  top: 50%;
-  -webkit-transform: translate(0px, -50%);
-          transform: translate(0px, -50%);
-  height: 100%;
-  width: 27px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #e7cba4), color-stop(8%, #ecc385), color-stop(15%, #e5b266), color-stop(86%, #e4ac59), color-stop(96%, #f5dcb9), to(#fff9e0));
-  background: linear-gradient(360deg, #faedc7 0%, #e7cba4 0%, #ecc385 8%, #e5b266 15%, #e4ac59 86%, #f5dcb9 96%, #fff9e0 100%);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.select_wrap_work .select_ul_work {
-  position: absolute;
-  top: 28px;
-  left: 0px;
-  width: 100%;
-  background: #fff;
-  display: none;
-  background-color: #fcebc6;
-}
-
-.select_wrap_work .select_ul_work li {
-  cursor: pointer;
-  padding: 0px 10px;
-  cursor: pointer;
-  height: 33px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap_work .select_ul_work li:hover {
-  background-color: #d8af75;
-}
-
-.select_wrap_work .option_work {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.select_wrap_work.active .select_ul_work {
-  display: block;
-  width: 306px;
-  -webkit-box-shadow: 0 0 0 1px var(--orange);
-          box-shadow: 0 0 0 1px var(--orange);
-}
-
-.select_wrap_time {
-  width: 201px;
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
+.select_wrap_resume .default_option_resume,
+.select_wrap_work .default_option_work,
 .select_wrap_time .default_option_time {
   height: 31px;
+  color: #55493f;
 }
 
+.select_wrap .default_option li,
+.select_wrap_resume .default_option_resume li,
+.select_wrap_work .default_option_work li,
 .select_wrap_time .default_option_time li {
   height: 100%;
   text-align: center;
@@ -1045,6 +791,9 @@ tr:nth-child(2n) td {
           align-items: center;
 }
 
+.select_wrap .default_option:before,
+.select_wrap_resume .default_option_resume:before,
+.select_wrap_work .default_option_work:before,
 .select_wrap_time .default_option_time:before {
   content: url(../img/dropBtn.svg);
   position: absolute;
@@ -1067,19 +816,24 @@ tr:nth-child(2n) td {
           justify-content: center;
 }
 
+.select_wrap .select_ul,
+.select_wrap_resume .select_ul_resume,
+.select_wrap_work .select_ul_work,
 .select_wrap_time .select_ul_time {
   position: absolute;
-  top: 28px;
-  left: 0px;
+  top: 30px;
+  left: 0;
   width: 100%;
   background: #fff;
   display: none;
   background-color: #fcebc6;
 }
 
+.select_wrap .select_ul li,
+.select_wrap_resume .select_ul_resume li,
+.select_wrap_work .select_ul_work li,
 .select_wrap_time .select_ul_time li {
-  cursor: pointer;
-  padding: 0px 10px;
+  padding: 10px;
   cursor: pointer;
   height: 33px;
   display: -webkit-box;
@@ -1090,10 +844,16 @@ tr:nth-child(2n) td {
           align-items: center;
 }
 
+.select_wrap .select_ul li:hover,
+.select_wrap_resume .select_ul_resume li:hover,
+.select_wrap_work .select_ul_work li:hover,
 .select_wrap_time .select_ul_time li:hover {
   background-color: #d8af75;
 }
 
+.select_wrap .option,
+.select_wrap_resume .option_resume,
+.select_wrap_work .option_work,
 .select_wrap_time .option_time {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1103,10 +863,18 @@ tr:nth-child(2n) td {
           align-items: center;
 }
 
+.select_wrap.active .select_ul,
+.select_wrap_resume.active .select_ul_resume,
+.select_wrap_work.active .select_ul_work,
 .select_wrap_time.active .select_ul_time {
   display: block;
-  width: 306px;
   -webkit-box-shadow: 0 0 0 1px var(--orange);
           box-shadow: 0 0 0 1px var(--orange);
+  font-family: "Verdana";
+  color: #45250a;
+}
+
+.select_wrap ul.select_ul-search > li {
+  padding: 0px 12px;
 }
 /*# sourceMappingURL=style.css.map */

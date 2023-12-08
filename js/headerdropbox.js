@@ -1,70 +1,16 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function () {
-
-    // const defaultOptionResume = document.querySelector(".default_option_resume");
-    // const selectUlResume = document.querySelectorAll(".select_ul_resume li");
-
-    // const defaultOptionWork = document.querySelector(".default_option_work");
-    // const selectUlWork = document.querySelectorAll(".select_ul_work li");
-
-
-    // const defaultOptionTime = document.querySelector(".default_option_time");
-    // const selectUlTime = document.querySelectorAll(".select_ul_time li");
-
-
-
-
-    // defaultOptionTime.addEventListener("click", function () {
-    //     this.parentElement.classList.toggle("active");
-    // });
-
-    // selectUlTime.forEach(function (item) {
-    //     item.addEventListener("click", function () {
-    //         const currentElement = this.innerHTML;
-    //         document.querySelector(".default_option_time li").innerHTML = currentElement;
-    //         this.closest(".select_wrap_time").classList.remove("active");
-    //     });
-    // });
-
-
-
-    // defaultOptionWork.addEventListener("click", function () {
-    //     this.parentElement.classList.toggle("active");
-    // });
-
-    // selectUlWork.forEach(function (item) {
-    //     item.addEventListener("click", function () {
-    //         const currentElement = this.innerHTML;
-    //         document.querySelector(".default_option_work li").innerHTML = currentElement;
-    //         this.closest(".select_wrap_work").classList.remove("active");
-    //     });
-    // });
-
-
-
-    // defaultOptionResume.addEventListener("click", function () {
-    //     this.parentElement.classList.toggle("active");
-    // });
-
-    // selectUlResume.forEach(function (item) {
-    //     item.addEventListener("click", function () {
-    //         const currentElement = this.innerHTML;
-    //         document.querySelector(".default_option_resume li").innerHTML = currentElement;
-    //         this.closest(".select_wrap_resume").classList.remove("active");
-    //     });
-    // });
-
-
-
-
+    /**
+     * @description Установка дроп-меню в header
+     */
     function setupSelect(defaultOptionSelector, selectUlSelector, wrapSelector) {
         const defaultOption = document.querySelector(defaultOptionSelector);
         const selectUl = document.querySelectorAll(selectUlSelector);
-    
+
         defaultOption.addEventListener("click", function () {
             this.parentElement.classList.toggle("active");
         });
-    
+
         selectUl.forEach(function (item) {
             item.addEventListener("click", function () {
                 const currentElement = this.innerHTML;
@@ -76,13 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-    
+
     setupSelect(".default_option_resume", ".select_ul_resume li", ".select_wrap_resume");
     setupSelect(".default_option_work", ".select_ul_work li", ".select_wrap_work");
     setupSelect(".default_option_time", ".select_ul_time li", ".select_wrap_time");
-    
-
-
 
     //Получение данных из инпутов в header
     document.getElementById('btn-application').addEventListener('click', function (e) {
@@ -107,7 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log(FIO, number, workName, workTime, text);
 
-    })
+    });
+
+    document.addEventListener('click', function (event) {
+        const allDropdowns = document.querySelectorAll('.closeDropBox');
+        allDropdowns.forEach(function (dropdown) {
+            if (!dropdown.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    });
+
 });
 
 
