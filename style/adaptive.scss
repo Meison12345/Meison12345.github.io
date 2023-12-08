@@ -5,11 +5,8 @@
         color: var(--white)
     }
 
-    .header-nav ul li ul li:active {
-        background-color: rgb(216, 175, 117);
-    }
-
-    li.header-nav-link:active {
+    .header-nav>ul>li>ul>li:active,
+    .clk-btn:active {
         background-color: rgb(216, 175, 117);
     }
 

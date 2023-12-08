@@ -25,20 +25,87 @@
                 <div class="application-popup application-inactive">
                     <input type="text" placeholder="ФИО">
                     <input type="text" placeholder="Телефон">
-                    <select name="application" id="application-choose">
-                        <option value="Репетитор">Репетитор</option>
-                        <option value="Гувернантка">Гувернантка</option>
-                        <option value="Няня" selected>Няня</option>
-                        <option value="Водитель">Водитель</option>
-                        <option value="Садовник">Садовник</option>
-                    </select>
-                    <select name="time" id="time-chose">
+
+                    <div class="select_wrap_work">
+                        <ul class="default_option_work">
+                            <li>
+                                <div class="option_work">
+                                    <p>Няня</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul_work">
+                            <li>
+                                <div class="option_work">
+                                    <p>Гувернантка</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
+                                    <p>Няня</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
+                                    <p>Двороник</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
+                                    <p>Водитель</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
+                                    <p>Садовник</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- <select name="time" id="time-chose">
                         <option value="Полный день">Полный день</option>
                         <option value="Пол дня">Пол дня</option>
                         <option value="График работы" selected>График работы</option>
                         <option value="несколько часов">несколько часов</option>
                         <option value="Круглосуточно">Круглосуточно</option>
-                    </select>
+                    </select> -->
+
+
+                    <div class="select_wrap_time">
+                        <ul class="default_option_time">
+                            <li>
+                                <div class="option_time">
+                                    <p>Полный день</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul_time">
+                            <li>
+                                <div class="option_time">
+                                    <p>Пол дня</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>График работы</option>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>Несколько часов</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>Круглосуточно</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
                     <textarea type="text" id="custom-textarea" placeholder="Дополнительная информация"></textarea>
                     <button>Отправить</button>
                 </div>
@@ -61,7 +128,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="option">
+                                <div class="option_resume">
                                     <p>Няня</p>
                                 </div>
                             </li>
@@ -91,20 +158,20 @@
 
         <nav class="header-nav">
             <ul>
-                <li class="header-nav-link"><a href="index.html">Главная</a></li>
+                <li class="header-nav-link"><a href="index.html" class="clk-btn">Главная</a></li>
                 <li class="header-nav-link"><a href="recrutment.html" class="submenu-btn">Подобрать персонал</a>
                     <ul class="submenu application-inactive">
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Задать вопрос</a></li>
-                        <li><a href="#">Это интересно</a></li>
-                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#" class="submenu-dropbox">О нас</a></li>
+                        <li><a href="#" class="submenu-dropbox">Задать вопрос</a></li>
+                        <li><a href="#" class="submenu-dropbox">Это интересно</a></li>
+                        <li><a href="#" class="submenu-dropbox">Отзывы</a></li>
                     </ul>
                 </li>
-                <li class="header-nav-link"><a href="#">Цены</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Цены</a></li>
                 <li><a href="index.html"><img src="img/head_logo.png" class="main-logo" alt="логотип сайты"></a></li>
-                <li class="header-nav-link"><a href="#">Оставить<br>заявку</a></li>
-                <li class="header-nav-link"><a href="#">Оставить вакансию</a></li>
-                <li class="header-nav-link"><a href="#">Контакты</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Оставить<br>заявку</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Оставить вакансию</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Контакты</a></li>
             </ul>
         </nav>
     </header>

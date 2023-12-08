@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function searchPersonnel() {
         const position = document.getElementById('recruit-worker').textContent.trim();
-        console.log(position);
         const minExperience = +(document.querySelector('.main__calc-mid').children[0].children[0].value);
         const maxExperience = +(document.querySelector('.main__calc-mid').children[0].children[1].value);
         const minAge = +(document.querySelector('.main__calc-mid').children[1].children[0].value);
@@ -45,10 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
         displayResults(filteredData);
     }
 
+    /**
+     * @description Очистка таблицы перед обновлением и создание новых строк с данными
+     */
     function displayResults(data) {
-        // Очистка таблицы перед обновлением
         tableBody.innerHTML = '';
-        // Создание новых строк с данными
         data.forEach(person => {
             const row = document.createElement('tr');
             const nameCell = document.createElement('td');

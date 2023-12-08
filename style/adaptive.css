@@ -5,10 +5,8 @@
     background-image: linear-gradient(0deg, #faedc7 0%, #77470b 0%, #d39538 73%, #f5dcb9 96%, #fff9e0 100%);
     color: var(--white);
   }
-  .header-nav ul li ul li:active {
-    background-color: #d8af75;
-  }
-  li.header-nav-link:active {
+  .header-nav > ul > li > ul > li:active,
+  .clk-btn:active {
     background-color: #d8af75;
   }
   .info-btn:active {

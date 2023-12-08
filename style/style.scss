@@ -166,9 +166,11 @@ button {
         }
 
         & ul li a {
+            width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
         & ul li ul {
@@ -358,7 +360,7 @@ button {
 
 .main {
     color: var(--brown-bcgk);
-    padding: 0px 25px 105px 25px;
+    padding: 0px 25px 120px 25px;
     font-family: arialmt;
 
     &__title {
@@ -527,15 +529,20 @@ button {
     & input,
     textarea,
     select,
-    .select_wrap_resume {
+    .select_wrap_resume,
+    .select_wrap_work,
+    .select_wrap_time {
         border: none;
         box-shadow: 0 0 0 1px var(--orange);
         background-image: linear-gradient(90deg, rgb(255, 246, 226) 0%, rgb(255, 246, 226) 30%, rgb(255, 255, 255) 65%, rgb(255, 255, 255) 100%);
-        // box-shadow: inset 0px 0px 0px 0px rgba(141, 84, 8, 0.004);
         width: 306px;
         height: 30px;
         margin-top: 13px;
         padding: 0px 10px;
+    }
+
+    .select_wrap_work {
+        z-index: 3;
     }
 
     & button {
@@ -581,6 +588,10 @@ button {
 
 .submenu {
     left: 0px;
+}
+
+ul.submenu>li>a.submenu-dropbox {
+    justify-content: unset;
 }
 
 .submenu-btn-active {
@@ -807,6 +818,145 @@ tr:nth-child(2n) td {
 }
 
 .select_wrap_resume.active .select_ul_resume {
+    display: block;
+    width: 306px;
+    box-shadow: 0 0 0 1px var(--orange);
+}
+
+
+
+
+
+
+.select_wrap_work {
+    width: 201px;
+    position: relative;
+    user-select: none;
+}
+
+.select_wrap_work .default_option_work {
+    height: 31px;
+}
+
+.select_wrap_work .default_option_work li {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap_work .default_option_work:before {
+    content: url(../img/dropBtn.svg);
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    height: 100%;
+    width: 27px;
+    display: flex;
+    background: linear-gradient(360deg, rgb(250, 237, 199) 0%, rgb(231, 203, 164) 0%, rgb(236, 195, 133) 8%, rgb(229, 178, 102) 15%, rgb(228, 172, 89) 86%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
+    align-items: center;
+    justify-content: center;
+}
+
+.select_wrap_work .select_ul_work {
+    position: absolute;
+    top: 28px;
+    left: 0px;
+    width: 100%;
+    background: #fff;
+    display: none;
+    background-color: rgb(252, 235, 198);
+}
+
+.select_wrap_work .select_ul_work li {
+    cursor: pointer;
+    padding: 0px 10px;
+    cursor: pointer;
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap_work .select_ul_work li:hover {
+    background-color: rgb(216, 175, 117);
+}
+
+.select_wrap_work .option_work {
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap_work.active .select_ul_work {
+    display: block;
+    width: 306px;
+    box-shadow: 0 0 0 1px var(--orange);
+}
+
+
+
+
+
+.select_wrap_time {
+    width: 201px;
+    position: relative;
+    user-select: none;
+}
+
+.select_wrap_time .default_option_time {
+    height: 31px;
+}
+
+.select_wrap_time .default_option_time li {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap_time .default_option_time:before {
+    content: url(../img/dropBtn.svg);
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    height: 100%;
+    width: 27px;
+    display: flex;
+    background: linear-gradient(360deg, rgb(250, 237, 199) 0%, rgb(231, 203, 164) 0%, rgb(236, 195, 133) 8%, rgb(229, 178, 102) 15%, rgb(228, 172, 89) 86%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
+    align-items: center;
+    justify-content: center;
+}
+
+.select_wrap_time .select_ul_time {
+    position: absolute;
+    top: 28px;
+    left: 0px;
+    width: 100%;
+    background: #fff;
+    display: none;
+    background-color: rgb(252, 235, 198);
+}
+
+.select_wrap_time .select_ul_time li {
+    cursor: pointer;
+    padding: 0px 10px;
+    cursor: pointer;
+    height: 33px;
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap_time .select_ul_time li:hover {
+    background-color: rgb(216, 175, 117);
+}
+
+.select_wrap_time .option_time {
+    display: flex;
+    align-items: center;
+}
+
+.select_wrap_time.active .select_ul_time {
     display: block;
     width: 306px;
     box-shadow: 0 0 0 1px var(--orange);

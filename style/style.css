@@ -185,6 +185,7 @@ button {
 }
 
 .header-nav ul li a {
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,6 +193,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header-nav ul li ul {
@@ -391,7 +395,7 @@ button {
 
 .main {
   color: var(--brown-bcgk);
-  padding: 0px 25px 105px 25px;
+  padding: 0px 25px 120px 25px;
   font-family: arialmt;
 }
 
@@ -589,10 +593,14 @@ button {
 .application-popup textarea,
 .application-popup select,
 .application-popup .select_wrap_resume,
+.application-popup .select_wrap_work,
+.application-popup .select_wrap_time,
 .resume-popup input,
 .resume-popup textarea,
 .resume-popup select,
-.resume-popup .select_wrap_resume {
+.resume-popup .select_wrap_resume,
+.resume-popup .select_wrap_work,
+.resume-popup .select_wrap_time {
   border: none;
   -webkit-box-shadow: 0 0 0 1px var(--orange);
           box-shadow: 0 0 0 1px var(--orange);
@@ -602,6 +610,11 @@ button {
   height: 30px;
   margin-top: 13px;
   padding: 0px 10px;
+}
+
+.application-popup .select_wrap_work,
+.resume-popup .select_wrap_work {
+  z-index: 3;
 }
 
 .application-popup button,
@@ -647,6 +660,12 @@ button {
 
 .submenu {
   left: 0px;
+}
+
+ul.submenu > li > a.submenu-dropbox {
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
 }
 
 .submenu-btn-active {
@@ -904,6 +923,184 @@ tr:nth-child(2n) td {
 }
 
 .select_wrap_resume.active .select_ul_resume {
+  display: block;
+  width: 306px;
+  -webkit-box-shadow: 0 0 0 1px var(--orange);
+          box-shadow: 0 0 0 1px var(--orange);
+}
+
+.select_wrap_work {
+  width: 201px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.select_wrap_work .default_option_work {
+  height: 31px;
+}
+
+.select_wrap_work .default_option_work li {
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_work .default_option_work:before {
+  content: url(../img/dropBtn.svg);
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  height: 100%;
+  width: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #e7cba4), color-stop(8%, #ecc385), color-stop(15%, #e5b266), color-stop(86%, #e4ac59), color-stop(96%, #f5dcb9), to(#fff9e0));
+  background: linear-gradient(360deg, #faedc7 0%, #e7cba4 0%, #ecc385 8%, #e5b266 15%, #e4ac59 86%, #f5dcb9 96%, #fff9e0 100%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.select_wrap_work .select_ul_work {
+  position: absolute;
+  top: 28px;
+  left: 0px;
+  width: 100%;
+  background: #fff;
+  display: none;
+  background-color: #fcebc6;
+}
+
+.select_wrap_work .select_ul_work li {
+  cursor: pointer;
+  padding: 0px 10px;
+  cursor: pointer;
+  height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_work .select_ul_work li:hover {
+  background-color: #d8af75;
+}
+
+.select_wrap_work .option_work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_work.active .select_ul_work {
+  display: block;
+  width: 306px;
+  -webkit-box-shadow: 0 0 0 1px var(--orange);
+          box-shadow: 0 0 0 1px var(--orange);
+}
+
+.select_wrap_time {
+  width: 201px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.select_wrap_time .default_option_time {
+  height: 31px;
+}
+
+.select_wrap_time .default_option_time li {
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_time .default_option_time:before {
+  content: url(../img/dropBtn.svg);
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  height: 100%;
+  width: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #e7cba4), color-stop(8%, #ecc385), color-stop(15%, #e5b266), color-stop(86%, #e4ac59), color-stop(96%, #f5dcb9), to(#fff9e0));
+  background: linear-gradient(360deg, #faedc7 0%, #e7cba4 0%, #ecc385 8%, #e5b266 15%, #e4ac59 86%, #f5dcb9 96%, #fff9e0 100%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.select_wrap_time .select_ul_time {
+  position: absolute;
+  top: 28px;
+  left: 0px;
+  width: 100%;
+  background: #fff;
+  display: none;
+  background-color: #fcebc6;
+}
+
+.select_wrap_time .select_ul_time li {
+  cursor: pointer;
+  padding: 0px 10px;
+  cursor: pointer;
+  height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_time .select_ul_time li:hover {
+  background-color: #d8af75;
+}
+
+.select_wrap_time .option_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select_wrap_time.active .select_ul_time {
   display: block;
   width: 306px;
   -webkit-box-shadow: 0 0 0 1px var(--orange);

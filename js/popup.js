@@ -81,6 +81,43 @@ const selectUlItems = document.querySelectorAll(".select_ul li");
 const defaultOptionResume = document.querySelector(".default_option_resume");
 const selectUlResume = document.querySelectorAll(".select_ul_resume li");
 
+const defaultOptionWork = document.querySelector(".default_option_work");
+const selectUlWork = document.querySelectorAll(".select_ul_work li");
+
+
+const defaultOptionTime = document.querySelector(".default_option_time");
+const selectUlTime = document.querySelectorAll(".select_ul_time li");
+
+
+
+
+defaultOptionTime.addEventListener("click", function() {
+    this.parentElement.classList.toggle("active");
+  });
+  
+  selectUlTime.forEach(function(item) {
+    item.addEventListener("click", function() {
+      const currentElement = this.innerHTML;
+      document.querySelector(".default_option_time li").innerHTML = currentElement;
+      this.closest(".select_wrap_time").classList.remove("active");
+    });
+  });
+
+
+
+defaultOptionWork.addEventListener("click", function() {
+    this.parentElement.classList.toggle("active");
+  });
+  
+  selectUlWork.forEach(function(item) {
+    item.addEventListener("click", function() {
+      const currentElement = this.innerHTML;
+      document.querySelector(".default_option_work li").innerHTML = currentElement;
+      this.closest(".select_wrap_work").classList.remove("active");
+    });
+  });
+
+
 
 defaultOptionResume.addEventListener("click", function() {
     this.parentElement.classList.toggle("active");
