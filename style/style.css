@@ -28,7 +28,9 @@
   --white: white;
   --brown-bcgk: #4e2c1e;
   --main-bcgk: #fffae8;
+  --grey-brown: rgb(171, 110, 23);
   --orange: rgb(205, 142, 49);
+  --mahogany-brown: rgb(78, 44, 30);
   --time-delation: 1.3s;
 }
 
@@ -49,7 +51,7 @@ body {
 }
 
 body > * {
-  background: #fffae8;
+  background: var(--main-bcgk);
 }
 
 a {
@@ -318,7 +320,7 @@ button {
   font-size: 13px;
   font-family: verdana;
   margin-top: 20px;
-  color: #4e2c1e;
+  color: var(--mahogany-brown);
   line-height: 1.2;
   text-align: center;
   border-radius: 5px;
@@ -411,7 +413,7 @@ button {
   margin-bottom: 30px;
   font-size: 25px;
   font-family: 'bookantiqua';
-  color: #4e2c1e;
+  color: var(--mahogany-brown);
 }
 
 .main__desc {
@@ -629,8 +631,8 @@ button {
   color: var(--white);
 }
 
-.application-popup #custom-textarea,
-.resume-popup #custom-textarea {
+.application-popup .custom-textarea,
+.resume-popup .custom-textarea {
   resize: none;
   background-image: -webkit-gradient(linear, left top, right top, from(#fff6e2), color-stop(30%, #fff6e2), color-stop(65%, white), to(white));
   background-image: linear-gradient(90deg, #fff6e2 0%, #fff6e2 30%, white 65%, white 100%);
@@ -692,8 +694,8 @@ ul.submenu > li > a.submenu-dropbox {
 }
 
 .table__head {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#77470b), color-stop(0%, #77470b), color-stop(0%, #a4671f), color-stop(14%, #4e2c1e), color-stop(63%, #764936), to(#7c5140));
-  background-image: linear-gradient(0deg, #77470b 0%, #77470b 0%, #a4671f 0%, #4e2c1e 14%, #764936 63%, #7c5140 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#77470b), color-stop(0%, #77470b), color-stop(0%, #a4671f), color-stop(14%, var(--mahogany-brown)), color-stop(63%, #764936), to(#7c5140));
+  background-image: linear-gradient(0deg, #77470b 0%, #77470b 0%, #a4671f 0%, var(--mahogany-brown) 14%, #764936 63%, #7c5140 100%);
   height: 35px;
   color: var(--white);
   font-size: 15px;

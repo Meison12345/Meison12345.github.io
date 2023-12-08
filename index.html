@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
                 <div class="application-popup application-inactive">
                     <input type="text" placeholder="ФИО">
                     <input type="text" placeholder="Телефон">
-                    <select name="application" id="application-choose">
+                    <select name="application">
                         <option value="Репетитор">Репетитор</option>
                         <option value="Гувернантка">Гувернантка</option>
                         <option value="Няня" selected>Няня</option>
@@ -39,14 +39,14 @@
                         <option value="несколько часов">несколько часов</option>
                         <option value="Круглосуточно">Круглосуточно</option>
                     </select>
-                    <textarea type="text" id="custom-textarea" placeholder="Дополнительная информация"></textarea>
+                    <textarea class="custom-textarea" placeholder="Дополнительная информация"></textarea>
                     <button>Отправить</button>
                 </div>
                 <button class="header-top__right--btn" id="resume">Отправить резюме</button>
                 <div class="resume-popup application-inactive">
                     <input type="text" placeholder="ФИО">
                     <input type="text" placeholder="Телефон">
-                    <select name="application" id="application-choose">
+                    <select name="application">
                         <option value="Должность" hidden disabled selected>Должность</option>
                         <option value="Репетитор">Репетитор</option>
                         <option value="Гувернантка">Гувернантка</option>
@@ -55,7 +55,7 @@
                         <option value="Садовник">Садовник</option>
                     </select>
                     <input type="text" placeholder="Образование">
-                    <textarea type="text" id="custom-textarea" placeholder="Дополнительная информация"></textarea>
+                    <textarea class="custom-textarea" placeholder="Дополнительная информация"></textarea>
                     <button>Отправить</button>
                 </div>
             </div>
@@ -82,7 +82,7 @@
     </header>
 
 
-    <section class="center slider">
+    <div class="center slider">
         <div class="slider__container">
             <div class="slide"><img src="img/1.jpg" width="925" height="325" alt="Slide 1"></div>
             <div class="slide"><img src="img/2.jpg" width="925" height="325" alt="Slide 2"></div>
@@ -92,14 +92,14 @@
             <div class="slide"><img src="img/6.jpg" width="925" height="325" alt="Slide 6"></div>
         </div>
         <div class="dots-container" id="dots-container"></div>
-    </section>
+    </div>
 
 
 
     <section class="center info">
         <div class="info__left">
             <img src="img/home.png" alt="дом">
-            <h1 class="info__left-title">Постоянный персонал</h1>
+            <h2 class="info__left-title">Постоянный персонал</h2>
             <p class="info__left-desc">Наличие в доме обслуживающего
                 персонала - водителя, няни,
                 гувернантки, горничной,
@@ -113,14 +113,14 @@
         </div>
         <div class="info__right">
             <img src="img/clock.png" alt="часы">
-            <h1 class="info__right-title">Временный персонал</h1>
+            <h2 class="info__right-title">Временный персонал</h2>
             <p class="info__right-desc"> Наличие в доме обслуживающего
                 персонала - водителя, няни,
                 гувернантки, горничной,
                 домработницы - это вовсе не
                 <span class="info__left-span">дань моде и не причуды избалованных нежданно свалившимся богатством
                     нуворишей. Напротив, услугами
-                    сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени. </p></span>
+                    сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени.</span></p>
             <div class="info-btn-wrapper-right">
                 <button class="info-btn info-btn">Подробнее</button>
             </div>
@@ -130,12 +130,12 @@
 
 
 
-    <section class="center photo">
+    <div class="center photo">
         <img src="img/info1.png" alt="">
         <img src="img/info2.png" alt="">
         <img src="img/info3.png" alt="">
         <img src="img/info4.png" alt="">
-    </section>
+    </div>
 
     <main class="center main">
         <h1 class="main__title">Заголовок</h1>
@@ -223,8 +223,9 @@
             </a>
         </div>
     </footer>
+
+    <script src="js/slider.js"></script>
+    <script src="js/popup.js"></script>
 </body>
-<script src="js/slider.js"></script>
-<script src="js/popup.js"></script>
 
 </html>

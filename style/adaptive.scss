@@ -1,8 +1,8 @@
 @media screen and (min-width:768px) {
     .header-top__right--btn:active {
-        border-color: rgb(171, 110, 23);
+        border-color: var(--grey-brown);
         background-image: linear-gradient(0deg, rgb(250, 237, 199) 0%, rgb(119, 71, 11) 0%, rgb(211, 149, 56) 73%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
-        color: var(--white)
+        color: var(--white);
     }
 
     .header-nav>ul>li>ul>li:active,
@@ -11,7 +11,7 @@
     }
 
     .info-btn:active {
-        border-color: rgb(171, 110, 23);
+        border-color: var(--grey-brown);
         background-image: linear-gradient(0deg, rgb(250, 237, 199) 0%, rgb(119, 71, 11) 0%, rgb(211, 149, 56) 73%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
         color: var(--white);
     }
@@ -19,7 +19,7 @@
     .main__calc-right>button:hover {
         font-size: 14px;
         font-family: verdana;
-        color: rgb(78, 44, 30);
+        color: var(--mahogany-brown);
         border: 1px solid rgb(199, 168, 101);
         background-image: -ms-linear-gradient(90deg, rgb(250, 237, 199) 0%, rgb(234, 207, 143) 13%, rgb(232, 196, 120) 58%, rgb(255, 249, 224) 96%, rgb(255, 249, 224) 100%);
     }

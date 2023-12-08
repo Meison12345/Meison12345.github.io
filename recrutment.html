@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -62,16 +62,6 @@
                             </li>
                         </ul>
                     </div>
-
-                    <!-- <select name="time" id="time-chose">
-                        <option value="Полный день">Полный день</option>
-                        <option value="Пол дня">Пол дня</option>
-                        <option value="График работы" selected>График работы</option>
-                        <option value="несколько часов">несколько часов</option>
-                        <option value="Круглосуточно">Круглосуточно</option>
-                    </select> -->
-
-
                     <div class="select_wrap_time">
                         <ul class="default_option_time">
                             <li>
@@ -88,8 +78,7 @@
                             </li>
                             <li>
                                 <div class="option_time">
-                                    <p>График работы</option>
-                                    </p>
+                                    <p>График работы</p>
                                 </div>
                             </li>
                             <li>
@@ -106,7 +95,7 @@
                     </div>
 
 
-                    <textarea type="text" id="custom-textarea" placeholder="Дополнительная информация"></textarea>
+                    <textarea class="custom-textarea" placeholder="Дополнительная информация"></textarea>
                     <button>Отправить</button>
                 </div>
                 <button class="header-top__right--btn" id="resume">Отправить резюме</button>
@@ -150,7 +139,7 @@
                         </ul>
                     </div>
                     <input type="text" placeholder="Образование">
-                    <textarea type="text" id="custom-textarea" placeholder="Дополнительная информация"></textarea>
+                    <textarea class="custom-textarea" placeholder="Дополнительная информация"></textarea>
                     <button>Отправить</button>
                 </div>
             </div>
@@ -177,7 +166,7 @@
     </header>
 
 
-    <section class="center slider">
+    <div class="center slider">
         <div class="slider__container">
             <div class="slide"><img src="img/1.jpg" width="925" height="325" alt="Slide 1"></div>
             <div class="slide"><img src="img/2.jpg" width="925" height="325" alt="Slide 2"></div>
@@ -187,7 +176,7 @@
             <div class="slide"><img src="img/6.jpg" width="925" height="325" alt="Slide 6"></div>
         </div>
         <div class="dots-container" id="dots-container"></div>
-    </section>
+    </div>
 
 
 
@@ -198,7 +187,7 @@
     <main class="center main">
         <h1 class="main__title main__title-recruit">Подобрать персонал</h1>
 
-        <section class="main__calc">
+        <div class="main__calc">
             <img src="img/double-ornament.png" class="main__calc-ornament" alt="орнамент">
             <div class="main__calc-left box">
                 <p>Показать только</p>
@@ -238,26 +227,20 @@
                         </li>
                     </ul>
                 </div>
-
-            </div>
             </div>
             <div class="main__calc-mid">
                 <p>Стаж от <input class="range-inp" value="1" type="text">до <input class="range-inp" value="30"
                         type="text">лет</p>
-                <p>Возраст от <input type class="range-inp" value="25" type="text">до <input class="range-inp"
-                        value="65" type="text">лет</p>
+                <p>Возраст от <input type="text" class="range-inp" value="25">до <input class="range-inp" value="65"
+                        type="text">лет</p>
             </div>
             <div class="main__calc-right">
                 <button>Подобрать</button>
             </div>
 
-        </section>
+        </div>
 
-
-
-
-
-        <section class="center table">
+        <div class="center table">
             <table class="table-wrapper">
                 <thead class="table__head">
                     <tr>
@@ -269,7 +252,7 @@
                 </thead>
                 <tbody class="table__body" id="resultBody"></tbody>
             </table>
-        </section>
+        </dIV>
 
         <div class="main__desc">
             <p>
@@ -337,9 +320,10 @@
             </a>
         </div>
     </footer>
+
+    <script src="js/slider.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/search.js"></script>
 </body>
-<script src="js/slider.js"></script>
-<script src="js/popup.js"></script>
-<script src="js/search.js"></script>
 
 </html>
