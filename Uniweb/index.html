@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logoUW.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/logoUW.svg">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/adaptive.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Ваш ДОМ</title>
+</head>
+
+<body>
+    <header class="center header">
+        <div class="header-top">
+            <div class="header-top__left">
+                <a href="tel:84872311345" class="header-top__left--number">8 (4872) 31-13-45</a>
+            </div>
+            <div class="header-top__right">
+                <button class="header-top__right--btn" id="application">Оставить заявку</button>
+                <form class="application-popup application-inactive">
+                    <input type="text" placeholder="ФИО" class="application-FIO">
+                    <input type="text" placeholder="Телефон" class="application-phone">
+
+                    <div class="select_wrap_work closeDropBox">
+                        <ul class="default_option_work application-work">
+                            <li>
+                                <div class="option_work">
+                                    <p>Няня</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul_work">
+                            <li>
+                                <div class="option_work">
+                                    <p>Гувернантка</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
+                                    <p>Няня</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
+                                    <p>Двороник</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
+                                    <p>Водитель</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
+                                    <p>Садовник</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select_wrap_time closeDropBox">
+                        <ul class="default_option_time application-workTime">
+                            <li>
+                                <div class="option_time">
+                                    <p>Полный день</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul_time">
+                            <li>
+                                <div class="option_time">
+                                    <p>Пол дня</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>График работы</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>Несколько часов</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>Круглосуточно</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <textarea class="custom-textarea application-custom-textarea"
+                        placeholder="Дополнительная информация"></textarea>
+                    <button id="btn-application">Отправить</button>
+                </form>
+
+                <button class="header-top__right--btn" id="resume">Отправить резюме</button>
+                <form class="resume-popup application-inactive">
+                    <input type="text" placeholder="ФИО" class="resume-FIO">
+                    <input type="text" placeholder="Телефон" class="resume-phone">
+                    <div class="select_wrap_resume closeDropBox">
+                        <ul class="default_option_resume resume-work">
+                            <li>
+                                <div class="option_resume">
+                                    <p>Должность</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul_resume">
+                            <li>
+                                <div class="option_resume">
+                                    <p>Гувернантка</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_resume">
+                                    <p>Няня</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_resume">
+                                    <p>Двороник</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_resume">
+                                    <p>Водитель</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_resume">
+                                    <p>Садовник</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <input type="text" placeholder="Образование" class="resume-education">
+                    <div id="custom-file-upload" contenteditable="true"><span class="dont-click">Прикрепить
+                            резюме</span></div>
+                    <input type="file" id="resume-upload" style="display: none;" />
+                    <button id="btn-resume">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+                <li class="header-nav-link"><a href="index.html" class="clk-btn">Главная</a></li>
+                <li class="header-nav-link"><a href="#" class="submenu-btn">Подобрать персонал</a>
+                    <ul class="submenu application-inactive">
+                        <li><a href="#" class="submenu-dropbox">О нас</a></li>
+                        <li><a href="#" class="submenu-dropbox">Задать вопрос</a></li>
+                        <li><a href="#" class="submenu-dropbox">Это интересно</a></li>
+                        <li><a href="#" class="submenu-dropbox">Отзывы</a></li>
+                    </ul>
+                </li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Цены</a></li>
+                <li><a href="index.html"><img src="img/head_logo.png" class="main-logo" alt="логотип сайты"></a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Оставить<br>заявку</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Оставить вакансию</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="center slider">
+        <div class="slider__container">
+            <div class="slide"><img src="img/1.jpg" width="925" height="325" alt="Slide 1"></div>
+            <div class="slide"><img src="img/2.jpg" width="925" height="325" alt="Slide 2"></div>
+            <div class="slide"><img src="img/3.jpg" width="925" height="325" alt="Slide 3"></div>
+            <div class="slide"><img src="img/4.jpg" width="925" height="325" alt="Slide 4"></div>
+            <div class="slide"><img src="img/5.jpg" width="925" height="325" alt="Slide 5"></div>
+            <div class="slide"><img src="img/6.jpg" width="925" height="325" alt="Slide 6"></div>
+        </div>
+        <div class="dots-container" id="dots-container"></div>
+    </div>
+
+
+
+    <section class="center info">
+        <div class="info__left">
+            <img src="img/home.png" alt="дом">
+            <h2 class="info__left-title">Постоянный персонал</h2>
+            <p class="info__left-desc">Наличие в доме обслуживающего
+                персонала - водителя, няни,
+                гувернантки, горничной,
+                домработницы - это вовсе не
+                <span class="info__left-span">дань моде и не причуды избалованных нежданно свалившимся богатством
+                    нуворишей. Напротив, услугами
+                    сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени.</span></p>
+            <div class="info-btn-wrapper-left">
+                <button class="info-btn info-btn">Подробнее</button>
+            </div>
+        </div>
+        <div class="info__right">
+            <img src="img/clock.png" alt="часы">
+            <h2 class="info__right-title">Временный персонал</h2>
+            <p class="info__right-desc"> Наличие в доме обслуживающего
+                персонала - водителя, няни,
+                гувернантки, горничной,
+                домработницы - это вовсе не
+                <span class="info__left-span">дань моде и не причуды избалованных нежданно свалившимся богатством
+                    нуворишей. Напротив, услугами
+                    сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени.</span></p>
+            <div class="info-btn-wrapper-right">
+                <button class="info-btn info-btn">Подробнее</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="center photo">
+        <img src="img/info1.png" alt="">
+        <img src="img/info2.png" alt="">
+        <img src="img/info3.png" alt="">
+        <img src="img/info4.png" alt="">
+    </div>
+
+    <main class="center main">
+        <h1 class="main__title">Заголовок</h1>
+        <div class="main__desc">
+            <p>
+                Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это<br>
+                вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив,<br>
+                услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени<br>
+                Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это<br>
+                вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив,<br>
+                услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени<br>
+
+                <p>
+                    Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это
+                    вовсе не<br>
+                    дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами
+                    сиделки<br>
+                    или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени. Люди, для которых
+                    важно не<br>
+                    только вырастить ребенка, но и создать основу будущего благосостояния, построив свою карьеру - вот
+                    основная<br>
+                    категорий заказчиков, которые ежедневно пользуются услугами нашей компании по подбору домашнего
+                    персонала.<br>
+                    Заказ няни, сиделки или домработницы является благом не только для женщины, которая имеет
+                    возможность<br>
+                    строить свою карьеру или получить, наконец, передышку от выполнения бесконечных домашних
+                    обязанностей,но<br>
+                    и для всех остальных членов семьи, которые могут провести вместе свободный вечер или выходные. А
+                    доступные<br>
+                    цены, которые устанавливает на свои услуги наша компания, и предлагаемый нами широкий выбор
+                    различных<br>
+                    категорий домашнего персонала делают исключительно удобным и, главное, безопасным процесс поиска
+                    няни<br>
+                    для малыша, сиделки для пожилых членов семьи или домработницы для квартиры или загородного особняка.
+                </p>
+                <p>
+                    Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это
+                    вовсе не дань моде и не<br> причуды избалованных нежданно свалившимся богатством нуворишей.
+                    Напротив, услугами
+                    сиделки или няни пользуются сегодня<br>
+                    те, кто отлично знает цену деньгам и своему времени. Люди, для которых
+                    важно не только вырастить ребенка, но и создать основу<br>
+                </p>
+        </div>
+    </main>
+
+
+
+    <footer class="center footer">
+        <nav class="footer-nav footer-nav__top">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="recrutment.html">Подобрать персонал</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Подобрать персонал</a></li>
+                <li><a href="#">Цены</a></li>
+            </ul>
+        </nav>
+        <div class="footer__bottom">
+            <a href="tel:84872311345">8 (4872) 31-13-45</a>
+            <a href="https://uniofweb.ru/" target="_blank">
+                <figure>
+                    <figcaption>Разработка и продвижение сайта компанией «Юни Веб» -</figcaption>
+                    <img src="img/logoUW.svg" alt="Иконка UW">
+                </figure>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/headerdropbox.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+
+</html>

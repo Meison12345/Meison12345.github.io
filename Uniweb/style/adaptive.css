@@ -1,0 +1,28 @@
+@media screen and (min-width: 768px) {
+  .header-top__right--btn:active {
+    border-color: var(--grey-brown);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #77470b), color-stop(73%, #d39538), color-stop(96%, #f5dcb9), to(#fff9e0));
+    background-image: linear-gradient(0deg, #faedc7 0%, #77470b 0%, #d39538 73%, #f5dcb9 96%, #fff9e0 100%);
+    color: var(--white);
+  }
+  .header-nav > ul > li > ul > li:active,
+  .clk-btn:active {
+    background-color: #d8af75;
+  }
+  .info-btn:active {
+    border-color: var(--grey-brown);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(0%, #77470b), color-stop(73%, #d39538), color-stop(96%, #f5dcb9), to(#fff9e0));
+    background-image: linear-gradient(0deg, #faedc7 0%, #77470b 0%, #d39538 73%, #f5dcb9 96%, #fff9e0 100%);
+    color: var(--white);
+  }
+  .main__calc-right > button:hover {
+    color: var(--mahogany-brown);
+    border: 1px solid var(--sandy-yellow);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(13%, #eacf8f), color-stop(58%, #e8c478), color-stop(96%, #fff9e0), to(#fff9e0));
+    background-image: linear-gradient(0deg, #faedc7 0%, #eacf8f 13%, #e8c478 58%, #fff9e0 96%, #fff9e0 100%);
+  }
+  .submenu-btn:active {
+    background-image: -webkit-linear-gradient(90deg, #faedc7 0%, #eacf8f 13%, #e8c478 58%, #fff9e0 96%, #fff9e0 100%);
+  }
+}
+/*# sourceMappingURL=adaptive.css.map */

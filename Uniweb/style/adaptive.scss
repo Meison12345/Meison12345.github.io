@@ -1,0 +1,28 @@
+@media screen and (min-width:768px) {
+    .header-top__right--btn:active {
+        border-color: var(--grey-brown);
+        background-image: linear-gradient(0deg, rgb(250, 237, 199) 0%, rgb(119, 71, 11) 0%, rgb(211, 149, 56) 73%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
+        color: var(--white);
+    }
+
+    .header-nav>ul>li>ul>li:active,
+    .clk-btn:active {
+        background-color: rgb(216, 175, 117);
+    }
+
+    .info-btn:active {
+        border-color: var(--grey-brown);
+        background-image: linear-gradient(0deg, rgb(250, 237, 199) 0%, rgb(119, 71, 11) 0%, rgb(211, 149, 56) 73%, rgb(245, 220, 185) 96%, rgb(255, 249, 224) 100%);
+        color: var(--white);
+    }
+
+    .main__calc-right>button:hover {
+        color: var(--mahogany-brown);
+        border: 1px solid var(--sandy-yellow);
+        background-image: linear-gradient(0deg, rgb(250, 237, 199) 0%, rgb(234, 207, 143) 13%, rgb(232, 196, 120) 58%, rgb(255, 249, 224) 96%, rgb(255, 249, 224) 100%);
+    }
+
+    .submenu-btn:active {
+        background-image: -webkit-linear-gradient(90deg, rgb(250, 237, 199) 0%, rgb(234, 207, 143) 13%, rgb(232, 196, 120) 58%, rgb(255, 249, 224) 96%, rgb(255, 249, 224) 100%);
+    }
+}
