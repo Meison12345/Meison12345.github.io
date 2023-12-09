@@ -276,6 +276,8 @@ button {
         margin-top: 20px;
         color: var(--mahogany-brown);
         line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 900;
         text-align: center;
         border-radius: 5px;
 
@@ -323,16 +325,11 @@ button {
         width: 50%;
 
         &-title {
-
-            background-image: linear-gradient(to top, #150702, #5e3625, #82451c), linear-gradient(to bottom, #4e2c1e, #4e2c1e);
             font-family: garamond;
-            font-size: 22.5px;
-            color: #4e2c1e;
+            font-size: 23px;
             display: inline-block;
+            margin-bottom: 28px;
             width: 150px;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         &-desc {
@@ -797,8 +794,25 @@ tr:nth-child(2n) td {
     padding: 0px 12px;
 }
 
-#custom-file-upload{
+#custom-file-upload {
     display: flex;
     align-items: center;
     color: #55493F
+}
+
+.personal-el {
+    background-image: linear-gradient(to top, #150702, #5e3625, #82451c), linear-gradient(to bottom, #4e2c1e, #4e2c1e);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#150702), color-stop(#5e3625), to(#82451c)), -webkit-gradient(linear, left top, left bottom, from(#4e2c1e), to(#4e2c1e));
+    color: #4e2c1e;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#btn-application,
+#btn-resume {
+    font-size: 14px;
+    font-family: Verdana;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
 }
