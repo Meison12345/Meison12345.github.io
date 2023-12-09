@@ -1,5 +1,6 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function () {
+    let file = '';
     /**
      * @description Установка дроп-меню в header
      */
@@ -38,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         console.log(FIO, number, workName, workTime, text);
 
+        e.target.parentElement.classList.add('application-inactive');
+
     })
 
     document.getElementById('btn-resume').addEventListener('click', function (e) {
@@ -46,9 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const number = document.querySelector('.resume-phone').value;
         const workName = document.querySelector('.resume-work').textContent.trim();
         const workTime = document.querySelector('.resume-education').value.trim()
-        const text = document.querySelector('.resume-custom-textarea').value.trim();
 
-        console.log(FIO, number, workName, workTime, text);
+        console.log(FIO, number, workName, workTime, file);
+
+        e.target.parentElement.classList.add('application-inactive');
 
     });
 
@@ -59,6 +63,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 dropdown.classList.remove('active');
             }
         });
+    });
+
+    //Загрузка файла
+    const customFileUpload = document.getElementById('custom-file-upload');
+    const resumeUpload = document.getElementById('resume-upload');
+
+    customFileUpload.addEventListener('click', function () {
+        resumeUpload.click();
+    });
+
+    resumeUpload.addEventListener('change', function () {
+        if (this.files.length > 0) {
+            const fileName = this.files[0].name;
+            file = this.files[0];
+            customFileUpload.textContent = fileName;
+        }
+    });
+
+    customFileUpload.addEventListener('selectstart', function (e) {
+        e.preventDefault();
+    });
+
+    customFileUpload.addEventListener('mousedown', function (e) {
+        e.preventDefault();
     });
 
 });

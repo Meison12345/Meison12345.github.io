@@ -108,7 +108,7 @@
                         <ul class="default_option_resume resume-work">
                             <li>
                                 <div class="option_resume">
-                                    <p>Няня</p>
+                                    <p>Должность</p>
                                 </div>
                             </li>
                         </ul>
@@ -141,8 +141,9 @@
                         </ul>
                     </div>
                     <input type="text" placeholder="Образование" class="resume-education">
-                    <textarea class="custom-textarea resume-custom-textarea"
-                        placeholder="Дополнительная информация"></textarea>
+                    <div id="custom-file-upload" contenteditable="true"><span class="dont-click">Прикрепить
+                            резюме</span></div>
+                    <input type="file" id="resume-upload" style="display: none;" />
                     <button id="btn-resume">Отправить</button>
                 </form>
             </div>
@@ -151,7 +152,7 @@
         <nav class="header-nav">
             <ul>
                 <li class="header-nav-link"><a href="index.html" class="clk-btn">Главная</a></li>
-                <li class="header-nav-link"><a href="recrutment.html" class="submenu-btn">Подобрать персонал</a>
+                <li class="header-nav-link"><a href="#" class="submenu-btn">Подобрать персонал</a>
                     <ul class="submenu application-inactive">
                         <li><a href="#" class="submenu-dropbox">О нас</a></li>
                         <li><a href="#" class="submenu-dropbox">Задать вопрос</a></li>
@@ -232,10 +233,10 @@
                 </div>
             </div>
             <div class="main__calc-mid">
-                <p>Стаж от <input class="range-inp" value="1" type="text">до <input class="range-inp" value="30"
-                        type="text">лет</p>
-                <p>Возраст от <input type="text" class="range-inp" value="25">до <input class="range-inp" value="65"
-                        type="text">лет</p>
+                <p>Стаж от <input class="range-inp" value="1" type="text"> до <input class="range-inp" value="30"
+                        type="text"> лет</p>
+                <p>Возраст от <input type="text" class="range-inp" value="25"> до <input class="range-inp" value="65"
+                        type="text"> лет</p>
             </div>
             <div class="main__calc-right">
                 <button>Подобрать</button>
