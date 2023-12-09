@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: garamond;
-  src: url(../fonts/garamond.ttf);
+  font-family: GaramondC;
+  src: url(../fonts/GaramondC.otf);
 }
 
 @font-face {
@@ -32,6 +32,8 @@
   --orange: rgb(205, 142, 49);
   --mahogany-brown: rgb(78, 44, 30);
   --sandy-yellow: rgb(199, 168, 101);
+  --border-table: rgb(211, 168, 108);
+  --brown-head-table: rgb(129, 75, 4);
   --time-delation: 1.3s;
 }
 
@@ -419,6 +421,9 @@ button {
 
 .main__desc {
   font-size: 14px;
+  font-family: Arial;
+  color: var(--mahogany-brown);
+  line-height: 1.2;
 }
 
 .main__desc p {
@@ -496,7 +501,7 @@ button {
 }
 
 .footer-nav__top ul li {
-  padding: 0px 39px;
+  padding: 0px 34px;
   position: relative;
 }
 
@@ -506,7 +511,7 @@ button {
 
 .footer-nav__top ul {
   text-shadow: 0px 1px 0 rgba(17, 17, 26, 0.46);
-  font-family: arialmt;
+  font-family: Arial;
   font-size: 11px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -693,13 +698,12 @@ ul.submenu > li > a.submenu-dropbox {
 }
 
 .table__head {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#77470b), color-stop(0%, #77470b), color-stop(0%, #a4671f), color-stop(14%, var(--mahogany-brown)), color-stop(63%, #764936), to(#7c5140));
-  background-image: linear-gradient(0deg, #77470b 0%, #77470b 0%, #a4671f 0%, var(--mahogany-brown) 14%, #764936 63%, #7c5140 100%);
+  background: var(--brown-head-table);
   height: 35px;
   color: var(--white);
   font-size: 15px;
-  font-family: arialmt;
-  color: white;
+  font-family: Arial;
+  color: var(--white);
   text-transform: uppercase;
   line-height: 1.2;
   text-shadow: 0px 1px 0px rgba(17, 17, 26, 0.46);
@@ -721,6 +725,12 @@ ul.submenu > li > a.submenu-dropbox {
   width: 159px;
 }
 
+.table__body {
+  font-size: 15px;
+  font-family: Verdana;
+  color: var(--brown-head-table);
+}
+
 .table__body tr {
   height: 31px;
 }
@@ -730,11 +740,11 @@ table {
 }
 
 thead th {
-  border: 1px solid #d3a86c;
+  border: 1px solid var(--border-table);
 }
 
 tr:nth-child(2n) td {
-  border: 1px solid #d3a86c;
+  border: 1px solid var(--border-table);
   background-color: var(--white);
 }
 

@@ -62,25 +62,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-
-
-// function setupDropdown(defaultOptionSelector, selectUlSelector) {
-//     const defaultOption = document.querySelector(defaultOptionSelector);
-//     const selectUlItems = document.querySelectorAll(selectUlSelector + ' li');
-
-//     defaultOption.addEventListener("click", function () {
-//       this.parentElement.classList.toggle("active");
-//     });
-
-//     selectUlItems.forEach(function (item) {
-//       item.addEventListener("click", function () {
-//         const currentElement = this.innerHTML;
-//         document.querySelector(defaultOptionSelector + ' li').innerHTML = currentElement;
-//         this.closest(selectUlSelector + ' li').classList.remove("active");
-//       });
-//     });
-//   }
-
-//   setupDropdown(".default_option_resume", ".select_ul_resume");
-//   setupDropdown(".default_option_work", ".select_ul_work");
-//   setupDropdown(".default_option_time", ".select_ul_time");
