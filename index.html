@@ -98,6 +98,7 @@
                         placeholder="Дополнительная информация"></textarea>
                     <button id="btn-application">Отправить</button>
                 </form>
+
                 <button class="header-top__right--btn" id="resume">Отправить резюме</button>
                 <form class="resume-popup application-inactive">
                     <input type="text" placeholder="ФИО" class="resume-FIO">
@@ -106,7 +107,7 @@
                         <ul class="default_option_resume resume-work">
                             <li>
                                 <div class="option_resume">
-                                    <p>Няня</p>
+                                    <p>Должность</p>
                                 </div>
                             </li>
                         </ul>
@@ -139,8 +140,9 @@
                         </ul>
                     </div>
                     <input type="text" placeholder="Образование" class="resume-education">
-                    <textarea class="custom-textarea resume-custom-textarea"
-                        placeholder="Дополнительная информация"></textarea>
+                    <div id="custom-file-upload" contenteditable="true"><span class="dont-click">Прикрепить
+                            резюме</span></div>
+                    <input type="file" id="resume-upload" style="display: none;" />
                     <button id="btn-resume">Отправить</button>
                 </form>
             </div>
@@ -149,7 +151,7 @@
         <nav class="header-nav">
             <ul>
                 <li class="header-nav-link"><a href="index.html" class="clk-btn">Главная</a></li>
-                <li class="header-nav-link"><a href="recrutment.html" class="submenu-btn">Подобрать персонал</a>
+                <li class="header-nav-link"><a href="#" class="submenu-btn">Подобрать персонал</a>
                     <ul class="submenu application-inactive">
                         <li><a href="#" class="submenu-dropbox">О нас</a></li>
                         <li><a href="#" class="submenu-dropbox">Задать вопрос</a></li>
@@ -275,9 +277,9 @@
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="recrutment.html">Подобрать персонал</a></li>
                 <li><a href="#">Цены</a></li>
-                <li><a href="#">Оставить заявку</a></li>
-                <li><a href="#">Оставить вакансию</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Подобрать персонал</a></li>
+                <li><a href="#">Цены</a></li>
             </ul>
         </nav>
         <div class="footer__bottom">
