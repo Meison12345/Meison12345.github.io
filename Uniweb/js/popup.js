@@ -65,29 +65,4 @@ document.addEventListener('DOMContentLoaded', function () {
             submenu.classList.add('application-inactive');
         }
     });
-
-
-
-
-
-
-
-
-
-
-const defaultOption = document.querySelector(".default_option");
-const selectUlItems = document.querySelectorAll(".select_ul li");
-
-defaultOption.addEventListener("click", function() {
-  this.parentElement.classList.toggle("active");
-});
-
-selectUlItems.forEach(function(item) {
-  item.addEventListener("click", function() {
-    const currentElement = this.innerHTML;
-    document.querySelector(".default_option li").innerHTML = currentElement;
-    this.closest(".select_wrap").classList.remove("active");
-  });
-});
-
 });

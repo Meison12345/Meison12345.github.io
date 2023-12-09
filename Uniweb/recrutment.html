@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -22,103 +22,160 @@
             </div>
             <div class="header-top__right">
                 <button class="header-top__right--btn" id="application">Оставить заявку</button>
-                <div class="application-popup application-inactive">
-                    <input type="text" placeholder="ФИО">
-                    <input type="text" placeholder="Телефон">
-                    <select name="application" id="application-choose">
-                        <option value="Репетитор">Репетитор</option>
-                        <option value="Гувернантка">Гувернантка</option>
-                        <option value="Няня" selected>Няня</option>
-                        <option value="Водитель">Водитель</option>
-                        <option value="Садовник">Садовник</option>
-                    </select>
-                    <select name="time" id="time-chose">
-                        <option value="Полный день">Полный день</option>
-                        <option value="Пол дня">Пол дня</option>
-                        <option value="График работы" selected>График работы</option>
-                        <option value="несколько часов">несколько часов</option>
-                        <option value="Круглосуточно">Круглосуточно</option>
-                    </select>
-                    <textarea type="text" id="custom-textarea" placeholder="Дополнительная информация"></textarea>
-                    <button>Отправить</button>
-                </div>
-                <button class="header-top__right--btn" id="resume">Отправить резюме</button>
-                <div class="resume-popup application-inactive">
-                    <input type="text" placeholder="ФИО">
-                    <input type="text" placeholder="Телефон">
-                    <!-- <select name="application" id="application-choose">
-                        <option value="Должность" hidden disabled selected>Должность</option>
-                        <option value="Репетитор">Репетитор</option>
-                        <option value="Гувернантка">Гувернантка</option>
-                        <option value="Няня">Няня</option>
-                        <option value="Водитель">Водитель</option>
-                        <option value="Садовник">Садовник</option>
-                    </select> -->
-                    <!-- <div class="select_wrap header-select_wrap application-choose">
-                        <ul class="default_option">
+                <form class="application-popup application-inactive">
+                    <input type="text" placeholder="ФИО" class="application-FIO">
+                    <input type="text" placeholder="Телефон" class="application-phone">
+
+                    <div class="select_wrap_work closeDropBox">
+                        <ul class="default_option_work application-work">
                             <li>
-                                <div class="option">
-                                    <p>Должность</p>
+                                <div class="option_work">
+                                    <p>Няня</p>
                                 </div>
                             </li>
                         </ul>
-                        <ul class="select_ul">
+                        <ul class="select_ul_work">
                             <li>
-                                <div class="option">
+                                <div class="option_work">
+                                    <p>Репетитор</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_work">
                                     <p>Гувернантка</p>
                                 </div>
                             </li>
                             <li>
-                                <div class="option">
+                                <div class="option_work">
                                     <p>Няня</p>
                                 </div>
                             </li>
                             <li>
-                                <div class="option">
-                                    <p>Двороник</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="option">
+                                <div class="option_work">
                                     <p>Водитель</p>
                                 </div>
                             </li>
                             <li>
-                                <div class="option">
+                                <div class="option_work">
                                     <p>Садовник</p>
                                 </div>
                             </li>
                         </ul>
-                    </div> -->
-                    <input type="text" placeholder="Образование">
-                    <textarea type="text" id="custom-textarea" placeholder="Дополнительная информация"></textarea>
-                    <button>Отправить</button>
-                </div>
+                    </div>
+                    <div class="select_wrap_time closeDropBox">
+                        <ul class="default_option_time application-workTime">
+                            <li>
+                                <div class="option_time">
+                                    <p>График работы</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul_time">
+                            <li>
+                                <div class="option_time">
+                                    <p>Полный день</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>Пол дня</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>График работы</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>Несколько часов</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_time">
+                                    <p>Круглосуточно</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <textarea class="custom-textarea application-custom-textarea"
+                        placeholder="Дополнительная информация"></textarea>
+                    <button id="btn-application">Отправить</button>
+                </form>
+
+                <button class="header-top__right--btn" id="resume">Отправить резюме</button>
+                <form class="resume-popup application-inactive">
+                    <input type="text" placeholder="ФИО" class="resume-FIO">
+                    <input type="text" placeholder="Телефон" class="resume-phone">
+                    <div class="select_wrap_resume closeDropBox">
+                        <ul class="default_option_resume resume-work">
+                            <li>
+                                <div class="option_resume">
+                                    <p>Должность</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="select_ul_resume">
+                            <li>
+                                <div class="option_resume">
+                                    <p>Гувернантка</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_resume">
+                                    <p>Няня</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_resume">
+                                    <p>Двороник</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_resume">
+                                    <p>Водитель</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="option_resume">
+                                    <p>Садовник</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <input type="text" placeholder="Образование" class="resume-education">
+                    <div id="custom-file-upload" contenteditable="true"><span class="dont-click">Прикрепить
+                            резюме</span></div>
+                    <input type="file" id="resume-upload" style="display: none;" />
+                    <button id="btn-resume">Отправить</button>
+                </form>
             </div>
         </div>
 
         <nav class="header-nav">
             <ul>
-                <li class="header-nav-link"><a href="index.html">Главная</a></li>
-                <li class="header-nav-link"><a href="recrutment.html" class="submenu-btn">Подобрать персонал</a>
+                <li class="header-nav-link"><a href="index.html" class="clk-btn">Главная</a></li>
+                <li class="header-nav-link"><a href="#" class="submenu-btn">Подобрать персонал</a>
                     <ul class="submenu application-inactive">
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Задать вопрос</a></li>
-                        <li><a href="#">Это интересно</a></li>
-                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#" class="submenu-dropbox">О нас</a></li>
+                        <li><a href="#" class="submenu-dropbox">Задать вопрос</a></li>
+                        <li><a href="#" class="submenu-dropbox">Это интересно</a></li>
+                        <li><a href="#" class="submenu-dropbox">Отзывы</a></li>
                     </ul>
                 </li>
-                <li class="header-nav-link"><a href="#">Цены</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Цены</a></li>
                 <li><a href="index.html"><img src="img/head_logo.png" class="main-logo" alt="логотип сайты"></a></li>
-                <li class="header-nav-link"><a href="#">Оставить<br>заявку</a></li>
-                <li class="header-nav-link"><a href="#">Оставить вакансию</a></li>
-                <li class="header-nav-link"><a href="#">Контакты</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Оставить<br>заявку</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Оставить вакансию</a></li>
+                <li class="header-nav-link"><a href="#" class="clk-btn">Контакты</a></li>
             </ul>
         </nav>
     </header>
 
 
-    <section class="center slider">
+    <div class="center slider">
         <div class="slider__container">
             <div class="slide"><img src="img/1.jpg" width="925" height="325" alt="Slide 1"></div>
             <div class="slide"><img src="img/2.jpg" width="925" height="325" alt="Slide 2"></div>
@@ -128,7 +185,7 @@
             <div class="slide"><img src="img/6.jpg" width="925" height="325" alt="Slide 6"></div>
         </div>
         <div class="dots-container" id="dots-container"></div>
-    </section>
+    </div>
 
 
 
@@ -139,11 +196,11 @@
     <main class="center main">
         <h1 class="main__title main__title-recruit">Подобрать персонал</h1>
 
-        <section class="main__calc">
+        <div class="main__calc">
             <img src="img/double-ornament.png" class="main__calc-ornament" alt="орнамент">
             <div class="main__calc-left box">
                 <p>Показать только</p>
-                <div class="select_wrap">
+                <div class="select_wrap closeDropBox">
                     <ul class="default_option" id="recruit-worker">
                         <li>
                             <div class="option">
@@ -151,7 +208,7 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="select_ul">
+                    <ul class="select_ul select_ul-search">
                         <li>
                             <div class="option">
                                 <p>Гувернантка</p>
@@ -179,26 +236,20 @@
                         </li>
                     </ul>
                 </div>
-
-            </div>
             </div>
             <div class="main__calc-mid">
-                <p>Стаж от <input class="range-inp" value="1" type="text">до <input class="range-inp" value="30"
-                        type="text">лет</p>
-                <p>Возраст от <input type class="range-inp" value="25" type="text">до <input class="range-inp"
-                        value="65" type="text">лет</p>
+                <p>Стаж от <input class="range-inp" value="1" type="text"> до <input class="range-inp" value="30"
+                        type="text"> лет</p>
+                <p>Возраст от <input type="text" class="range-inp" value="25"> до <input class="range-inp" value="65"
+                        type="text"> лет</p>
             </div>
             <div class="main__calc-right">
                 <button>Подобрать</button>
             </div>
 
-        </section>
+        </div>
 
-
-
-
-
-        <section class="center table">
+        <div class="center table">
             <table class="table-wrapper">
                 <thead class="table__head">
                     <tr>
@@ -210,7 +261,7 @@
                 </thead>
                 <tbody class="table__body" id="resultBody"></tbody>
             </table>
-        </section>
+        </dIV>
 
         <div class="main__desc">
             <p>
@@ -278,9 +329,11 @@
             </a>
         </div>
     </footer>
+
+    <script src="js/headerdropbox.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/search.js"></script>
 </body>
-<script src="js/slider.js"></script>
-<script src="js/popup.js"></script>
-<script src="js/search.js"></script>
 
 </html>
