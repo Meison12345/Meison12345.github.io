@@ -75,12 +75,6 @@ button {
   height: 70px;
   font-family: bookantiqua;
 }
-.header-top__left-desc, .header-top__right-desc {
-  font-family: Arial;
-  font-size: 13px;
-  line-height: normal;
-  color: #35190d;
-}
 .header-top__left--number {
   font-size: 26px;
   letter-spacing: 0.65px;
