@@ -1,6 +1,7 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function () {
     let slideIndex = 1;
+    let timeSlide = 1000;
 
     function showSlides(index) {
         const slides = document.querySelectorAll('.slide');
@@ -39,23 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showSlides(slideIndex);
 
-    let startX = 0;
-    let endX = 0;
-
-    document.querySelector('.slider').addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    document.querySelector('.slider').addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        handleGesture();
-    });
-
-    function handleGesture() {
-        if (endX - startX > 50) {
-            showSlides(slideIndex -= 1);
-        } else if (startX - endX > 50) {
-            showSlides(slideIndex += 1);
-        }
-    }
+    // Автоматическое перелистывание слайдов каждую секунду
+    setInterval(() => {
+        showSlides(slideIndex += 1);
+    }, timeSlide);
 });
