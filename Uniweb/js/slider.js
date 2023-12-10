@@ -1,6 +1,7 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
     let slideIndex = 1;
+    let timeSlide = 5000;
+    let slideInterval = '';
 
     function showSlides(index) {
         const slides = document.querySelectorAll('.slide');
@@ -14,18 +15,19 @@ document.addEventListener('DOMContentLoaded', function () {
             slideIndex = slides.length;
         }
 
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-        }
-
-        slides[slideIndex - 1].style.display = 'block';
+        const transformValue = `translateX(-${100 * (slideIndex - 1)}%)`;
+        document.querySelector('.slider__container').style.transform = transformValue;
 
         const dots = [];
         dotsContainer.innerHTML = '';
         for (let i = 0; i < slides.length; i++) {
             const dot = document.createElement('span');
             dot.classList.add('dot');
-            dot.addEventListener('click', () => currentSlide(i + 1));
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                currentSlide(i + 1);
+                slideInterval = setInterval(() => showSlides(slideIndex += 1), timeSlide);
+            });
             dotsContainer.appendChild(dot);
             dots.push(dot);
         }
@@ -39,23 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showSlides(slideIndex);
 
-    let startX = 0;
-    let endX = 0;
-
-    document.querySelector('.slider').addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    document.querySelector('.slider').addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        handleGesture();
-    });
-
-    function handleGesture() {
-        if (endX - startX > 50) {
-            showSlides(slideIndex -= 1);
-        } else if (startX - endX > 50) {
-            showSlides(slideIndex += 1);
-        }
-    }
+    slideInterval = setInterval(() => {
+        showSlides(slideIndex += 1);
+    }, timeSlide);
 });

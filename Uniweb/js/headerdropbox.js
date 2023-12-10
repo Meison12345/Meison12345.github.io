@@ -1,6 +1,7 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function () {
     let file = '';
+
     /**
      * @description Установка дроп-меню в header
      */
@@ -65,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    //Загрузка файла
+    //Загрузка и работа с входным файлом
     const customFileUpload = document.getElementById('custom-file-upload');
     const resumeUpload = document.getElementById('resume-upload');
 
@@ -74,19 +75,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     resumeUpload.addEventListener('change', function () {
-        if (this.files.length > 0) {
-            const fileName = this.files[0].name;
-            file = this.files[0];
+        const selectedFiles = this.files;
+        if (selectedFiles.length > 0) {
+            const fileName = selectedFiles[0].name;
             customFileUpload.textContent = fileName;
+            file = selectedFiles[0];
         }
     });
 
-    customFileUpload.addEventListener('selectstart', function (e) {
-        e.preventDefault();
-    });
 
-    customFileUpload.addEventListener('mousedown', function (e) {
+
+    function preventSelection(e) {
         e.preventDefault();
-    });
+    }
+
+    customFileUpload.addEventListener('selectstart', preventSelection);
+    customFileUpload.addEventListener('mousedown', preventSelection);
 
 });

@@ -4,11 +4,6 @@
 }
 
 @font-face {
-    font-family: arialmt;
-    src: url(../fonts/arialmt.ttf);
-}
-
-@font-face {
     font-family: GaramondC;
     src: url(../fonts/GaramondC.otf);
 }
@@ -89,13 +84,15 @@ button {
         height: 70px;
         font-family: bookantiqua;
 
+        ///////////
         &__left-desc,
         &__right-desc {
-            font-family: 'arialmt';
+            font-family: Arial;
             font-size: 13px;
             line-height: normal;
             color: #35190d;
         }
+        /////////
 
         &__left {
             &--number {
@@ -210,30 +207,30 @@ button {
     position: relative;
     width: 100%;
     overflow: hidden;
+    box-shadow: 0px 1px 8px 0px rgba(178, 163, 143, 1);
 }
 
 .slider__container {
     display: flex;
     height: 325px;
-    box-shadow: 0px 1px 8px 0px rgba(178, 163, 143, 1);
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
     flex: 0 0 100%;
+    transition: opacity 0.5s ease-in-out;
 }
-
 
 .dots-container {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .dot {
     display: inline-block;
-    width: 13px;
-    height: 13px;
-    margin: 0px 9px;
+    width: 14px;
+    height: 14px;
+    margin: 0px 7px;
     box-shadow: inset 0px 2px 3px 0 rgba(51, 27, 2, 0.75);
     background-image: linear-gradient(to bottom, rgba(199, 109, 2, 0.48), rgba(199, 109, 2, 0.48)), linear-gradient(to bottom, #4e2c1e, #e0b876);
     border-radius: 50%;
@@ -293,7 +290,7 @@ button {
     }
 
     &__left {
-        margin: 60px 38px 60px 60px;
+        margin: 40px 38px 40px 60px;
 
         &-span {
             text-align: justify;
@@ -307,7 +304,7 @@ button {
     }
 
     &__right {
-        margin: 60px 60px 60px 38px;
+        margin: 40px 60px 40px 38px;
 
         &-right {
             text-align: justify;
@@ -334,7 +331,7 @@ button {
 
         &-desc {
             font-size: 13px;
-            font-family: arialmt;
+            font-family: Arial;
             color: rgb(53, 25, 13);
             line-height: 1.2;
         }
@@ -348,15 +345,15 @@ button {
 .photo {
     display: flex;
     justify-content: space-around;
-    padding: 0px 63px 31px 60px;
+    padding: 30px 63px 31px 60px;
 }
 
 
 
 .main {
     color: var(--brown-bcgk);
-    padding: 0px 25px 120px 25px;
-    font-family: arialmt;
+    padding: 0px 25px 134px 25px;
+    font-family: Arial;
 
     &__title {
         margin: 0;
@@ -365,8 +362,7 @@ button {
 
         &-recruit {
             text-align: center;
-            padding-top: 30px;
-            margin-bottom: 30px;
+            padding: 31px 0px;
             font-size: 25px;
             font-family: 'bookantiqua';
             color: var(--mahogany-brown);
@@ -379,7 +375,7 @@ button {
         color: var(--mahogany-brown);
         line-height: 1.2;
 
-        & p {
+        & p:not(:last-child) {
             margin-bottom: 14px;
             text-align: justify;
             text-align-last: justify;
@@ -669,7 +665,14 @@ thead th {
 
 tr:nth-child(2n) td {
     border: 1px solid var(--border-table);
+}
+
+tr:nth-child(odd) td {
     background-color: var(--white);
+}
+
+#resultBody tr:last-child {
+    border-bottom: 1px solid var(--border-table);
 }
 
 .main:after {
@@ -797,7 +800,8 @@ tr:nth-child(2n) td {
 #custom-file-upload {
     display: flex;
     align-items: center;
-    color: #55493F
+    color: #55493F;
+    cursor: pointer;
 }
 
 .personal-el {
@@ -815,4 +819,8 @@ tr:nth-child(2n) td {
     font-family: Verdana;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
+}
+
+#resume-upload {
+    display: none;
 }
