@@ -1,7 +1,7 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
     let slideIndex = 1;
-    let timeSlide = 1000;
+    let timeSlide = 5000;
+    let slideInterval = '';
 
     function showSlides(index) {
         const slides = document.querySelectorAll('.slide');
@@ -15,18 +15,19 @@ document.addEventListener('DOMContentLoaded', function () {
             slideIndex = slides.length;
         }
 
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = 'none';
-        }
-
-        slides[slideIndex - 1].style.display = 'block';
+        const transformValue = `translateX(-${100 * (slideIndex - 1)}%)`;
+        document.querySelector('.slider__container').style.transform = transformValue;
 
         const dots = [];
         dotsContainer.innerHTML = '';
         for (let i = 0; i < slides.length; i++) {
             const dot = document.createElement('span');
             dot.classList.add('dot');
-            dot.addEventListener('click', () => currentSlide(i + 1));
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                currentSlide(i + 1);
+                slideInterval = setInterval(() => showSlides(slideIndex += 1), timeSlide);
+            });
             dotsContainer.appendChild(dot);
             dots.push(dot);
         }
@@ -40,8 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showSlides(slideIndex);
 
-    // Автоматическое перелистывание слайдов каждую секунду
-    setInterval(() => {
+    slideInterval = setInterval(() => {
         showSlides(slideIndex += 1);
     }, timeSlide);
 });

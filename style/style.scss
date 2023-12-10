@@ -221,8 +221,8 @@ button {
 
 .slide {
     flex: 0 0 100%;
+    transition: opacity 0.5s ease-in-out;
 }
-
 
 .dots-container {
     text-align: center;
