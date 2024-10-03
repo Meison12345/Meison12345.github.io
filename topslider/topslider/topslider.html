@@ -1,0 +1,79 @@
+<head>
+    <link rel="stylesheet" href="/assets/style/normalize.css">
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <!-- <link rel="stylesheet" href="/topslider/topslider.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    .swiper {
+        max-width: 1920px;
+        max-height: 1080px;
+    }
+
+    .swiper-wrapper {
+        height: auto;
+    }
+
+    .custom-swiper .swiper-pagination-bullet {
+        border: 1px solid #4E4E50;
+        width: 13px;
+        height: 13px;
+        background-color: transparent;
+    }
+
+    .custom-swiper .swiper-pagination-bullet-active {
+        background: #4E4E50;
+    }
+
+    .swiper-slide-image {
+        width: 100%;
+    }
+</style>
+
+<section>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="swiper-slide swiper-slide-image" src="/assets/img/11.png">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper-slide swiper-slide-image" src="/assets/img/22.png">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper-slide swiper-slide-image" src="/assets/img/33.png">
+            </div>
+            <div class="swiper-slide">
+                <img class="swiper-slide swiper-slide-image" src="/assets/img/44.png">
+            </div>
+        </div>
+        <div class="custom-swiper swiper-pagination"></div>
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates, facere eveniet eum libero quos
+        obcaecati alias ipsum nulla modi tempore deleniti dignissimos ex hic porro debitis! Perferendis, ratione nisi!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates, facere eveniet eum libero quos
+        obcaecati alias ipsum nulla modi tempore deleniti dignissimos ex hic porro debitis! Perferendis, ratione nisi!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates, facere eveniet eum libero quos
+        obcaecati alias ipsum nulla modi tempore deleniti dignissimos ex hic porro debitis! Perferendis, ratione nisi!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates, facere eveniet eum libero quos
+        obcaecati alias ipsum nulla modi tempore deleniti dignissimos ex hic porro debitis! Perferendis, ratione nisi!
+    </div>
+</section>
+
+<script>
+    const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        // autoplay: {
+        //     delay: 3000,
+        // },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
