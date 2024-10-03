@@ -13,6 +13,7 @@
     .swiper {
         max-width: 1920px;
         max-height: 1080px;
+        background: linear-gradient(180deg, #E9EAEE 0%, #FFFFFF 100%);
     }
 
     .swiper-wrapper {
@@ -33,35 +34,75 @@
     .swiper-slide-image {
         width: 100%;
     }
+
+    .swiper-slide-image--mobile {
+        display: none;
+    }
+
+    @media screen and (max-width:600px) {
+        .swiper-slide-image {
+            display: none;
+        }
+
+        .swiper-slide-image--mobile {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width:600px) {
+        .topSlider__title {
+            display: none;
+        }
+    }
+
+    .topSlider__title {
+        font-family: 'Zekton';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 120%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #4E4E50;
+        margin: 40px 43px 20px 20px;
+    }
+
+    .topSlider__title-span {
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: #4E4E50;
+    }
 </style>
 
 <section>
-    <div class="swiper mySwiper">
+    <div class="topslider swiper mySwiper">
+        <h1 class="topslider__title">Лучшие мировые
+            инновации для благополучия
+            Ваших питомцев
+            <span class="topslider__title-span">со стремлением к совершенству в разработках и продуктах</span>
+        </h1>
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img class="swiper-slide swiper-slide-image" src="/assets/img/11.png">
+                <img class="swiper-slide swiper-slide-image swiper-slide-image--mobile" src="/assets/img/test.png">
             </div>
             <div class="swiper-slide">
                 <img class="swiper-slide swiper-slide-image" src="/assets/img/22.png">
+                <img class="swiper-slide swiper-slide-image swiper-slide-image--mobile" src="/assets/img/test.png">
             </div>
             <div class="swiper-slide">
                 <img class="swiper-slide swiper-slide-image" src="/assets/img/33.png">
+                <img class="swiper-slide swiper-slide-image swiper-slide-image--mobile" src="/assets/img/test.png">
             </div>
             <div class="swiper-slide">
                 <img class="swiper-slide swiper-slide-image" src="/assets/img/44.png">
+                <img class="swiper-slide swiper-slide-image swiper-slide-image--mobile" src="/assets/img/test.png">
             </div>
         </div>
         <div class="custom-swiper swiper-pagination"></div>
-    </div>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates, facere eveniet eum libero quos
-        obcaecati alias ipsum nulla modi tempore deleniti dignissimos ex hic porro debitis! Perferendis, ratione nisi!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates, facere eveniet eum libero quos
-        obcaecati alias ipsum nulla modi tempore deleniti dignissimos ex hic porro debitis! Perferendis, ratione nisi!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates, facere eveniet eum libero quos
-        obcaecati alias ipsum nulla modi tempore deleniti dignissimos ex hic porro debitis! Perferendis, ratione nisi!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus voluptates, facere eveniet eum libero quos
-        obcaecati alias ipsum nulla modi tempore deleniti dignissimos ex hic porro debitis! Perferendis, ratione nisi!
     </div>
 </section>
 
